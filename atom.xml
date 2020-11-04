@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>zhang</title>
   
-  
+  <subtitle>Charles</subtitle>
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://github.com/huaibinzhang/huaibinzhang.github.io/</id>
   
   <author>
-    <name>huaibin</name>
+    <name>Charles</name>
     
   </author>
   
