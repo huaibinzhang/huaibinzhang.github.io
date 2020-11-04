@@ -6,7 +6,7 @@
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/"/>
-  <updated>2020-11-04T14:58:44.889Z</updated>
+  <updated>2020-11-04T15:07:43.377Z</updated>
   <id>https://github.com/huaibinzhang/huaibinzhang.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/chong-hui-chong-pai-li-jie-yu-you-hua/"/>
     <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/chong-hui-chong-pai-li-jie-yu-you-hua/</id>
     <published>2020-11-04T14:42:50.416Z</published>
-    <updated>2020-11-04T14:58:44.889Z</updated>
+    <updated>2020-11-04T15:07:43.377Z</updated>
     
     
       
@@ -37,7 +37,11 @@
     <category term="js" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/js/"/>
     
     
-    <category term="js" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/js/"/>
+    <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/html5/"/>
+    
+    <category term="重绘" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%87%8D%E7%BB%98/"/>
+    
+    <category term="重排" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%87%8D%E6%8E%92/"/>
     
   </entry>
   
