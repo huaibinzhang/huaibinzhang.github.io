@@ -6,7 +6,7 @@
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/"/>
-  <updated>2020-11-04T15:07:43.377Z</updated>
+  <updated>2020-11-05T08:18:47.692Z</updated>
   <id>https://github.com/huaibinzhang/huaibinzhang.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>贪吃蛇源码</title>
+    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/05/tan-chi-she-yuan-ma/"/>
+    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/05/tan-chi-she-yuan-ma/</id>
+    <published>2020-11-05T08:06:58.046Z</published>
+    <updated>2020-11-05T08:18:47.692Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;贪吃蛇源码&quot;&gt;&lt;a href=&quot;#贪吃蛇源码&quot; class=&quot;headerlink&quot; title=&quot;贪吃蛇源码&quot;&gt;&lt;/a&gt;贪吃蛇源码&lt;/h2&gt;&lt;h3 id=&quot;body部分&quot;&gt;&lt;a href=&quot;#body部分&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/html5/"/>
+    
+    
+    <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/html5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>重绘重排理解与优化</title>
     <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/chong-hui-chong-pai-li-jie-yu-you-hua/"/>
     <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/chong-hui-chong-pai-li-jie-yu-you-hua/</id>
     <published>2020-11-04T14:42:50.416Z</published>
-    <updated>2020-11-04T15:07:43.377Z</updated>
+    <updated>2020-11-04T15:10:31.168Z</updated>
     
     
       
@@ -34,7 +59,7 @@
     
     
     
-    <category term="js" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/js/"/>
+    <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/html5/"/>
     
     
     <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/html5/"/>
