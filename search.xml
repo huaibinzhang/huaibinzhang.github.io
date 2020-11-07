@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Vue中实现token验证</title>
+      <link href="2020/11/07/vue-zhong-shi-xian-token-yan-zheng/"/>
+      <url>2020/11/07/vue-zhong-shi-xian-token-yan-zheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Vue中实现token验证"><a href="#Vue中实现token验证" class="headerlink" title="Vue中实现token验证"></a>Vue中实现token验证</h2><h3 id="前后端流程分析"><a href="#前后端流程分析" class="headerlink" title="前后端流程分析"></a>前后端流程分析</h3><ol><li>前端页面进行登录操作，将用户名和密码发给服务器</li><li>服务器进行校验，通过后生成token，包含信息有密匙、uid、过期时间等，然后返回给前端</li><li>前端将token保存在本地（建议在localStorage中）和state（vuex）中，下次对服务器请求时带上，然后返回给前端</li><li>服务器端对接收到的token进行校验。通过则进行相应的增删改查操作，并将数据返回给前端；未通过则返回错误码，提示错误信息，然后跳转到登录页</li></ol><h3 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h3><p>技术栈：vuex + axios + localStorage + vue-router</p><ul><li><p>登录路由添加自定义meta字段，来记录该页面是否需要身份验证</p><pre class=" language-vue"><code class="language-vue">// router.js&#123;    path: "/index",    name: "index",    component: resolve => require(['./index.vue'], resolve),    meta: &#123;        requiresAuth: true    &#125;&#125;</code></pre></li><li><p>设置路由拦截</p><pre class=" language-vue"><code class="language-vue">router.beforeEach((to, from, next) => &#123;    //  matched的数组中包含$route对象的检查元字段    //  arr.some() 表示判断该数组是否有元素符合相应的条件, 返回布尔值    if (to.matched.some(record => record.meta.requiresAuth)) &#123;        // 判断当前是否有登录的权限        if (!auth.loggedIn()) &#123;            next(&#123;                path: '/login',                query: &#123; redirect: to.fullPath &#125;            &#125;)        &#125; else &#123;            next()        &#125;    &#125; else &#123;        next() // 确保一定要调用 next()    &#125;&#125;)</code></pre></li><li><p>设置请求/响应拦截<br>在后面的所有请求中都将携带token进行。<br>利用axios中的请求拦截器, 通过配置http response inteceptor, 当后端接口返回401 (未授权), 让用户重新执行登录操作。</p><pre class=" language-vue"><code class="language-vue">// http request 拦截器axios.interceptors.request.use(    config => &#123;        if (store.state.token) &#123;  // 判断是否存在token，如果存在的话，则每个http header都加上token            config.headers.Authorization = `token $&#123;store.state.token&#125;`;        &#125;        return config;    &#125;,    err => &#123;        return Promise.reject(err);    &#125;);// http response 拦截器axios.interceptors.response.use(    response => &#123;        return response;    &#125;,    error => &#123;        if (error.response) &#123;            switch (error.response.status) &#123;                case 401:                    // 返回 401 清除token信息并跳转到登录页面                    store.commit(types.LOGOUT);                    router.replace(&#123;                        path: 'login',                        query: &#123;redirect: router.currentRoute.fullPath&#125;                    &#125;)            &#125;        &#125;        return Promise.reject(error.response.data)   // 返回接口返回的错误信息&#125;);</code></pre></li><li><p>登录页面:</p><pre class=" language-vue"><code class="language-vue">//login.vuemethods: &#123;  login()&#123;      if (this.token) &#123;          // 存储在本地的localStograge中，可以使用cookies/local/sessionStograge          this.$store.commit(types.LOGIN, this.token)          // 跳转至其他页面          let redirect = decodeURIComponent(this.$route.query.redirect || '/');          this.$router.push(&#123;              path: redirect          &#125;)      &#125;  &#125;&#125;</code></pre></li><li><p>vuex设置</p><pre class=" language-vue"><code class="language-vue">import Vuex from 'vuex';import Vue from 'vue';import * as types from './types'Vue.use(Vuex);export default new Vuex.Store(&#123;    state: &#123;        user: &#123;&#125;,        token: null,        title: ''    &#125;,    mutations: &#123;        // 登录成功将, token保存在localStorage中        [types.LOGIN]: (state, data) => &#123;            localStorage.token = data;            state.token = data;        &#125;,        // 退出登录将, token清空        [types.LOGOUT]: (state) => &#123;            localStorage.removeItem('token');            state.token = null        &#125;    &#125;&#125;);</code></pre></li></ul><p>三者的区别:</p><ul><li>sessionStorage 不能跨页面共享的，关闭窗口即被清除</li><li>localStorage 可以同域共享，并且是持久化存储的</li><li>在 local / session storage 的 tokens，就不能从不同的域名中读取,甚至是子域名也不行.<br>解决办法使用Cookie.demo: 假设当用户通过 app.yourdomain.com 上面的验证时你生成一个 token 并且作为一个 cookie 保存到 .yourdomain.com,然后，在 youromdain.com 中你可以检查这个 cookie 是不是已经存在了，并且如果存在的话就转到 app.youromdain.com去。这个 token 将会对程序的子域名以及之后通常的流程都有效（直到这个 token 超过有效期） 只是利用cookie的特性进行存储而非验证.</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2019前端面试题系列--Vue面试题</title>
       <link href="2020/11/07/2019-qian-duan-mian-shi-ti-xi-lie-vue-mian-shi-ti/"/>
       <url>2020/11/07/2019-qian-duan-mian-shi-ti-xi-lie-vue-mian-shi-ti/</url>
