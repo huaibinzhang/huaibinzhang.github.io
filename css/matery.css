@@ -2174,3 +2174,15 @@ footer .copy-right {
 #busuanzi_container_site_uv{
     display: inline-block !important;
 }
+
+/* 滚动条样式 */
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #45b26f;
+    border-radius: 80px;
+}

@@ -6,7 +6,7 @@
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/"/>
-  <updated>2020-11-10T02:07:01.291Z</updated>
+  <updated>2020-11-10T11:22:27.180Z</updated>
   <id>https://github.com/huaibinzhang/huaibinzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webpack配置指南</title>
+    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/10/webpack-pei-zhi-zhi-nan/"/>
+    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/10/webpack-pei-zhi-zhi-nan/</id>
+    <published>2020-11-10T11:18:50.601Z</published>
+    <updated>2020-11-10T11:22:27.180Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;webpack概述&quot;&gt;&lt;a href=&quot;#webpack概述&quot; class=&quot;headerlink&quot; title=&quot;webpack概述&quot;&gt;&lt;/a&gt;webpack概述&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;webpack&lt;/em&gt; 是一个现代</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="webpack" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/webpack/"/>
+    
+  </entry>
   
   <entry>
     <title>50道JavaScript基础面试题（附答案）</title>
