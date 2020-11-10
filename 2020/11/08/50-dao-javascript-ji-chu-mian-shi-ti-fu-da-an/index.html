@@ -1,0 +1,1565 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="50道JavaScript基础面试题（附答案）, Charles的博客">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>50道JavaScript基础面试题（附答案） | Charles的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Charles的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Charles的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Charles的博客</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">50道JavaScript基础面试题（附答案）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                <span class="chip bg-color">面试题</span>
+                            </a>
+                        
+                            <a href="/tags/js/">
+                                <span class="chip bg-color">js</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                面试题
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-11-08
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.3k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="50道JavaScript基础面试题（附答案）"><a href="#50道JavaScript基础面试题（附答案）" class="headerlink" title="50道JavaScript基础面试题（附答案）"></a>50道JavaScript基础面试题（附答案）</h2><h3 id="1介绍JavaScript的基本数据类型"><a href="#1介绍JavaScript的基本数据类型" class="headerlink" title="1介绍JavaScript的基本数据类型"></a>1介绍JavaScript的基本数据类型</h3><p>Number、String 、Boolean 、Null、Undefined</p>
+<p>Object是JavaScript中所有对象的父对象</p>
+<p>数据封装类对象:Object、Array、Boolean、Number和String</p>
+<p>其他对象:Function、Arguments、Math、Date、RegExp、Error</p>
+<p>新类型: Symbol</p>
+<h3 id="2-说说写JavaScript的基本规范"><a href="#2-说说写JavaScript的基本规范" class="headerlink" title="2. 说说写JavaScript的基本规范"></a>2. 说说写JavaScript的基本规范</h3><ul>
+<li>不要在同一行声明多个变量</li>
+<li>使用===或!==来比较true/false或者数值</li>
+<li>switch必须带有default分支</li>
+<li>函数应该有返回值</li>
+<li>for if else 必须使用大括号</li>
+<li>语句结束加分号</li>
+<li>命名要有意义，使用驼峰命名法</li>
+</ul>
+<h3 id="3-jQuery使用建议"><a href="#3-jQuery使用建议" class="headerlink" title="3.jQuery使用建议"></a>3.jQuery使用建议</h3><ul>
+<li>尽量减少对dom元素的访问和操作</li>
+<li>尽量避免给dom元素绑定多个相同类型的事件处理函数，可以将多个相同类型事件处理函数合并到一个处理函数，通过数据状态来处理分支</li>
+<li>尽量避免使用toggle事件</li>
+</ul>
+<h3 id="4-Ajax使用"><a href="#4-Ajax使用" class="headerlink" title="4.Ajax使用"></a>4.Ajax使用</h3><p>全称: Asynchronous Javascript And XML</p>
+<p>所谓异步，就是向服务器发送请求的时候，我们不必等待结果，而是可以同时做其他的事情，等到有了结果它自己会根据设定进行后续操作，与此同时，页面是不会发生整页刷新的，提高了用户体验。创建Ajax的过程:</p>
+<ul>
+<li><p>创建XMLHttpRequest对象（异步调用对象）</p>
+<pre><code>var xhr = new XMLHttpRequest();</code></pre>
+</li>
+<li><p>创建新的http请求(方法、URL、是否异步)</p>
+<pre><code>xhr.open(&#39;get&#39;,&#39;example.php&#39;,false);</code></pre>
+</li>
+<li><p>设置响应HTTP请求状态变化的函数</p>
+<p>onreadystatechange事件中readyState属性等于4. 响应的HTTP状态为200(OK)或者304(Not Modified)</p>
+</li>
+<li><p>发送http请求</p>
+<pre><code>xhr.send(data)</code></pre>
+</li>
+<li><p>获取异步调用返回的数据</p>
+<p>注意:</p>
+<ul>
+<li>页面初次加载时，尽量在web服务器一次性输出所有相关的数据，只在页面加载完成之后，用户进行操作时采用ajax进行交互。</li>
+<li>同步ajax在IE上会产生页面假死的问题。所以建议采用异步ajax。</li>
+<li>尽量减少ajax请求次数</li>
+<li>ajax安全问题，对于敏感数据在服务器端处理，避免在客户端处理过滤。对于关键业务逻辑代码也必须放在服务器端处理。</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-JavaScript有几种类型的值-你能画一下他们的内存图吗"><a href="#5-JavaScript有几种类型的值-你能画一下他们的内存图吗" class="headerlink" title="5.JavaScript有几种类型的值?你能画一下他们的内存图吗"></a>5.JavaScript有几种类型的值?你能画一下他们的内存图吗</h3><p>基本数据类型存储在栈中，引用数据类型(对象）存储在堆中，指针放在栈中。<br>两种类型的区别是:存储位置不同;原始数据类型直接存储在栈中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储;引用数据类型存储在堆中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能<br>引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。</p>
+<h3 id="6-栈和堆的区别"><a href="#6-栈和堆的区别" class="headerlink" title="6.栈和堆的区别"></a>6.栈和堆的区别</h3><ul>
+<li>栈(stack) :由编译器自动分配释放，存放函数的参数值，局部变量等;</li>
+<li>堆(heap)︰一般由程序员分配释放，若程序员不释放，程序结束时可能由操作系统释放。</li>
+</ul>
+<h3 id="7-Javascript实现继承的几种方式"><a href="#7-Javascript实现继承的几种方式" class="headerlink" title="7.Javascript实现继承的几种方式"></a>7.<strong>Javascript实现继承的几种方式</strong></h3><ul>
+<li><p>借用构造函数法(又叫经典继承)</p>
+<pre><code>function SuperType(name) &#123;
+
+    this.name = name;
+
+    this.sayName = function() &#123;
+        window.alert(this.name);
+    &#125;;
+&#125;
+
+function SubType(name, age) &#123;
+
+    SuperType.call(this, name); //在这里借用了父类的构造函数
+
+    this.age = age;
+&#125;</code></pre>
+</li>
+<li><p>对象冒充</p>
+<pre><code>function SuperType(name) &#123;
+
+    this.name = name;
+
+    this.sayName = function() &#123;
+        window.alert(this.name);
+    &#125;;
+&#125;
+
+function SubType(name, age) &#123;
+
+    this.supertype = SuperType; //在这里使用了对象冒充
+    this.supertype(name);
+
+    this.age = age;
+&#125;</code></pre>
+</li>
+<li><p>组合继承(最常用)</p>
+<pre><code>function SuperType(name) &#123;
+
+    this.name = name;
+
+&#125;
+
+SuperType.prototype = &#123;
+
+    sayName : function() &#123;
+        window.alert(this.name);
+    &#125;
+&#125;;
+
+function SubType(name, age) &#123;
+
+    SuperType.call(this, name); //在这里继承属性
+    this.age = age;
+&#125;
+
+SubType.prototype = new SuperType(); //这里继承方法</code></pre>
+<p>组合继承的方法是对应着我们用‘组合使用构造函数和原型方法’定义父类的一种继承方法。同样的，我们的属性和方法是分开继承的。</p>
+</li>
+</ul>
+<h3 id="8-Javascript创建对象的几种方式？"><a href="#8-Javascript创建对象的几种方式？" class="headerlink" title="8 Javascript创建对象的几种方式？"></a><strong>8 Javascript创建对象的几种方式？</strong></h3><ul>
+<li><p>工厂方法</p>
+<pre><code>function creatPerson(name, age) &#123;
+
+    var obj = new Object();
+
+    obj.name = name;
+    obj.age = age;
+
+    obj.sayName = function() &#123;
+        window.alert(this.name);
+    &#125;;
+
+    return obj;
+&#125;</code></pre>
+</li>
+<li><p>构造函数法</p>
+<pre><code>function Person(name, age) &#123;
+
+    this.name = name;
+    this.age = age;
+
+    this.sayName = function() &#123;
+        window.alert(this.name);
+    &#125;;
+&#125;</code></pre>
+</li>
+<li><p>原型方法</p>
+<pre><code>function Person() &#123;
+
+&#125;
+
+Person.prototype = &#123;
+    constructor : Person,
+    name : &quot;Ning&quot;,
+    age : &quot;23&quot;,
+    sayName : function() &#123;
+        window.alert(this.name);
+    &#125;
+&#125;;</code></pre>
+</li>
+</ul>
+<h3 id="9-Javascript作用链域"><a href="#9-Javascript作用链域" class="headerlink" title="9 Javascript作用链域"></a>9 Javascript作用链域</h3><p>作用域链的原理和原型链很类似，如果这个变量在自己的作用域中没有，那么它会寻找父级的，直到最顶层。<br>注意：JS没有块级作用域，若要形成块级作用域，可通过（function（）｛｝）（）；立即执行的形式实现。</p>
+<h3 id="10-谈谈this的理解"><a href="#10-谈谈this的理解" class="headerlink" title="10 谈谈this的理解"></a>10 谈谈this的理解</h3><ul>
+<li>this总是指向函数的直接调用者（而非间接调用者）</li>
+<li>如果有new关键字，this指向new出来的那个对象</li>
+<li>在事件中，this指向目标元素，特殊的是IE的attachEvent中的this总是指向全局对象window。</li>
+</ul>
+<h3 id="11-eval是做什么的"><a href="#11-eval是做什么的" class="headerlink" title="11 eval是做什么的"></a>11 eval是做什么的</h3><p>它的功能是把对应的字符串解析成JS代码并运行；应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。</p>
+<h3 id="12-什么是window对象-什么是document对象"><a href="#12-什么是window对象-什么是document对象" class="headerlink" title="12 什么是window对象? 什么是document对象"></a>12 什么是window对象? 什么是document对象</h3><p>window对象代表浏览器中打开的一个窗口。document对象代表整个html文档。实际上，document对象是window对象的一个属性。</p>
+<h3 id="13-null，undefined的区别"><a href="#13-null，undefined的区别" class="headerlink" title="13 null，undefined的区别"></a>13 null，undefined的区别</h3><p>null表示一个对象被定义了，但存放了空指针，转换为数值时为0。<br>undefined表示声明的变量未初始化，转换为数值时为NAN。<br>typeof(null) – object;<br>typeof(undefined) – undefined</p>
+<h3 id="14-写一个通用的事件侦听器函数-机试题"><a href="#14-写一个通用的事件侦听器函数-机试题" class="headerlink" title="14 写一个通用的事件侦听器函数(机试题)"></a>14 写一个通用的事件侦听器函数(机试题)</h3><h3 id="15-“1”-“2”-“3”-map-parseInt-答案是多少"><a href="#15-“1”-“2”-“3”-map-parseInt-答案是多少" class="headerlink" title="15 [“1”, “2”, “3”].map(parseInt) 答案是多少"></a>15 [“1”, “2”, “3”].map(parseInt) 答案是多少</h3><p>[1,NaN,NaN]</p>
+<p>解析：<br>Array.prototype.map()<br>array.map(callback[, thisArg])<br>callback函数的执行规则<br>参数：自动传入三个参数<br>currentValue（当前被传递的元素）；<br>index（当前被传递的元素的索引）；<br>array（调用map方法的数组）</p>
+<p>parseInt方法接收两个参数<br>第三个参数[“1”, “2”, “3”]将被忽略。parseInt方法将会通过以下方式被调用<br>parseInt(“1”, 0)<br>parseInt(“2”, 1)<br>parseInt(“3”, 2)</p>
+<p>parseInt的第二个参数radix为0时，ECMAScript5将string作为十进制数字的字符串解析；<br>parseInt的第二个参数radix为1时，解析结果为NaN；<br>parseInt的第二个参数radix在2—36之间时，如果string参数的第一个字符（除空白以外），不属于radix指定进制下的字符，解析结果为NaN。<br>parseInt(“3”, 2)执行时，由于”3”不属于二进制字符，解析结果为NaN。</p>
+<h3 id="16-关于事件，IE与火狐的事件机制有什么区别？-如何阻止冒泡"><a href="#16-关于事件，IE与火狐的事件机制有什么区别？-如何阻止冒泡" class="headerlink" title="16 关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡"></a>16 关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡</h3><p>IE为事件冒泡，Firefox同时支持事件捕获和事件冒泡。但并非所有浏览器都支持事件捕获。jQuery中使用<code>event.stopPropagation()</code>方法可阻止冒泡;（旧IE的方法 <code>ev.cancelBubble = true;</code>）</p>
+<h3 id="17-什么是闭包（closure），为什么要用它"><a href="#17-什么是闭包（closure），为什么要用它" class="headerlink" title="17 什么是闭包（closure），为什么要用它"></a>17 什么是闭包（closure），为什么要用它</h3><p>闭包指的是一个函数可以访问另一个函数作用域中变量。常见的构造方法，是在一个函数内部定义另外一个函数。内部函数可以引用外层的变量；外层变量不会被垃圾回收机制回收。<br>注意，闭包的原理是作用域链，所以闭包访问的上级作用域中的变量是个对象，其值为其运算结束后的最后一个值。<br>优点：避免全局变量污染。缺点：容易造成内存泄漏。<br>例子:</p>
+<pre><code>function makeFunc() &#123;
+    var name = &quot;Mozilla&quot;;
+    function displayName() &#123;
+        console.log(name);
+    &#125;
+    return displayName;
+&#125;
+var myFunc = makeFunc();
+myFunc();   //输出Mozilla</code></pre>
+<p>myFunc 变成一个 闭包。闭包是一种特殊的对象。它由两部分构成：函数，以及创建该函数的环境。环境由闭包创建时在作用域中的任何局部变量组成。在我们的例子中，myFunc 是一个闭包，由 displayName 函数和闭包创建时存在的 “Mozilla” 字符串形成。</p>
+<h3 id="18-javascript-代码中的”use-strict”-是什么意思-使用它区别是什么"><a href="#18-javascript-代码中的”use-strict”-是什么意思-使用它区别是什么" class="headerlink" title="18 javascript 代码中的”use strict”;是什么意思 ? 使用它区别是什么"></a>18 javascript 代码中的”use strict”;是什么意思 ? 使用它区别是什么</h3><p>除了正常模式运行外，ECMAscript添加了第二种运行模式：“严格模式”。<br>作用：</p>
+<ul>
+<li>消除js不合理，不严谨地方，减少怪异行为</li>
+<li>消除代码运行的不安全之处，</li>
+<li>提高编译器的效率，增加运行速度</li>
+<li>为未来的js新版本做铺垫。</li>
+</ul>
+<h3 id="19-如何判断一个对象是否属于某个类"><a href="#19-如何判断一个对象是否属于某个类" class="headerlink" title="19 如何判断一个对象是否属于某个类"></a>19 如何判断一个对象是否属于某个类</h3><p>使用instanceof 即if(a instanceof Person){alert(‘yes’);}</p>
+<h3 id="20-new操作符具体干了什么呢"><a href="#20-new操作符具体干了什么呢" class="headerlink" title="20 new操作符具体干了什么呢"></a>20 new操作符具体干了什么呢</h3><ul>
+<li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。</li>
+<li>属性和方法被加入到 this 引用的对象中。</li>
+<li>新创建的对象由 this 所引用，并且最后隐式的返回 this 。</li>
+</ul>
+<h3 id="21-Javascript中，执行时对象查找时，永远不会去查找原型的函数"><a href="#21-Javascript中，执行时对象查找时，永远不会去查找原型的函数" class="headerlink" title="21 Javascript中，执行时对象查找时，永远不会去查找原型的函数"></a>21 Javascript中，执行时对象查找时，永远不会去查找原型的函数</h3><p>Object.hasOwnProperty(proName)：是用来判断一个对象是否有你给出名称的属性。不过需要注意的是，此方法无法检查该对象的原型链中是否具有该属性，该属性必须是对象本身的一个成员。</p>
+<h3 id="22-对JSON的了解"><a href="#22-对JSON的了解" class="headerlink" title="22 对JSON的了解"></a>22 对JSON的了解</h3><p>全称：JavaScript Object Notation<br>JSON中对象通过“{}”来标识，一个“{}”代表一个对象，如{“AreaId”:”123”}，对象的值是键值对的形式（key：value）。JSON是JS的一个严格的子集，一种轻量级的数据交换格式，类似于xml。数据格式简单，易于读写，占用带宽小。<br>两个函数：<br>JSON.parse(str)<br>解析JSON字符串 把JSON字符串变成JavaScript值或对象<br>JSON.stringify(obj)<br>将一个JavaScript值(对象或者数组)转换为一个 JSON字符串<br>eval(‘(‘＋json＋’)’)<br>用eval方法注意加括号 而且这种方式更容易被攻击</p>
+<h3 id="23-JS延迟加载的方式有哪些"><a href="#23-JS延迟加载的方式有哪些" class="headerlink" title="23 JS延迟加载的方式有哪些"></a>23 JS延迟加载的方式有哪些</h3><p>JS的延迟加载有助与提高页面的加载速度。<br>defer和async、动态创建DOM方式（用得最多）、按需异步载入JS<br>defer：延迟脚本。立即下载，但延迟执行（延迟到整个页面都解析完毕后再运行），按照脚本出现的先后顺序执行。<br>async：异步脚本。下载完立即执行，但不保证按照脚本出现的先后顺序执行。</p>
+<h3 id="24-同步和异步的区别"><a href="#24-同步和异步的区别" class="headerlink" title="24 同步和异步的区别"></a>24 同步和异步的区别</h3><p>同步的概念在操作系统中：不同进程协同完成某项工作而先后次序调整（通过阻塞、唤醒等方式），同步强调的是顺序性，谁先谁后。异步不存在顺序性。<br>同步：浏览器访问服务器，用户看到页面刷新，重新发请求，等请求完，页面刷新，新内容出现，用户看到新内容之后进行下一步操作。<br>异步：浏览器访问服务器请求，用户正常操作，浏览器在后端进行请求。等请求完，页面不刷新，新内容也会出现，用户看到新内容。</p>
+<h3 id="25-什么是跨域问题-，如何解决跨域问题"><a href="#25-什么是跨域问题-，如何解决跨域问题" class="headerlink" title="25.什么是跨域问题 ，如何解决跨域问题?"></a>25.<strong>什么是跨域问题 ，如何解决跨域问题?</strong></h3><h4 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a><strong>什么是跨域</strong></h4><hr>
+<p>要明白什么是跨域之前，首先要明白什么是<strong>同源策略</strong>？</p>
+<p>同源策略就是用来限制从一个源加载的文档或脚本与来自另一个源的资源进行交互。那怎样判断是否是同源呢？</p>
+<p>如果协议，端口（如果指定了）和主机对于两个页面是相同的，则两个页面具有相同的源，也就是同源。也就是说，要同时满足以下3个条件，才能叫同源：</p>
+<ol>
+<li>协议相同</li>
+<li>端口相同</li>
+<li>主机相同</li>
+</ol>
+<p>举个例子就一目了然了：<br>我们来看下面的页面是否与 <code>http://store.company.com/dir/index.html</code> 是同源的？</p>
+<ol>
+<li><code>http://store.company.com/dir/index2.html</code> 同源</li>
+<li><code>http://store.company.com/dir2/index3.html</code> 同源 虽然在不同文件夹下</li>
+<li><code>https://store.company.com/secure.html</code> 不同源 不同的协议(https)</li>
+<li><code>http://store.company.com:81/dir/index.html</code> 不同源 不同的端口(81)</li>
+<li><code>http://news.company.com/dir/other.html</code> 不同源 不同的主机(news)</li>
+</ol>
+<p>所以当面对跨域问题的时候，有什么解决方案呢？</p>
+<h4 id="跨域的几种解决方案"><a href="#跨域的几种解决方案" class="headerlink" title="跨域的几种解决方案"></a>跨域的几种解决方案</h4><hr>
+<h5 id="document-domain方法"><a href="#document-domain方法" class="headerlink" title="document.domain方法"></a><strong>document.domain方法</strong></h5><p>我们来看一个具体场景：有一个页面 <code>http://www.example.com/a.html</code> ，它里面有一个<code>iframe</code>，这个<code>iframe</code>的源是 <code>http://example.com/b.html</code> ，很显然它们是不同源的，所以我们无法在父页面中操控子页面的内容。</p>
+<p>解决方案如下:</p>
+<pre><code>&lt;!-- b.html --&gt;
+&lt;script&gt;
+document.domain = &#39;example.com&#39;;
+&lt;/script&gt;</code></pre>
+<pre><code>&lt;!-- a.html --&gt;
+&lt;script&gt;
+document.domain = &#39;example.com&#39;;
+var iframe = document.getElementById(&#39;iframe&#39;).contentWindow.document;
+
+//后面就可以操作iframe里的内容了...
+
+&lt;/script&gt;</code></pre>
+<p>所以我们只要将两个页面的document.domain设置成一致就可以了，要注意的是，document.domain的设置是有限制的，我们只能把document.domain设置成自身或更高一级的父域。</p>
+<p>但是，这种方法只能解决主域相同的跨域问题。</p>
+<h5 id="window-name方法"><a href="#window-name方法" class="headerlink" title="window.name方法"></a><strong>window.name方法</strong></h5><p>window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的，并不会因新页面的载入而进行重置。</p>
+<p>我们来看一个具体场景，在一个页面 <code>example.com/a.html</code> 中，我们想获取 <code>data.com/data.html</code> 中的数据，以下是解决方案：</p>
+<pre><code>&lt;!-- data.html --&gt;
+&lt;script&gt;
+window.name = &#39;data&#39;; //这是就是我们需要通信的数据
+&lt;/script&gt;</code></pre>
+<pre><code>&lt;!-- a.html --&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+    function getData () &#123;
+        var iframe = document.getElementById(&#39;iframe&#39;);
+        iframe.src = &#39;example.com/b.html&#39;; // 这里让iframe与父页面同源
+
+        iframe.onload = function () &#123;
+            var data = iframe.contentWindow.name; //在这里我们得到了跨域页面中传来的数据
+        &#125;;
+    &#125;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h5 id="JSONP方法"><a href="#JSONP方法" class="headerlink" title="JSONP方法"></a><strong>JSONP方法</strong></h5><p>JONSP(JSON with Padding)是JSON的一种使用模式。基本原理如下：</p>
+<pre><code>&lt;!-- a.html --&gt;
+&lt;script&gt;
+    function dealData (data) &#123;
+        console.log(data);
+    &#125;
+&lt;/script&gt;
+
+&lt;script src=&#39;http://example.com/data.php?callback=dealData&#39;&gt;&lt;/script&gt;</code></pre>
+<pre><code>&lt;?php
+    $callback = $_GET[&#39;callback&#39;];
+    $data = &#39;data&#39;;
+    echo $callback.&#39;(&#39;.json_encode($data).&#39;)&#39;;
+?&gt;</code></pre>
+<p>这时候在<code>a.html</code>中我们得到了一条js的执行语句<code>dealData(&#39;data&#39;)</code>，从而达到了跨域的目的。</p>
+<p>所以JSONP的原理其实就是利用引入<code>script</code>不限制源的特点，把处理函数名作为参数传入，然后返回执行语句，仔细阅读以上代码就可以明白里面的意思了。</p>
+<p>如果在jQuery中用JSONP的话就更加简单了：</p>
+<pre><code>&lt;script&gt;
+$.getJSON(&#39;&#39;http://example.com/data.php?callback=?&#39;, function (data) &#123;
+    console.log(data);
+&#125;);
+&lt;/script&gt;</code></pre>
+<p>注意jQuery会自动生成一个全局函数来替换<code>callback=?</code>中的问号，之后获取到数据后又会自动销毁，实际上就是起一个临时代理函数的作用。<code>$.getJSON</code>方法会自动判断是否跨域，不跨域的话，就调用普通的ajax方法；跨域的话，则会以异步加载js文件的形式来调用JSONP的回调函数。</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h5><hr>
+<p>除了上述方法外，HTML5还新增了一个<code>window.postMessage()</code>方法，有兴趣的可以自行查阅。</p>
+<h3 id="26-页面编码和被请求的资源编码如果不一致如何处理？"><a href="#26-页面编码和被请求的资源编码如果不一致如何处理？" class="headerlink" title="26 页面编码和被请求的资源编码如果不一致如何处理？"></a><strong>26 页面编码和被请求的资源编码如果不一致如何处理？</strong></h3><p>若请求的资源编码，如外引js文件编码与页面编码不同。可根据外引资源编码方式定义为 charset=”utf-8”或”gbk”。<br>比如：<code>http://www.yyy.com/a.html</code> 中嵌入了一个<code>http://www.xxx.com/test.js</code><br>a.html 的编码是gbk或gb2312的。 而引入的js编码为utf-8的 ，那就需要在引入的时候</p>
+<pre><code>&lt;script src=&quot;http://www.xxx.com/test.js&quot;; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</code></pre>
+<h3 id="27-模块化开发怎么做"><a href="#27-模块化开发怎么做" class="headerlink" title="27 模块化开发怎么做"></a>27 模块化开发怎么做</h3><p>模块化开发指的是在解决某一个复杂问题或者一系列问题时，依照一种分类的思维把问题进行系统性的分解。模块化是一种将复杂系统分解为代码结构更合理，可维护性更高的可管理的模块方式。对于软件行业：系统被分解为一组高内聚，低耦合的模块。</p>
+<ol>
+<li>定义封装的模块</li>
+<li>定义新模块对其他模块的依赖</li>
+<li>可对其他模块的引入支持。在JavaScript中出现了一些非传统模块开发方式的规范。 CommonJS的模块规范，AMD（Asynchronous Module Definition），CMD（Common Module Definition）等。AMD是异步模块定义，所有的模块将被异步加载，模块加载不影响后边语句运行。</li>
+</ol>
+<h3 id="28-AMD（Modules-Asynchronous-Definition）、CMD（Common-Module-Definition）规范区别"><a href="#28-AMD（Modules-Asynchronous-Definition）、CMD（Common-Module-Definition）规范区别" class="headerlink" title="28 AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别"></a>28 AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别</h3><p>AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。<br>区别：</p>
+<ol>
+<li>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。</li>
+<li>CMD 推崇依赖就近，AMD 推崇依赖前置。</li>
+<li>AMD 的 API 默认是一个当多个用，CMD 的 API 严格区分，推崇职责单一。</li>
+</ol>
+<pre><code>// CMD
+define(function(require, exports, module) &#123;
+    var a = require(&#39;./a&#39;)
+    a.doSomething()
+    // 此处略去 100 行
+    var b = require(&#39;./b&#39;) // 依赖可以就近书写
+    b.doSomething()
+&#125;)
+// AMD 默认推荐
+define([&#39;./a&#39;, &#39;./b&#39;], function(a, b) &#123; // 依赖必须一开始就写好
+    a.doSomething();
+    // 此处略去 100 行
+    b.doSomething();
+&#125;)</code></pre>
+<h3 id="29-requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何缓存的？）"><a href="#29-requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何缓存的？）" class="headerlink" title="29 requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何缓存的？）"></a><strong>29 requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何缓存的？）</strong></h3><p>核心是js的加载模块，通过正则匹配模块以及模块的依赖关系，保证文件加载的先后顺序，根据文件的路径对加载过的文件做了缓存。</p>
+<h3 id="30-call和apply"><a href="#30-call和apply" class="headerlink" title="30 call和apply"></a><strong>30 call和apply</strong></h3><p>call（）方法和apply（）方法的作用相同，动态改变某个类的某个方法的运行环境。他们的区别在于接收参数的方式不同。在使用call（）方法时，传递给函数的参数必须逐个列举出来。使用apply（）时，传递给函数的是参数数组。</p>
+<h3 id="31-谈一谈你对ECMAScript6的了解"><a href="#31-谈一谈你对ECMAScript6的了解" class="headerlink" title="31 谈一谈你对ECMAScript6的了解"></a><strong>31 谈一谈你对ECMAScript6的了解</strong></h3><h3 id="32-documen-write和-innerHTML的区别"><a href="#32-documen-write和-innerHTML的区别" class="headerlink" title="32 documen.write和 innerHTML的区别"></a><strong>32 documen.write和 innerHTML的区别</strong></h3><p>document.write()只能重绘整个页面</p>
+<pre><code>setTimeout(function()&#123;
+       document.write(&#39;&lt;p&gt;5 secs later&lt;/p&gt;&#39;);
+&#125;, 5000);</code></pre>
+<p>或</p>
+<pre><code>window.onload = function() &#123; document.write(&quot;HI&quot;);</code></pre>
+<p>innerHTML可以重绘页面的一部分</p>
+<h3 id="33-回流与重绘"><a href="#33-回流与重绘" class="headerlink" title="33 回流与重绘"></a>33 回流与重绘</h3><p>当渲染树中的一部分(或全部)因为元素的规模尺寸，布局，隐藏等改变而需要重新构建。这就称为回流(reflow)。每个页面至少需要一次回流，就是在页面第一次加载的时候。在回流的时候，浏览器会使渲染树中受到影响的部分失效，并重新构造这部分渲染树。完成回流后，浏览器会重新绘制受影响的部分到屏幕中，该过程成为重绘</p>
+<h3 id="34-DOM操作"><a href="#34-DOM操作" class="headerlink" title="34 DOM操作"></a>34 DOM操作</h3><ol>
+<li>创建新节点<br>createDocumentFragment() //创建一个DOM片段<br>createElement() //创建一个具体的元素<br>createTextNode() //创建一个文本节点</li>
+<li>添加、移除、替换、插入<br>appendChild()<br>removeChild()<br>replaceChild()<br>insertBefore() //在已有的子节点前插入一个新的子节点</li>
+<li>查找<br>getElementsByTagName() //通过标签名称<br>getElementsByName() //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)<br>getElementById() //通过元素Id，唯一性</li>
+</ol>
+<h3 id="35-数组对象有哪些原生方法，列举一下"><a href="#35-数组对象有哪些原生方法，列举一下" class="headerlink" title="35 数组对象有哪些原生方法，列举一下"></a>35 数组对象有哪些原生方法，列举一下</h3><p>pop、push、shift、unshift、splice、reverse、sort、concat、join、slice、toString、indexOf、lastIndexOf、reduce、reduceRight<br>forEach、map、filter、every、some</p>
+<h3 id="36-那些操作会造成内存泄漏"><a href="#36-那些操作会造成内存泄漏" class="headerlink" title="36 那些操作会造成内存泄漏"></a>36 那些操作会造成内存泄漏</h3><p>全局变量、闭包、DOM清空或删除时，事件未清除、子元素存在引用</p>
+<h3 id="37-什么是Cookie-隔离？（或者：请求资源的时候不要带cookie怎么做）"><a href="#37-什么是Cookie-隔离？（或者：请求资源的时候不要带cookie怎么做）" class="headerlink" title="37 什么是Cookie 隔离？（或者：请求资源的时候不要带cookie怎么做）"></a>37 什么是Cookie 隔离？（或者：请求资源的时候不要带cookie怎么做）</h3><p>通过使用多个非主要域名来请求静态文件，如果静态文件都放在主域名下，那静态文件请求的时候带有的cookie的数据提交给server是非常浪费的，还不如隔离开。因为cookie有域的限制，因此不能跨域提交请求，故使用非主要域名的时候，请求头中就不会带有cookie数据，这样可以降低请求头的大小，降低请求时间，从而达到降低整体请求延时的目的。同时这种方式不会将cookie传入server，也减少了server对cookie的处理分析环节，提高了server的http请求的解析速度。</p>
+<h3 id="38-响应事件"><a href="#38-响应事件" class="headerlink" title="38 响应事件"></a>38 响应事件</h3><p>onclick鼠标点击某个对象；onfocus获取焦点；onblur失去焦点；onmousedown鼠标被按下</p>
+<h3 id="39-flash和js通过什么类如何交互"><a href="#39-flash和js通过什么类如何交互" class="headerlink" title="39 flash和js通过什么类如何交互"></a>39 flash和js通过什么类如何交互</h3><p>Flash提供了ExternalInterface接口与JavaScript通信，ExternalInterface有两个方法，call和addCallback，call的作用是让Flash调用js里的方法，addCallback是用来注册flash函数让js调用。</p>
+<h3 id="40-Flash与Ajax各自的优缺点"><a href="#40-Flash与Ajax各自的优缺点" class="headerlink" title="40 Flash与Ajax各自的优缺点"></a>40 Flash与Ajax各自的优缺点</h3><p>Flash：适合处理多媒体、矢量图形、访问机器。但对css、处理文本不足，不容易被搜索。<br>Ajax：对css、文本支持很好，但对多媒体、矢量图形、访问机器不足。</p>
+<h3 id="41-有效的javascript变量定义规则"><a href="#41-有效的javascript变量定义规则" class="headerlink" title="41 有效的javascript变量定义规则"></a>41 有效的javascript变量定义规则</h3><p>第一个字符必须是一个字母、下划线（_）或一个美元符号（$）；其他字符可以是字母、下划线、美元符号或数字。</p>
+<h3 id="42-XML与JSON的区别"><a href="#42-XML与JSON的区别" class="headerlink" title="42 XML与JSON的区别"></a>42 XML与JSON的区别</h3><ol>
+<li>数据体积方面。JSON相对于XML来讲，数据的体积小，传递的速度更快些。</li>
+<li>数据交互方面。JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互。</li>
+<li>数据描述方面。JSON对数据的描述性比XML较差。</li>
+<li>传输速度方面。JSON的速度要远远快于XML。</li>
+</ol>
+<h3 id="43-HTML与XML的区别"><a href="#43-HTML与XML的区别" class="headerlink" title="43 HTML与XML的区别"></a>43 HTML与XML的区别</h3><ol>
+<li>XML用来传输和存储数据，HTML用来显示数据；</li>
+<li>XML使用的标签不用预先定义</li>
+<li>XML标签必须成对出现</li>
+<li>XML对大小写敏感</li>
+<li>XML中空格不会被删减</li>
+<li>XML中所有特殊符号必须用编码表示</li>
+<li>XML中的图片必须有文字说明</li>
+</ol>
+<h3 id="44-渐进增强与优雅降级"><a href="#44-渐进增强与优雅降级" class="headerlink" title="44 渐进增强与优雅降级"></a>44 渐进增强与优雅降级</h3><p>渐进增强：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进，达到更好的用户体验。<br>优雅降级：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+<h3 id="45-Web-Worker和Web-Socket"><a href="#45-Web-Worker和Web-Socket" class="headerlink" title="45 Web Worker和Web Socket"></a>45 Web Worker和Web Socket</h3><p>web socket：在一个单独的持久连接上提供全双工、双向的通信。使用自定义的协议（ws://、wss://），同源策略对web socket不适用。<br>web worker：运行在后台的JavaScript，不影响页面的性能。<br>创建worker：var worker = new Worker(url);<br>向worker发送数据：worker.postMessage(data);<br>接收worker返回的数据：worker.onmessage<br>终止一个worker的执行：worker.terminate();</p>
+<h3 id="46-JS垃圾回收机制"><a href="#46-JS垃圾回收机制" class="headerlink" title="46 JS垃圾回收机制"></a>46 JS垃圾回收机制</h3><ol>
+<li><p>标记清除：<br>这个算法把“对象是否不再需要”简化定义为“对象是否可以获得”。<br>这个算法假定设置一个叫做根（root）的对象（在Javascript里，根是全局对象）。定期的，垃圾回收器将从根开始，找所有从根开始引用的对象，然后找这些对象引用的对象。从根开始，垃圾回收器将找到所有可以获得的对象和所有不能获得的对象。</p>
+</li>
+<li><p>引用计数：<br>这是最简单的垃圾收集算法。此算法把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。<br>该算法有个限制：无法处理循环引用。两个对象被创建，并互相引用，形成了一个循环。它们被调用之后不会离开函数作用域，所以它们已经没有用了，可以被回收了。然而，引用计数算法考虑到它们互相都有至少一次引用，所以它们不会被回收。</p>
+</li>
+</ol>
+<h3 id="47-web应用从服务器主动推送data到客户端的方式"><a href="#47-web应用从服务器主动推送data到客户端的方式" class="headerlink" title="47 web应用从服务器主动推送data到客户端的方式"></a>47 web应用从服务器主动推送data到客户端的方式</h3><p>JavaScript数据推送：commet（基于http长连接的服务器推送技术）。<br>基于web socket的推送：SSE（server-send Event）</p>
+<h3 id="48-如何删除一个cookie？"><a href="#48-如何删除一个cookie？" class="headerlink" title="48 如何删除一个cookie？"></a><strong>48 如何删除一个cookie？</strong></h3><ol>
+<li>将cookie的失效时间设置为过去的时间（expires）</li>
+</ol>
+<pre><code>document.cookie = ‘user=’+ encodeURIComponent(‘name’) + &#39;;
+expires=’+ new Date(0);</code></pre>
+<ol start="2">
+<li>将系统时间设置为当前时间往前一点时间</li>
+</ol>
+<pre><code>var data = new Date();
+date.setDate(date.getDate()-1);</code></pre>
+<h3 id="49-attribute与property的区别？"><a href="#49-attribute与property的区别？" class="headerlink" title="49 attribute与property的区别？"></a><strong>49 attribute与property的区别？</strong></h3><p>attribute是dom元素在文档中作为html标签拥有的属性<br>property是dom元素在js中作为对象拥有的属性。<br>所以，对于html的标准属性来说，attribute和property是同步的，是会自动更新的。但对于自定义属性，他们不同步。</p>
+<h3 id="50-Ajax请求的页面历史记录状态问题？"><a href="#50-Ajax请求的页面历史记录状态问题？" class="headerlink" title="50 Ajax请求的页面历史记录状态问题？"></a><strong>50 Ajax请求的页面历史记录状态问题？</strong></h3><ol>
+<li>通过location.hash记录状态，让浏览器记录Ajax请求时页面状态的变化。</li>
+<li>通过HTML5的history.pushstate，来实现浏览器地址栏的无刷新改变。</li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Charles</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/08/50-dao-javascript-ji-chu-mian-shi-ti-fu-da-an/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/08/50-dao-javascript-ji-chu-mian-shi-ti-fu-da-an/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Charles</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                    <span class="chip bg-color">面试题</span>
+                                </a>
+                            
+                                <a href="/tags/js/">
+                                    <span class="chip bg-color">js</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/11/08/50-dao-javascript-ji-chu-mian-shi-ti-fu-da-an/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="50道JavaScript基础面试题（附答案）">
+                        
+                        <span class="card-title">50道JavaScript基础面试题（附答案）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            50道JavaScript基础面试题（附答案）1介绍JavaScript的基本数据类型Number、String 、Boolean 、Null、Undefined
+Object是JavaScript中所有对象的父对象
+数据封装类对象:Obj
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                    面试题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
+                    </a>
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/07/vue-zhong-shi-xian-token-yan-zheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Vue中实现token验证">
+                        
+                        <span class="card-title">Vue中实现token验证</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Vue中实现token验证前后端流程分析
+前端页面进行登录操作，将用户名和密码发给服务器
+服务器进行校验，通过后生成token，包含信息有密匙、uid、过期时间等，然后返回给前端
+前端将token保存在本地（建议在localStorage中
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Vue/" class="post-category">
+                                    Vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Charles的博客<br />'
+            + '文章作者: Charles<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="7689823053"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Charles</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "4";
+                    var startHour = "11";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/huaibinzhang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1207510422@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1207510422" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1207510422" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?code-HPokNTio6o.huaibinzhang.github.io";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "4f275905"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":200,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>
