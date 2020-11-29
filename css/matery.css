@@ -2190,3 +2190,8 @@ footer .copy-right {
 .fa-space-shuttle {
     transform: rotate(-90deg);
 }
+
+#floating-toc-btn {
+   right: 70px !important ;
+   bottom: 22px !important ;
+}
