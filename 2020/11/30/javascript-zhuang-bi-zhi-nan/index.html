@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Vue相关面试题, 博客">
+    <meta name="keywords" content="JavaScript装逼指南, 博客">
     <meta name="description" content="Charles的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Vue相关面试题 | Charles的博客</title>
+    <title>JavaScript装逼指南 | Charles的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -244,7 +244,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Vue相关面试题</h1>
+                    <h1 class="description center-align post-title">JavaScript装逼指南</h1>
                 </div>
             </div>
         </div>
@@ -361,12 +361,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                <span class="chip bg-color">面试题</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
-                            <a href="/tags/Vue/">
-                                <span class="chip bg-color">Vue</span>
+                            <a href="/tags/JS%E6%89%8B%E8%AE%B0/">
+                                <span class="chip bg-color">JS手记</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
-                                面试题
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -390,21 +390,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-24
+                    2020-11-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-26
+                    2020-11-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    1.4k
                 </div>
                 
 
@@ -421,325 +421,67 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-库和框架的区别"><a href="#1-库和框架的区别" class="headerlink" title="1.库和框架的区别"></a>1.库和框架的区别</h3><pre><code>答:
-    库: 本质上是一个函数的几何,每一次调用函数,实现一个特定的功能,使用库的时候,把库当成工具使用,需要自己控制代码的执行逻辑
-    框架: 是一套完整的解决方案,使用框架的时候,框架实现了大部分的功能,我们只需要按照框架的规则书写代码即可,使用框架开发比库开发效率更高,更容易维护</code></pre>
-<h3 id="2-MVC和MVVM的区别"><a href="#2-MVC和MVVM的区别" class="headerlink" title="2. MVC和MVVM的区别"></a>2. MVC和MVVM的区别</h3><pre><code>答:
-    MVVM
-        M Model 模型 指的是数据层
-        V View  视图 指的是用户页面
-        VM ViewModel 视图模型
-        视图模型是MVVM模式的核心,它是连接view和model的桥梁,MVVM实现了view和model的自动同步,当model的属性改变时,我们不用自己手动操作DOM元素,来改变view的显示,反之亦然,我们称之为数据的双向绑定
-
-    MVC
-        M Model 模型 指的是数据层
-        V View  视图 指的是用户页面
-        C controller 控制器 指的是页面业务逻辑
-        view传送指令到controller,controller完成业务逻辑后,要求model改变状态,model将型的数据发送给view,用户得到反馈,所有通信都是单向的</code></pre>
-<h3 id="3-v-if和v-show的区别-使用场景"><a href="#3-v-if和v-show的区别-使用场景" class="headerlink" title="3. v-if和v-show的区别,使用场景"></a>3. v-if和v-show的区别,使用场景</h3><pre><code>答:
-    v-if是通过创建和删除DOM元素来控制元素的显示和隐藏,适用于不需要频繁切换元素显示和隐藏的情况
-    v-show是通过css的display: block和display: none来控制元素的显示和隐藏,适用于需要频繁切换元素的显示和隐藏的场景</code></pre>
-<h3 id="4-v-for和v-if的优先级哪个更高"><a href="#4-v-for和v-if的优先级哪个更高" class="headerlink" title="4. v-for和v-if的优先级哪个更高"></a>4. v-for和v-if的优先级哪个更高</h3><pre><code>答:
-    v-for优先级高于v-if
-    如果两个同时出现,无论判断条件是否成立,都会执行一遍v-for循环,这样浪费性能,所以要尽可能的避免两者一起使用</code></pre>
-<h3 id="5-vue中的事件修饰符有哪些-分别作用是什么"><a href="#5-vue中的事件修饰符有哪些-分别作用是什么" class="headerlink" title="5. vue中的事件修饰符有哪些,分别作用是什么"></a>5. vue中的事件修饰符有哪些,分别作用是什么</h3><pre><code>答:
-    .prevent   阻止事件默认行为
-    .stop      阻止事件冒泡
-    .capture   设置事件捕获机制
-    .self      只有点击元素自身才能触发事件
-    .once      事件只触发一次</code></pre>
-<h3 id="6-v-model的修饰符有哪些-分别作用是什么"><a href="#6-v-model的修饰符有哪些-分别作用是什么" class="headerlink" title="6. v-model的修饰符有哪些,分别作用是什么"></a>6. v-model的修饰符有哪些,分别作用是什么</h3><pre><code>答:
-    .trim   去除首尾空格
-    .lazy   只在输入框失去焦点或按回车键时更新内容,不是实时更新
-    .number 将数据转换成number类型(原本是字符串类型)</code></pre>
-<h3 id="7-vue中的按键修饰符有哪些"><a href="#7-vue中的按键修饰符有哪些" class="headerlink" title="7. vue中的按键修饰符有哪些"></a>7. vue中的按键修饰符有哪些</h3><pre><code>答:
-    .tob
-    .enter
-    .esc
-    .space
-    .delete(捕获&quot;删除&quot;和&quot;空格&quot;键)
-    .up
-    .down
-    .left
-    .right</code></pre>
-<h3 id="8-v-for中为什么要加key-原理是什么"><a href="#8-v-for中为什么要加key-原理是什么" class="headerlink" title="8. v-for中为什么要加key,原理是什么"></a>8. v-for中为什么要加key,原理是什么</h3><pre><code>答:
-    原理: 
-        1. vue实现了一套虚拟DOM,使我们可以不直接操作DOM元素只操作数据,就可以重新渲染页面,而隐藏在背后的原理是高效的Diff算法
-        2. 当页面数据发生改变时,Diff算法只会比较同一层级的节点
-        3. 如果节点类型不同,直接干掉前面的节点,再创建并插入新的节点,不会再比较这个节点后面的子节点
-           如果节点类型相同,则会重新设置该节点属性,从而实现节点更新
-        4. 使用key给每个节点做一个唯一标识,Diff算法就可以正确失败此节点,&quot;就地更新&quot;找到正确的位置插入新的节点
-    作用: 
-        1. key的作用主要是为了高效的更新虚拟DOM,提高渲染性能
-        2. key属性可以避免数据混乱的情况出现</code></pre>
-<h3 id="9-computed和watch的区别"><a href="#9-computed和watch的区别" class="headerlink" title="9. computed和watch的区别"></a>9. computed和watch的区别</h3><pre><code>答:
-    1. 概念:
-        computed是计算属性,它会根据所依赖的数据动态显示新的计算结果,通过计算出来的属性不需要调用,可以直接在DOM中使用
-        watch是监视对象,键是data对应的数据,值是对应的回调函数,值也可以包含选项的对象,当data数据发生改变时,就会发生一个回调,它有两个参数,val(修改后的data函数), oldval(原来的data数据), vue实例会在实例化的时候调用$watch(), 变量watch对象的每个属性,deep属性可以实现深度监听
-    2. 缓存
-        computed具有缓存属性,只有依赖的数据发生改变,才会重新进行计算,如果所依赖的数据没有发生改变,就调用缓存
-    3. 使用场景
-        当一个属性受多个属性影响的时候使用computed, 比如: 购物车商品结算
-        当一条数据影响多条数据的时候,使用watch, 比如: 贷款金额的判断</code></pre>
-<h3 id="10-自己实现一个v-model的效果"><a href="#10-自己实现一个v-model的效果" class="headerlink" title="10. 自己实现一个v-model的效果"></a>10. 自己实现一个v-model的效果</h3><pre><code>答:
-    &lt;input type=&quot;text&quot;&gt;
-    &lt;script&gt;
-
-     // vue2.0
-    let data = &#123;
-      msg: &#39;hello vue&#39;
+                <blockquote>
+<p>如何写JavaScript才能逼格更高呢？怎样才能组织JavaScript才能让别人一眼看出你不简单呢？是否很期待别人在看完你的代码之后感叹一句“原来还可以这样写”呢？下面列出一些在JavaScript时的装逼技巧。</p>
+</blockquote>
+<h3 id="1-匿名函数的N种写法"><a href="#1-匿名函数的N种写法" class="headerlink" title="1. 匿名函数的N种写法"></a>1. 匿名函数的N种写法</h3><p>你知道“茴”的四种写法吗？ε=(･д･｀*)ﾊｧ… 扯淡，但你或许不知道匿名函数的好几种写法。一般情况下写匿名函数是这样的：<code> (function()&#123;&#125;)();</code></p>
+<p>但下面几种写法也是可以的：</p>
+<ul>
+<li><code>!function()&#123;&#125;();</code></li>
+<li><code>+function()&#123;&#125;();</code></li>
+<li><code>-function()&#123;&#125;();</code></li>
+<li><code>~function()&#123;&#125;();</code></li>
+<li><code>~(function()&#123;&#125;)();</code></li>
+<li><code>void function()&#123;&#125;();</code></li>
+<li><code>(function()&#123;&#125;());</code></li>
+</ul>
+<p>当然，这样的写法，没有什么区别，纯粹看装逼程度。</p>
+<h3 id="2-另外一种undefined"><a href="#2-另外一种undefined" class="headerlink" title="2. 另外一种undefined"></a>2. 另外一种undefined</h3><p>从来不需要声明一个变量的值是undefined，因为JavaScript会自动把一个未赋值的变量置为undefined。所有如果你在代码里这么写，会被鄙视的：</p>
+<pre><code>var data = undefined;</code></pre>
+<p>但是如果你就是强迫症发作，一定要再声明一个暂时没有值的变量的时候赋上一个undefined。那你可以考虑这么做：</p>
+<pre><code>var data = void 0; // undefined</code></pre>
+<p>void在JavaScript中是一个操作符，对传入的操作不执行并且返回undefined。void后面可以跟<code>()</code>来用，例如<code>void(0)</code>，看起来是不是很熟悉？没错，在HTML里阻止带href的默认点击操作时，都喜欢把href写成<code>javascript:void(0)</code>，实际上也是依靠void操作不执行的意思。</p>
+<p>当然，除了出于装逼的原因外，实际用途上不太赞成使用void，因为void的出现是为了兼容早起ECMAScript标准中没有undefined属性。<code>void 0</code>的写法让代码晦涩难懂。</p>
+<h3 id="3-抛弃你的if和else"><a href="#3-抛弃你的if和else" class="headerlink" title="3. 抛弃你的if和else"></a>3. 抛弃你的if和else</h3><p>当JS代码里有大量的条件逻辑判断时，那代码看起来多可怕：</p>
+<pre><code>if () &#123;
+    // ...
+&#125; else if () &#123;
+    // ...
+&#125; else if () &#123;
+    // ...
+&#125; else &#123;
+    // ...
+&#125;</code></pre>
+<p>不用我说你都猜到用什么语法来简化if-else了。没错，用<code>||</code>和<code>&amp;&amp;</code>，很简单的原理就不用说啦。值得一提的是，有时候用<code>!!</code>操作符也能简化if-else模式。例如这样：</p>
+<pre><code>// 普通的if-else模式
+var isValid = false;
+if (value &amp;&amp; value !== &#39;error&#39;) &#123;
+    isValid = true;
+&#125;
+// 使用!!符号
+var isValid = !!(value &amp;&amp; value !== &#39;error&#39;);</code></pre>
+<p>“!”是取反操作，两个“!”自然是负负得正了。</p>
+<h3 id="4-不加分号"><a href="#4-不加分号" class="headerlink" title="4. 不加分号"></a>4. 不加分号</h3><p>关于JavaScript要不要加分号的争论已经吵了好几年。Google的JavaScript语法指南告诉我们要加分号，很多JavaScript语法书籍也告诉我们加上分号更安全。然而，分号加不加，全靠个人对代码的写法，你确信写得足够安全的话，不加分号显得更加高大上。</p>
+<h3 id="5-添加AMD模块支持"><a href="#5-添加AMD模块支持" class="headerlink" title="5. 添加AMD模块支持"></a>5. 添加AMD模块支持</h3><p>给你写的代码声明一下AMD模块规范，这样别人就可以直接通过AMD的规范来加载你的模块了，如果别人没有通过规范来加载你的模块，你也可以优雅地返回一个常规的全局对象。来看看jQueryUI的写法：</p>
+<pre><code>(function( factory ) &#123;
+    if ( typeof define === &quot;function&quot; &amp;&amp; define.amd ) &#123;
+        // AMD. Register as an anonymous module.
+        define( [ &quot;jquery&quot; ], factory );
+    &#125; else &#123;
+        // Browser globals
+        factory( jQuery );
     &#125;
-    let input = document.querySelector(&#39;input&#39;)
-    input.value = data.msg
-    input.addEventListener(&#39;input&#39;, function () &#123;
-      data.msg = this.value
-    &#125;)
-    let temp = data.msg
-    Object.defineProperty(data, &#39;msg&#39;, &#123;
-      get() &#123;
-        return temp
-      &#125;,
-      set(value) &#123;
-        input.value = value
-        return (temp = value)
-      &#125;
-    &#125;)
-
-    // vue3.0
-    let data = &#123;
-      msg: &#39;hello vue&#39;
-    &#125;
-    let input = document.querySelector(&#39;input&#39;)
-    input.value = data.msg
-    input.addEventListener(&#39;input&#39;, function () &#123;
-      obj.msg = this.value
-    &#125;)
-    const obj = new Proxy(data, &#123;
-      get(target, key) &#123;
-        return target[key]
-      &#125;,
-      set(target, key, value) &#123;
-        target[key] = value
-        input.value = value
-      &#125;
-    &#125;)
-   &lt;/script&gt;</code></pre>
-<h3 id="11-Object-defineProperty和proxy的区别"><a href="#11-Object-defineProperty和proxy的区别" class="headerlink" title="11. Object.defineProperty和proxy的区别"></a>11. Object.defineProperty和proxy的区别</h3><pre><code>1. Object.defineProperty  用于监听对象的数据变化
-    缺点:
-        1) 无法监听数组变化
-        2) 只能劫持对象的属性,属性值也是对象那么需要深度遍历
-2. proxy 可以理解为 在被劫持的对象之前 加了一层拦截
-   proxy返回的是一个新对象, 可以通过操作返回的新的对象达到目的
-总结:
-    当使用defineProperty 时, 我们修改原来的 obj 对象就可以触发拦截
-    而使用 proxy, 就必须修改代理对象,即 proxy 的实例才可以触发拦截</code></pre>
-<h3 id="12-怎么理解VUE的生命周期"><a href="#12-怎么理解VUE的生命周期" class="headerlink" title="12. 怎么理解VUE的生命周期"></a>12. 怎么理解VUE的生命周期</h3><pre><code>答:
-    vue的生命周期: vue实例从创建到销毁的全过程,这个过程可以分为3个阶段
-    第一阶段: 初始化阶段  创建vue实例,准备数据,准备模板,渲染视图
-    第二阶段: 数据更新阶段 当数据改变时,会进行新旧DOM的对比,对比出差异的部分,进行差异化更新
-    第三阶段: 实例销毁阶段 当vm.$destroy()被调用,vue实例就会被销毁,释放相关资源,此时再更新数据,视图不会再变化</code></pre>
-<h3 id="13-vue钩子函数有哪些-有哪些使用的场景"><a href="#13-vue钩子函数有哪些-有哪些使用的场景" class="headerlink" title="13. vue钩子函数有哪些,有哪些使用的场景"></a>13. vue钩子函数有哪些,有哪些使用的场景</h3><pre><code>答:
-    beforeCreate  当data数据注入到vm实例之前,此时vm身上没有数据
-    created       当data数据注入到vm实力之前,此时vm身上有数据
-
-    beforeMount   生成的结构替换视图之前,此时DOM还没更新
-    mounted       生成的结构替换视图之前,此时DOM已经更新完成
-
-    beforeUpdate  数据变化了,dom更新之前
-    updated       数据变化了,dom更新之后
-
-    beforeDestroy 实例销毁,是否资源之前
-    destroyed     实例销毁,是否资源之后
-
-    这些钩子函数会在vue的生命周期的不同阶段,自动被vue调用
-
-    常用的钩子函数使用场景
-    beforeCreate   做loading的一些渲染
-    created        结束loading,发送数据的请求,拿数据
-    mounted        可以对dom进行操作
-    updated        监听数据的更新
-    beforeDestroy  销毁非vue资源,防止内存泄漏,例如清除定时器</code></pre>
-<h3 id="14-vue中怎么给data添加数据-为什么要这样写"><a href="#14-vue中怎么给data添加数据-为什么要这样写" class="headerlink" title="14. vue中怎么给data添加数据,为什么要这样写"></a>14. vue中怎么给data添加数据,为什么要这样写</h3><pre><code>答:
-    1. 官方文档定义: 如果vue实例创建之后添加新的属性到实例上,他不会触发视图更新
-    2. 原因: 受现代JavaScript的限制,vue不能检测到对象属性的添加或删除,由于vue会在初始化实例是对属性执行getter/setter转换过程(使用Object.defineProperty进行数据的劫持).所以属性必须在data对象上存在才能让vue转换他,这样才能让他是响应的
-    方法: 
-        1. this.$set(对象名,属性,值)或Vue.set(对象名,属性,值)
-        2. Object.assign(target,soutce)添加多个属性
-        例如
-            const target = &#123;a:1,b:2&#125;
-            const source = &#123;b:4,d:5&#125;
-            const returnedTarget = Object.assign(target,source)
-            console.log(returnTarget); //&#123;a : 1, b : 4, c: 5&#125;</code></pre>
-<h3 id="15-nextTick的原理和使用的场景"><a href="#15-nextTick的原理和使用的场景" class="headerlink" title="15. $nextTick的原理和使用的场景"></a>15. $nextTick的原理和使用的场景</h3><pre><code>答:
-    1.使用原理
-        1) vue是异步执行dom更新的,一旦观察到数据变化,vue就会开启一个队列,然后把同一事件循环当中观察到数据变化的watcher推送进这个队列,如果这个watcher被触发多次,只会被推送到队列一次,这种缓冲行为可以有效地去掉重复数据造成的不必要的计算和dom操作,这样可以提高渲染效率
-        2) 如果要获取更新后的dom元素, 可以使用vue内置的$nextTick方法,参数是一个函数,它的作用类似于setTimeout,进行执行异步的操作
-    2. 应用: vue中的nextTick主要用于处理数据动态变化后,DOM还未及时更新的问题,用nextTick可以获取数据更新后最新dom的变化
-    3. 场景:
-        1) 第三方插件,在vue生成的某些dom动态发生变化时重新应用该插件
-        2) 视图更新之后,基于新的视图进行操作</code></pre>
-<h3 id="16-vue中组件如何进行通信"><a href="#16-vue中组件如何进行通信" class="headerlink" title="16. vue中组件如何进行通信"></a>16. vue中组件如何进行通信</h3><pre><code>答:
-    1. 父传子
-        1) 给子组件以添加属性的方式传值(属性名全小写)
-        2) 在子组件中通过props接收传递的参数
-    2. 子传父
-        1) 在子组件中,通过触发事件的同时传值
-           this.$emit(事件名,参数1, 参数2...)
-        2)  在父组件中,给子组件注册响应的事件,接收参数
-           @事件名 = &quot;fatherFn&quot;
-    3. 非父子
-        1) 创建一个都能访问到的事件总线(bus),本质上是一个空的vue实例
-            const bus = new Vue()
-        2) 在A组件中,触发bus事件,触发的同时传值
-            bus.$emit(事件名, 参数1, 参数2...)
-        3) 在B组件中给bus注册对应的事件,接收参数
-            bus.$on(事件名,事件处理函数)</code></pre>
-<h3 id="17-vue组件中data为什么必须是一个函数"><a href="#17-vue组件中data为什么必须是一个函数" class="headerlink" title="17. vue组件中data为什么必须是一个函数"></a>17. vue组件中data为什么必须是一个函数</h3><pre><code>答:
-    vue组件是可复用的vue实例,组件中的data写成一个函数,并且以函数返回值的显示定义,函数形成局部作用域,这样每次复用组件,就会返回一个新的data,确保data数据的独立性,各个组件之间修改不会相互影响,如果data使用对象,对象是引用类型,会导致复用组件中的data都指向同一块内存,那么各组件的数据就会相互响应,不能保持独立性了</code></pre>
-<h3 id="18-组件化和模块化的区别"><a href="#18-组件化和模块化的区别" class="headerlink" title="18. 组件化和模块化的区别"></a>18. 组件化和模块化的区别</h3><pre><code>答:
-    组件化: 主要是从界面上进行划分,是对于结构.样式.行为的整体拆分,方便调用和复用
-    模块化: 主要是从代码逻辑的焦点进行划分,是对js功能的拆分和封装,方便代码分成开发.保证每个功能模块职责单一
-    组件化和模块化的优点: 开发调试效率高,可维护性强,避免阻塞,版本管理更容易</code></pre>
-<h3 id="19-怎么理解vue中的虚拟DOM"><a href="#19-怎么理解vue中的虚拟DOM" class="headerlink" title="19.怎么理解vue中的虚拟DOM"></a>19.怎么理解vue中的虚拟DOM</h3><pre><code>答:
-    虚拟DOM其实就是一颗以JavaScript对象(VNode)作为基础的树,用对象属性来描述阶段,实际上它只是一层对真实DOM的抽象,最终可以通过一系列操作使这棵树映射到真实环境上. 简单理解可以把虚拟DOM理解为一个简单的JS对象,并且最少包含标签(tag),属性(attrs)和子元素对象(children)三个属性,不同的框架对这三个属性的命名会有差别,vue的虚拟DOM是将多次DOM操作保存在一个JS对象(虚拟DOM对象)中,然后用这个JS对象一次性的去更新DOM操作,这样就避免了很多无效的计算</code></pre>
-<h3 id="20-vue-loader是做什么的"><a href="#20-vue-loader是做什么的" class="headerlink" title="20.vue-loader是做什么的"></a>20.vue-loader是做什么的</h3><pre><code>答:
-    概念: vue-loader是基于webpack的一个loader,解析和转换.vue文件,提取出其中的逻辑代码script,样式代码style,以及HTML模板template,再分别把他们交给对应的loader去处理
-    用途: JS可以写es6,style样式可以是less或scss等</code></pre>
-<h3 id="21-vue中怎么操作DOM"><a href="#21-vue中怎么操作DOM" class="headerlink" title="21. vue中怎么操作DOM"></a>21. vue中怎么操作DOM</h3><pre><code>答:
-    要在mounted中使用,在执行mounted的时候,vue已经渲染了dom节点,可以获取DOM节点
-    方法: 
-        1) 在标签中添加ref=&quot;name&quot;
-        2) 在方法中用this.$ref.name拿到这个元素</code></pre>
-<h3 id="22-router和route的区别"><a href="#22-router和route的区别" class="headerlink" title="22. router和route的区别"></a>22. router和route的区别</h3><pre><code>答:
-    router是VueRouter的实例,是一个全局的路由对象,它包含了所有的路由和许多关键字的对象和属性
-    route是当前正在跳转的路由对象,是一个局部路由对象,里面包含当前路由的信息,比如: name,path,params,query等</code></pre>
-<h3 id="23-路由传参的方式和区别"><a href="#23-路由传参的方式和区别" class="headerlink" title="23. 路由传参的方式和区别"></a>23. 路由传参的方式和区别</h3><pre><code>答:
-    方式: params 和 query
-    区别: params用的是name,传送的参数在地址栏不会显示,类似于post
-          query用的是path,传递的参数会在地址栏显示出来,类似于get
-
-    举例:
-        1. params传参
-        传: this.$router.push(&#123;
-            name: &#39;particulars&#39;,
-            params:&#123;
-                id: id
-            &#125;
-        &#125;)
-        接: this.$route.params.id
-
-        2. query传参
-        传: this.$router.push(&#123;
-            path: &#39;/particulars&#39;,
-            query: &#123;
-                id: id
-            &#125;
-        &#125;)
-        接: this.$route.query.id</code></pre>
-<h3 id="24-导航钩子有几种-导航守卫-具体怎么用的"><a href="#24-导航钩子有几种-导航守卫-具体怎么用的" class="headerlink" title="24. 导航钩子有几种(导航守卫) 具体怎么用的"></a>24. 导航钩子有几种(导航守卫) 具体怎么用的</h3><pre><code>答:
-    分类:
-        1. 全局守卫: router.beforeEach
-        2. 全局解析守卫: router.beforeResolve
-        3. 全局后置钩子: router.afterEach
-        4. 路由独享的守卫: beforeEnter
-        5. 组件内的守卫: beforeRouteEnter,beforeRouteUpdate(2.2新增),beforeRouteLeave
-    使用:
-        1. 全局守卫: router.beforeEach
-            const router = new VueRouter(&#123; ... &#125;)
-                router,beforeEach((to, from, next) =&gt; &#123;
-                    // ...
-                &#125;)
-        2. 全局解析守卫: router.beforeResolve
-            可以用 router.beforeResolve 注册一个全局守卫,这和 router.beforeEach 类似,区别是: 在导航被确认之前,同时在所有组件内守卫和异步路由组件被解析之后,解析守卫就被调用
-        3. 全局后置钩子: router.afterEach
-            router.afterEach((to,from) =&gt; &#123;
-                // ...
-            &#125;)
-        4. 路由独享的守卫: beforeEnter
-            const router = new VueRouter(&#123;
-                routes: [
-                    &#123;
-                        path: &#39;/foo&#39;,
-                        component: Foo,
-                        beforeEnter: (to, from, next) =&gt; &#123;
-                            // ...
-                        &#125;
-                    &#125;
-                ]
-            &#125;)
-        5. 组件内的守卫: beforeRouteEnter,beforeRouteUpdate(2.2新增),beforeRouteLeave
-            const Foo = &#123;
-                template: `...`,
-                beforeRouteEnter (to, from, next) &#123;
-                    // 在渲染该组件的对应路由被 confirm 钱调用
-                    // 不能获取组件实例 `this`
-                    // 因为当守卫执行前, 组件实例还没被创建
-                &#125;,
-                beforeRouteUpdate (to, from, next) &#123;
-                    // 在当前路由改变,但是该组件被复用时调用
-                    // 举例来说, 对于一个带有动态参数的路径 /foo/:id, 在 /foo/1 和 /foo/2 之间跳转的时候,
-                    // 由于会渲染同样的Foo组件,因此组件实例会被复用,而这个钩子就会在这个情况下被调用
-                    // 可以访问组件实例 `this`
-                &#125;,
-                beforeRouteLeave (to, from, next) &#123;
-                    // 导航离开该组件的对用路由时调用
-                    // 可以访问组件实例 `this`
-                &#125;
-            &#125;</code></pre>
-<h3 id="25-keep-alive的理解"><a href="#25-keep-alive的理解" class="headerlink" title="25. keep-alive的理解"></a>25. keep-alive的理解</h3><pre><code>答:
-    1. keep-alive是Vue.js的一个内置组件, vue2.0提供了一个keep-alive组件用来缓存组件,避免多次加载响应的组件,减少性能消耗
-    2. 它有两个生命周期:
-        activated: keep-alive组件激活时调用
-        deactivated: keep-alive组件停用时调用
-    它提供了include与exclude两个属性, 允许组件有条件地进行缓存
-    3. 实例: 
-        &lt;!-- keep-alive代码可以结合v-if进行包裹,如果meta中的keepAlive为true进行缓存,否则不进行缓存,这样可以更灵活一些 --&gt;
-        &lt;keep-alive&gt;
-            &lt;router-view v-if=&quot;$route.meta.keepAlive&quot; /&gt;
-        &lt;/keep-alive&gt;
-        &lt;router-view v-if=&quot;!$route.meta.keepAlive&quot; /&gt;
-
-        &lt;template&gt;
-            &lt;div id=&quot;app&quot;&gt;
-                // 1. 将缓存 name为test 的组件
-                &lt;keep-alive include=&quot;test&quot;&gt;
-                    &lt;router-view/&gt;
-                &lt;/keep-alive&gt;
-
-                // 2. 将缓存 name 为 a 或者 b 的组件,结合动态组件使用
-                &lt;keep-alive include=&#39;a,b&#39;&gt;
-                    &lt;router-view /&gt;
-                &lt;/keep-alive&gt;
-
-
-                // 3. 使用正则表达式 需使用 v-bind
-                &lt;keep-alive include=&#39;/a|b/&#39;&gt;
-                    &lt;router-view /&gt;
-                &lt;/keep-alive&gt;
-
-
-                // 4. 动态判断
-                &lt;keep-alive include=&#39;includeComponents&#39;&gt;
-                    &lt;router-view /&gt;
-                &lt;/keep-alive&gt;
-
-
-                // 5. 将不缓存 name 为test的组件
-                &lt;keep-alive exclude=&#39;test&#39;&gt;
-                    &lt;router-view /&gt;
-                &lt;/keep-alive&gt;
-            &lt;/div&gt;
-        &lt;/template&gt;
-
-        &lt;script&gt;
-        export default &#123;
-            name: &#39;App&#39;
-        &#125;
-        &lt;/script&gt;
-
-    4. 原理:
-        首先,你要知道Vue.js内部将DOM节点抽象成了一个个的VNode(虚拟DOM)节点,所以,keep-alive的缓存也是基于VNode几点的而不是直接存储DOM结构
-        其实就是将需要缓存的VNode节点保存在this.cache中,在render时,如果VNode的name符合在缓存条件(可以用include以及exclude控制), 则会从this.cache中取出之前缓存的VNode实例进行渲染</code></pre>
+&#125;(function( $ ) &#123;
+    // 这里放模块代码
+    return $.widget;
+&#125;));</code></pre>
+<p>就用它来包裹你的实际代码吧，保证别人一看代码就知道你是个专业的开发者。</p>
+<h3 id="6-Function构造函数"><a href="#6-Function构造函数" class="headerlink" title="6.Function构造函数"></a>6.Function<strong>构造函数</strong></h3><p>很多JavaScript教程都告诉我们，不要直接用内置对象的构造函数来创建基本变量，例如<code>var arr = new Array(2);</code> 的写法就应该用<code>var arr = [1, 2];</code>的写法来取代。但是，Function构造函数（注意是大写的Function）有点特别。Function构造函数接受的参数中，第一个是要传入的参数名，第二个是函数内的代码（用字符串来表示）。</p>
+<pre><code>var f = new Function(&#39;a&#39;, &#39;alert(a)&#39;);
+f(&#39;test&#39;); // 将会弹出窗口显示test</code></pre>
+<p>或许大家疑惑了，你这样绕着写，跟<code>function f(a) &#123;alert(a);&#125;</code>比有什么好处呢？<br>事实上在某种情况下是有好处的，比如不能用eval的时候，你需要传入字符串内容来创建一个函数的时候。在一些JavaScript模板语言的解析，和字符串转换json对象的时候比较实用。</p>
+<h3 id="7-用原生Dom接口不用jQuery"><a href="#7-用原生Dom接口不用jQuery" class="headerlink" title="7.用原生Dom接口不用jQuery"></a>7.用原生Dom接口不用jQuery</h3><p>一个傲娇的前端工程师是不需要jQuery的，前提是你经得起折腾。实际上，几乎所有的jQuery方法都可以用同样的Dom原生接口来实现，因为这货本来就是用原生接口实现的嘛，哈哈。怎样做到不用jQuery（也叫jQuery-free）呢？阮老师的博文<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2013/05/jquery-free.html">《如何做到 jQuery-free？》</a> 给我们很好的讲解了做法。依赖于querySelector和querySelectorAll这两个现代浏览器的接口，可以实现跟jQuery同样方便和同样效率的Dom查找，而且其他的类似Ajax和CSS的接口同样也可以把原生方法做一些兼容方面的包装即可做到jQuery-free。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上述所有的JavaScript装逼写法，一些是为了程序易懂或者效率提高的语法糖，这样的做法是比较可取的，比如前面所说的省略if-else的做法；而有些写法则容易造成代码晦涩难懂或者效率偏低，例如上面说的<code>void 0</code>的写法，实际上不可取。JavaScript语法上灵活，让大家对同一个功能有很多种不同的写法，写法上的优化是对程序结构和代码维护有很大帮助的。所以，装逼得装得好看。</p>
 
             </div>
             <hr/>
@@ -765,7 +507,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/24/vue-xiang-guan-mian-shi-ti/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/24/vue-xiang-guan-mian-shi-ti/</a>
+                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/30/javascript-zhuang-bi-zhi-nan/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/30/javascript-zhuang-bi-zhi-nan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -803,12 +545,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                    <span class="chip bg-color">面试题</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
-                                <a href="/tags/Vue/">
-                                    <span class="chip bg-color">Vue</span>
+                                <a href="/tags/JS%E6%89%8B%E8%AE%B0/">
+                                    <span class="chip bg-color">JS手记</span>
                                 </a>
                             
                         </div>
@@ -976,9 +718,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/11/30/javascript-zhuang-bi-zhi-nan/">
                     <div class="card-image">
@@ -999,9 +742,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1014,6 +757,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1036,32 +780,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/14/js-shi-yong-ji-qiao/">
+                <a href="/2020/11/24/vue-xiang-guan-mian-shi-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="JS使用技巧">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Vue相关面试题">
                         
-                        <span class="card-title">JS使用技巧</span>
+                        <span class="card-title">Vue相关面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JS 使用技巧
-有些代码，需要的时候能写的出来，但是也需要时间。同时，如果有的东西长时间不接触，再次看的时候也会感觉很陌生，本文章旨在记录一些实用的 javascript 技巧，既可以作为一个知识的积累，又可以作为闲暇时打发时间写写代码的记
+                            1.库和框架的区别答:
+    库: 本质上是一个函数的几何,每一次调用函数,实现一个特定的功能,使用库的时候,把库当成工具使用,需要自己控制代码的执行逻辑
+    框架: 是一套完整的解决方案,使用框架的时候,框架实现了大部分的功能,我们
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                    面试题
                                 </a>
                             
                             
@@ -1071,12 +816,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
                     </a>
                     
-                    <a href="/tags/JS%E6%89%8B%E8%AE%B0/">
-                        <span class="chip bg-color">JS手记</span>
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
                     </a>
                     
                 </div>

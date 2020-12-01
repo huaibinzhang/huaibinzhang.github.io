@@ -2177,14 +2177,14 @@ footer .copy-right {
 /* 滚动条样式 */
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 10px;
     background-color: #fff;
-    border-radius: 50px;
+    border-radius: 80px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #45b26f;
-    border-radius: 80px;
+    border-radius: 100px;
 }
 
 .fa-space-shuttle {

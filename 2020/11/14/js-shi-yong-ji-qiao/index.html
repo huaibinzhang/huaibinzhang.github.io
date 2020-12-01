@@ -361,12 +361,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
-                            </a>
-                        
                             <a href="/tags/%E7%AC%94%E8%AE%B0/">
                                 <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/JS%E6%89%8B%E8%AE%B0/">
+                                <span class="chip bg-color">JS手记</span>
                             </a>
                         
                     </div>
@@ -397,14 +397,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-14
+                    2020-11-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    3.1k
                 </div>
                 
 
@@ -421,11 +421,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JS使用技巧"><a href="#JS使用技巧" class="headerlink" title="JS使用技巧"></a>JS使用技巧</h2><blockquote>
-<p>有些代码，需要的时候能写的出来，但是也需要时间。同时，如果有的东西长时间不接触，再次看的时候也会感觉很陌生，本文章旨在记录一些实用的javascript技巧，既可以作为一个知识的积累，又可以作为闲暇时打发时间写写代码的记录。同时也方便日后翻阅~</p>
+                <h2 id="JS-使用技巧"><a href="#JS-使用技巧" class="headerlink" title="JS 使用技巧"></a>JS 使用技巧</h2><blockquote>
+<p>有些代码，需要的时候能写的出来，但是也需要时间。同时，如果有的东西长时间不接触，再次看的时候也会感觉很陌生，本文章旨在记录一些实用的 javascript 技巧，既可以作为一个知识的积累，又可以作为闲暇时打发时间写写代码的记录。同时也方便日后翻阅~</p>
 </blockquote>
-<h3 id="1-“金钱”-格式转换"><a href="#1-“金钱”-格式转换" class="headerlink" title="1. “金钱” 格式转换"></a>1. “金钱” 格式转换</h3><p><strong>运用点:</strong>  <img src="/huaibinzhang/huaibinzhang.github.io/2020/11/14/js-shi-yong-ji-qiao/11/14/js-shi-yong-ji-qiao/zan.jpg" class><br>   所谓的金钱格式转换就是把数字转换成三位数加一个逗号的格式，使数据变得很直观明了~</p>
-<p><strong>例子:</strong> 就像这里的赞功能，点击之后加1，再次点击减1，很简单实现。但是数据是字符串的，加减钱需要用正则转换成数字，但是再显示最后结果时，也需要再次转换成金钱的格式，再通过ajax实现数据的交互。下面来看下怎么实现的 这个是正则，把字符串转换成数字之后，能直接进行运算:如把1,561,124转换成1561124</p>
+<h3 id="1-“金钱”-格式转换"><a href="#1-“金钱”-格式转换" class="headerlink" title="1. “金钱” 格式转换"></a>1. “金钱” 格式转换</h3><p>所谓的金钱格式转换就是把数字转换成三位数加一个逗号的格式，使数据变得很直观明了~</p>
+<p><strong>例子:</strong> 就像赞功能，点击之后加 1，再次点击减 1，很简单实现。但是数据是字符串的，加减钱需要用正则转换成数字，但是再显示最后结果时，也需要再次转换成金钱的格式，再通过 ajax 实现数据的交互。下面来看下怎么实现的 这个是正则，把字符串转换成数字之后，能直接进行运算:如把 1,561,124 转换成 1561124</p>
 <pre><code>var sLove=document.getElementById(&quot;love&quot;);  //slove = 1,561,124
 var reg=sLove1.innerHTML.replace(/,/g,&quot;&quot;);  //reg = 1561124</code></pre>
 <p>下面的这个是数字转换成金钱格式的函数，也很容易理解</p>
@@ -448,7 +448,7 @@ var reg=sLove1.innerHTML.replace(/,/g,&quot;&quot;);  //reg = 1561124</code></pr
 // demo:
 var num = 1012145;
 formatCash(num);   //1,012,145</code></pre>
-<h3 id="2-window-onload使用多次"><a href="#2-window-onload使用多次" class="headerlink" title="2.window.onload使用多次"></a>2.window.onload使用多次</h3><p>运用点：window.onload只能使用一次，而不像JQ那样能只用多次，下面的这个函数就可以实现多次使用onload的功能</p>
+<h3 id="2-window-onload-使用多次"><a href="#2-window-onload-使用多次" class="headerlink" title="2.window.onload 使用多次"></a>2.window.onload 使用多次</h3><p>运用点：window.onload 只能使用一次，而不像 JQ 那样能只用多次，下面的这个函数就可以实现多次使用 onload 的功能</p>
 <pre><code>function addLoadEvent(func) &#123;
     var oldonload = window.onload;
     if (typeof window.onload != &#39;function&#39;) &#123;
@@ -462,7 +462,7 @@ formatCash(num);   //1,012,145</code></pre>
 &#125;
 // demo：
 addLoadEvent(fnName);  //可使用多次</code></pre>
-<h3 id="3-insertafter在结点后面插入内容"><a href="#3-insertafter在结点后面插入内容" class="headerlink" title="3.insertafter在结点后面插入内容"></a>3.insertafter在结点后面插入内容</h3><p>运用点：js给我们提供了insertbefore，没有before，下面这个函数就实现了这个功能</p>
+<h3 id="3-insertafter-在结点后面插入内容"><a href="#3-insertafter-在结点后面插入内容" class="headerlink" title="3.insertafter 在结点后面插入内容"></a>3.insertafter 在结点后面插入内容</h3><p>运用点：js 给我们提供了 insertbefore，没有 before，下面这个函数就实现了这个功能</p>
 <pre><code>// insertAfter
 function insertAfter(newElement,targetElement)&#123;
   var parent=targetElement.parentNode;
@@ -474,7 +474,7 @@ function insertAfter(newElement,targetElement)&#123;
   &#125;</code></pre>
 <h3 id="4-随机数生成"><a href="#4-随机数生成" class="headerlink" title="4.随机数生成"></a>4.随机数生成</h3><pre><code>var rnd = Math.random(); //返回0-1之间的任意小数
 var rnd = Math.floor(Math.random() * n); //返回0-n之间的任意整数(不包括n)</code></pre>
-<h3 id="5-X进制数字的转换"><a href="#5-X进制数字的转换" class="headerlink" title="5. X进制数字的转换"></a>5. X进制数字的转换</h3><pre><code>var i = parseInt(&quot;0x1f&quot;,16); //31
+<h3 id="5-X-进制数字的转换"><a href="#5-X-进制数字的转换" class="headerlink" title="5. X 进制数字的转换"></a>5. X 进制数字的转换</h3><pre><code>var i = parseInt(&quot;0x1f&quot;,16); //31
 var i = parseInt(i,10); //31
 var i = parseInt(&quot;11010011&quot;,2); //211</code></pre>
 <h3 id="6-格式化显示数字"><a href="#6-格式化显示数字" class="headerlink" title="6. 格式化显示数字"></a>6. 格式化显示数字</h3><pre><code>var i = 3.14159;
@@ -558,27 +558,27 @@ cutstr(&quot;博客&quot;, 3)    //博客...</code></pre>
 &#125;
 // demo:
 getHost(&quot;http://www.hellozhb.top/page/2&quot;)   //www.hellozhb.top</code></pre>
-<h3 id="13-清除左右空格"><a href="#13-清除左右空格" class="headerlink" title="13.清除左右空格"></a>13.清除左右空格</h3><pre><code>String.prototype.trim=function()&#123;  
-　　return this.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);  
-&#125;  
-String.prototype.ltrim=function()&#123;  
-　　return this.replace(/(^\s*)/g,&quot;&quot;);  
-&#125;  
-String.prototype.rtrim=function()&#123;  
-　　return this.replace(/(\s*$)/g,&quot;&quot;);  
+<h3 id="13-清除左右空格"><a href="#13-清除左右空格" class="headerlink" title="13.清除左右空格"></a>13.清除左右空格</h3><pre><code>String.prototype.trim=function()&#123;
+　　return this.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);
+&#125;
+String.prototype.ltrim=function()&#123;
+　　return this.replace(/(^\s*)/g,&quot;&quot;);
+&#125;
+String.prototype.rtrim=function()&#123;
+　　return this.replace(/(\s*$)/g,&quot;&quot;);
 &#125;</code></pre>
 <h3 id="14-替换全部"><a href="#14-替换全部" class="headerlink" title="14.替换全部"></a>14.替换全部</h3><pre><code>String.prototype.replaceAll = function(s1, s2) &#123;
     return this.replace(new RegExp(s1, &quot;gm&quot;), s2)
 &#125;
 // demo:
 &quot;哈哈哈&quot;.replaceAll(&#39;哈&#39;,&#39;呵&#39;)   //呵呵呵</code></pre>
-<h3 id="15-转义html标签"><a href="#15-转义html标签" class="headerlink" title="15. 转义html标签"></a>15. 转义html标签</h3><pre><code>
+<h3 id="15-转义-html-标签"><a href="#15-转义-html-标签" class="headerlink" title="15. 转义 html 标签"></a>15. 转义 html 标签</h3><pre><code>
 function HtmlEncode(text) &#123;
     return text.replace(/&amp;/g, &#39;&amp;amp&#39;).replace(/\&quot;/g, &#39;&amp;quot;&#39;).replace(/&lt;/g, &#39;&amp;lt;&#39;).replace(/&gt;/g, &#39;&amp;gt;&#39;)
 &#125;
 // demo:
 HtmlEncode(&quot;&lt;html&gt;&lt;/html&gt;&quot;);    //&amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;</code></pre>
-<h3 id="16-还原html标签"><a href="#16-还原html标签" class="headerlink" title="16.还原html标签"></a>16.还原html标签</h3><pre><code>function HtmlDecode(text) &#123;
+<h3 id="16-还原-html-标签"><a href="#16-还原-html-标签" class="headerlink" title="16.还原 html 标签"></a>16.还原 html 标签</h3><pre><code>function HtmlDecode(text) &#123;
     return text.replace(/&amp;amp;/g, &#39;&amp;&#39;).replace(/&amp;quot;/g, &#39;\&quot;&#39;).replace(/&amp;lt;/g, &#39;&lt;&#39;).replace(/&amp;gt;/g, &#39;&gt;&#39;)
 &#125;
 // demo:
@@ -616,7 +616,7 @@ date.Format(&quot;YYYY-MM-DD&quot;);  //2013-11-08</code></pre>
 // demo:
 isDigit(&quot;sdf&quot;);     //false
 isDigit(12);        //true</code></pre>
-<h3 id="19-设置cookie值"><a href="#19-设置cookie值" class="headerlink" title="19.设置cookie值"></a>19.设置cookie值</h3><pre><code>function setCookie(name, value, Hours) &#123;
+<h3 id="19-设置-cookie-值"><a href="#19-设置-cookie-值" class="headerlink" title="19.设置 cookie 值"></a>19.设置 cookie 值</h3><pre><code>function setCookie(name, value, Hours) &#123;
     var d = new Date();
     var offset = 8;
     var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
@@ -625,10 +625,209 @@ isDigit(12);        //true</code></pre>
     exp.setTime(exp.getTime() + Hours * 60 * 60 * 1000);
     document.cookie = name + &quot;=&quot; + escape(value) + &quot;;path=/;expires=&quot; + exp.toGMTString() + &quot;;domain=xuanfengge.com;&quot;
 &#125;</code></pre>
-<h3 id="20-设置cookie值"><a href="#20-设置cookie值" class="headerlink" title="20.设置cookie值"></a>20.设置cookie值</h3><pre><code>function getCookie(name) &#123;
+<h3 id="20-设置-cookie-值"><a href="#20-设置-cookie-值" class="headerlink" title="20.设置 cookie 值"></a>20.设置 cookie 值</h3><pre><code>function getCookie(name) &#123;
     var arr = document.cookie.match(new RegExp(&quot;(^| )&quot; + name + &quot;=([^;]*)(;|$)&quot;));
     if (arr != null) return unescape(arr[2]);
     return null
+&#125;</code></pre>
+<h3 id="21-用户判断给定的对象是否是数组"><a href="#21-用户判断给定的对象是否是数组" class="headerlink" title="21 用户判断给定的对象是否是数组"></a>21 用户判断给定的对象是否是数组</h3><pre><code>function isArray(o)&#123;
+    return Object.prototype.toString.call(o)===&#39;[object Array]&#39;;
+&#125;
+// demo：
+isArray(&quot;str&quot;);  //false
+isArray([1,2]);  //true</code></pre>
+<h3 id="22-判断检查数组中是否存在某个值"><a href="#22-判断检查数组中是否存在某个值" class="headerlink" title="22.判断检查数组中是否存在某个值"></a>22.判断检查数组中是否存在某个值</h3><pre><code>Array.prototype.inArray = function(e) &#123;
+    for(i=0;i &lt; this.length;i++)
+    &#123;
+        if(this[i] == e)
+        return true;
+    &#125;
+    return false;
+&#125;
+// demo:
+[1,2].inArray(1);  //true</code></pre>
+<h3 id="23-用来显示或隐藏一个-DOM-元素"><a href="#23-用来显示或隐藏一个-DOM-元素" class="headerlink" title="23. 用来显示或隐藏一个 DOM 元素"></a>23. 用来显示或隐藏一个 DOM 元素</h3><pre><code>function toggle(obj)&#123;
+    var el = document.getElementById(obj);
+    if ( el.style.display != &#39;none&#39; ) &#123;
+        el.style.display = &#39;none&#39;;
+    &#125;
+    else &#123;
+        el.style.display = &#39;&#39;;
+    &#125;
+&#125;
+// demo:
+oDiv.onclick = toggle(&quot;id&quot;);</code></pre>
+<h3 id="24-加载样式文件"><a href="#24-加载样式文件" class="headerlink" title="24. 加载样式文件"></a>24. 加载样式文件</h3><pre><code>function LoadStyle(url) &#123;
+    try &#123;
+        document.createStyleSheet(url)
+    &#125; catch(e) &#123;
+        var cssLink = document.createElement(&#39;link&#39;);
+        cssLink.rel = &#39;stylesheet&#39;;
+        cssLink.type = &#39;text/css&#39;;
+        cssLink.href = url;
+        var head = document.getElementsByTagName(&#39;head&#39;)[0];
+        head.appendChild(cssLink)
+    &#125;
+&#125;
+// demo:
+LoadStyle(&quot;css/style.css&quot;);</code></pre>
+<h3 id="25-清除脚本内容"><a href="#25-清除脚本内容" class="headerlink" title="25. 清除脚本内容"></a>25. 清除脚本内容</h3><pre><code>function stripscript(s) &#123;
+    return s.replace(/&lt;script.*?&gt;.*?&lt;\/script&gt;/ig, &#39;&#39;);
+&#125;</code></pre>
+<h3 id="26-解析获取-URL-参数"><a href="#26-解析获取-URL-参数" class="headerlink" title="26. 解析获取 URL 参数"></a>26. 解析获取 URL 参数</h3><pre><code>function getUrlParm(url, parm)
+&#123;
+    var thisUrl=url;
+    var parmValue=&quot;&quot;;
+    var re=new RegExp(parm+&quot;=.*&quot;, &quot;i&quot;);
+    var mResult=re.exec(thisUrl);
+    if(mResult!=null)&#123;
+        mResult=mResult[0];
+        alert(mResult);
+        if(mResult.indexOf(&quot;&amp;&quot;)!=-1)
+            mResult=mResult.split(&quot;&amp;&quot;)[0];
+        alert(parm+&quot; value is &quot;+mResult.split(&quot;=&quot;)[1]);  //return mResult.split(&quot;=&quot;)[1];
+    &#125;
+&#125;
+// demo:
+getUrlParm(&quot;http://www.xuanfeng.com/login?user=chris&quot;,&quot;user&quot;);
+// user=chris
+// user value is chris</code></pre>
+<h3 id="27-判断是否为有效的数字"><a href="#27-判断是否为有效的数字" class="headerlink" title="27. 判断是否为有效的数字"></a>27. <strong>判断是否为有效的数字</strong></h3><pre><code>var i = 123; var str = &quot;string&quot;;
+if( typeof i == &quot;number&quot; )&#123; &#125; //true
+//某些方法(如:parseInt,parseFloat)会返回一个特殊的值NaN(Not a Number)
+//请注意第2点中的[注意],此方法不完全适合判断一个字符串是否是数字型!!
+i = parseInt(str);
+if( isNaN(i) )&#123; &#125;  //true</code></pre>
+<h3 id="28-获取时间的某部份"><a href="#28-获取时间的某部份" class="headerlink" title="28. 获取时间的某部份"></a>28. 获取时间的某部份</h3><pre><code>var myDate = new Date();
+myDate.getYear(); //获取当前年份(2位)
+myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+myDate.getMonth(); //获取当前月份(0-11,0代表1月)
+myDate.getDate(); //获取当前日(1-31)
+myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
+myDate.getTime(); //获取当前时间(从1970.1.1开始的毫秒数)
+myDate.getHours(); //获取当前小时数(0-23)
+myDate.getMinutes(); //获取当前分钟数(0-59)
+myDate.getSeconds(); //获取当前秒数(0-59)
+myDate.getMilliseconds(); //获取当前毫秒数(0-999)
+myDate.toLocaleDateString(); //获取当前日期
+myDate.toLocaleTimeString(); //获取当前时间
+myDate.toLocaleString( ); //获取日期与时间</code></pre>
+<h3 id="29-事件源对象"><a href="#29-事件源对象" class="headerlink" title="29. 事件源对象"></a>29. 事件源对象</h3><pre><code>event.srcElement.tagName
+event.srcElement.type
+
+// 捕获释放
+event.srcElement.setCapture();
+event.srcElement.releaseCapture();
+
+// 事件按键
+event.keyCode
+event.shiftKey
+event.altKey
+event.ctrlKey
+
+// 事件返回值
+event.returnValue
+
+// 鼠标位置
+event.x
+event.y</code></pre>
+<h3 id="30-元素显示的通用方法"><a href="#30-元素显示的通用方法" class="headerlink" title="30 . 元素显示的通用方法"></a>30 . 元素显示的通用方法</h3><pre><code>function $(id) &#123;
+    return !id ? null : document.getElementById(id);
+&#125;
+function display(id) &#123;
+    var obj = $(id);
+    if(obj.style.visibility) &#123;
+        obj.style.visibility = obj.style.visibility == &#39;visible&#39; ? &#39;hidden&#39; : &#39;visible&#39;;
+    &#125; else &#123;
+        obj.style.display = obj.style.display == &#39;&#39; ? &#39;none&#39; : &#39;&#39;;
+    &#125;
+&#125;</code></pre>
+<h3 id="31-将字符串转换成-URL-编码"><a href="#31-将字符串转换成-URL-编码" class="headerlink" title="31. 将字符串转换成 URL 编码"></a>31. 将字符串转换成 URL 编码</h3><pre><code>var myString = &quot;hello all&quot;;
+var code = encodeURI(myString); //结果: &quot;hello%20all&quot;
+var str = decodeURI(code); //结果: &quot;hello all&quot;</code></pre>
+<p><code>相应的还有: encodeURIComponent() decodeURIComponent()</code></p>
+<h3 id="32-将字符转换成-Unicode-编码"><a href="#32-将字符转换成-Unicode-编码" class="headerlink" title="32. 将字符转换成 Unicode 编码"></a>32. 将字符转换成 Unicode 编码</h3><pre><code>var myString = &quot;hello&quot;;
+var code = myString.charCodeAt(3); //返回&quot;l&quot;的Unicode编码(整型)
+var char = String.fromCharCode(66); //返回Unicode为66的字符</code></pre>
+<h3 id="33-光标停在文字的后面，文本框获得焦点时调用"><a href="#33-光标停在文字的后面，文本框获得焦点时调用" class="headerlink" title="33. 光标停在文字的后面，文本框获得焦点时调用"></a>33. 光标停在文字的后面，文本框获得焦点时调用</h3><pre><code>function focusLast()&#123;
+    var e = event.srcElement;
+    var r =e.createTextRange();
+    r.moveStart(&#39;character&#39;,e.value.length);
+    r.collapse(true);
+    r.select();
+&#125;</code></pre>
+<h3 id="34-检验-URL-链接是否有效"><a href="#34-检验-URL-链接是否有效" class="headerlink" title="34. 检验 URL 链接是否有效"></a>34. 检验 URL 链接是否有效</h3><pre><code>function getUrlState(URL)&#123;
+    var xmlhttp = new ActiveXObject(&quot;microsoft.xmlhttp&quot;);
+    xmlhttp.Open(&quot;GET&quot;,URL, false);
+    try&#123;
+        xmlhttp.Send();
+    &#125;catch(e)&#123;
+    &#125;finally&#123;
+        var result = xmlhttp.responseText;
+        if(result)&#123;
+            if(xmlhttp.Status==200)&#123;
+                return(true);
+            &#125;else&#123;
+                return(false);
+            &#125;
+        &#125;else&#123;
+            return(false);
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h3 id="35-格式化-CSS-样式代码"><a href="#35-格式化-CSS-样式代码" class="headerlink" title="35. 格式化 CSS 样式代码"></a>35. 格式化 CSS 样式代码</h3><pre><code>function formatCss(s)&#123;//格式化代码
+    s = s.replace(/\s*([\&#123;\&#125;\:\;\,])\s*/g, &quot;$1&quot;);
+    s = s.replace(/;\s*;/g, &quot;;&quot;); //清除连续分号
+    s = s.replace(/\,[\s\.\#\d]*&#123;/g, &quot;&#123;&quot;);
+    s = s.replace(/([^\s])\&#123;([^\s])/g, &quot;$1 &#123;\n\t$2&quot;);
+    s = s.replace(/([^\s])\&#125;([^\n]*)/g, &quot;$1\n&#125;\n$2&quot;);
+    s = s.replace(/([^\s]);([^\s\&#125;])/g, &quot;$1;\n\t$2&quot;);
+    return s;
+&#125;</code></pre>
+<h3 id="36-压缩-CSS-样式代码"><a href="#36-压缩-CSS-样式代码" class="headerlink" title="36. 压缩 CSS 样式代码"></a>36. 压缩 CSS 样式代码</h3><pre><code>function yasuoCss (s) &#123;//压缩代码
+    s = s.replace(/\/\*(.|\n)*?\*\//g, &quot;&quot;); //删除注释
+    s = s.replace(/\s*([\&#123;\&#125;\:\;\,])\s*/g, &quot;$1&quot;);
+    s = s.replace(/\,[\s\.\#\d]*\&#123;/g, &quot;&#123;&quot;); //容错处理
+    s = s.replace(/;\s*;/g, &quot;;&quot;); //清除连续分号
+    s = s.match(/^\s*(\S+(\s+\S+)*)\s*$/); //去掉首尾空白
+    return (s == null) ? &quot;&quot; : s[1];
+&#125;</code></pre>
+<h3 id="37-获取当前路径"><a href="#37-获取当前路径" class="headerlink" title="37. 获取当前路径"></a>37. 获取当前路径</h3><pre><code>var currentPageUrl = &quot;&quot;;
+if (typeof this.href === &quot;undefined&quot;) &#123;
+    currentPageUrl = document.location.toString().toLowerCase();
+&#125;
+else &#123;
+    currentPageUrl = this.href.toString().toLowerCase();
+&#125;</code></pre>
+<h3 id="38-IP-转成整型"><a href="#38-IP-转成整型" class="headerlink" title="38. IP 转成整型"></a>38. IP 转成整型</h3><pre><code>function _ip2int(ip)&#123;
+    var num = 0;
+    ip = ip.split(&quot;.&quot;);
+    num = Number(ip[0]) * 256 * 256 * 256 + Number(ip[1]) * 256 * 256 + Number(ip[2]) * 256 + Number(ip[3]);
+    num = num &gt;&gt;&gt; 0;
+    return num;
+&#125;</code></pre>
+<h3 id="39-整型解析为-IP-地址"><a href="#39-整型解析为-IP-地址" class="headerlink" title="39. 整型解析为 IP 地址"></a>39. 整型解析为 IP 地址</h3><pre><code>function _int2iP(num)&#123;
+    var str;
+    var tt = new Array();
+    tt[0] = (num &gt;&gt;&gt; 24) &gt;&gt;&gt; 0;
+    tt[1] = ((num &lt;&lt; 8) &gt;&gt;&gt; 24) &gt;&gt;&gt; 0;
+    tt[2] = (num &lt;&lt; 16) &gt;&gt;&gt; 24;
+    tt[3] = (num &lt;&lt; 24) &gt;&gt;&gt; 24;
+    str = String(tt[0]) + &quot;.&quot; + String(tt[1]) + &quot;.&quot; + String(tt[2]) + &quot;.&quot; + String(tt[3]);
+    return str;
+&#125;</code></pre>
+<h3 id="40-实现-checkbox-全选与全不选"><a href="#40-实现-checkbox-全选与全不选" class="headerlink" title="40. 实现 checkbox 全选与全不选"></a>40. 实现 checkbox 全选与全不选</h3><pre><code>function checkAll() &#123;
+    var selectall = document.getElementById(&quot;selectall&quot;);
+    var allbox = document.getElementsByName(&quot;allbox&quot;);
+    if (selectall.checked) &#123;
+        for (var i = 0; i &lt; allbox.length; i++) &#123;
+            allbox[i].checked = true;
+        &#125;
+    &#125; else &#123;
+        for (var i = 0; i &lt; allbox.length; i++) &#123;
+            allbox[i].checked = false;
+        &#125;
+    &#125;
 &#125;</code></pre>
 <p>来源:<a target="_blank" rel="noopener" href="https://www.xuanfengge.com/">轩枫阁</a></p>
 
@@ -694,12 +893,12 @@ isDigit(12);        //true</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
-                                </a>
-                            
                                 <a href="/tags/%E7%AC%94%E8%AE%B0/">
                                     <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/JS%E6%89%8B%E8%AE%B0/">
+                                    <span class="chip bg-color">JS手记</span>
                                 </a>
                             
                         </div>
