@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="史上最全前端面试题, 博客">
+    <meta name="keywords" content="12个花里胡哨的CSS炫酷案例！（附源码）, 博客">
     <meta name="description" content="Charles的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>史上最全前端面试题 | Charles的博客</title>
+    <title>12个花里胡哨的CSS炫酷案例！（附源码） | Charles的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -239,12 +239,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">史上最全前端面试题</h1>
+                    <h1 class="description center-align post-title">12个花里胡哨的CSS炫酷案例！（附源码）</h1>
                 </div>
             </div>
         </div>
@@ -361,8 +361,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                <span class="chip bg-color">面试题</span>
+                            <a href="/tags/%E6%BA%90%E7%A0%81/">
+                                <span class="chip bg-color">源码</span>
+                            </a>
+                        
+                            <a href="/tags/css/">
+                                <span class="chip bg-color">css</span>
                             </a>
                         
                     </div>
@@ -373,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
-                                面试题
+                            <a href="/categories/css/" class="post-category">
+                                css
                             </a>
                         
                     </div>
@@ -400,7 +404,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.5k
+                    5.2k
                 </div>
                 
 
@@ -417,553 +421,769 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Vue-面试题"><a href="#Vue-面试题" class="headerlink" title="Vue 面试题"></a><strong>Vue 面试题</strong></h2><p><strong>生命周期函数面试题</strong></p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上个礼拜看了许多关于平面构成的资料，我就边用 CSS 画了一些类似背景图案的玩意儿。这里给大家选了 12 种，从观察者的角度由易到难的给大家解一下思路。</p>
+<p>*<strong>*预警，本文没有对基础知识的详解，不过推荐一边看文章实践一边学习，效率更高。**</strong></p>
+<h2 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h2><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/640.gif"></p>
+<h2 id="分析顺序介绍"><a href="#分析顺序介绍" class="headerlink" title="分析顺序介绍"></a>分析顺序介绍</h2><p>粗略看过效果之后，我们按照图案种元素的多少及元素变异程度、动画难易程度、有无头绪等因素给文章小节排一个序，顺序见下图。每小节都有源码，你可以通过标题直接跳转到你想看的图案。</p>
+<p><strong>图片下载 : 右键此图片另存为可保存此图片</strong><br><img src="/images/640.jpg"></p>
+<h3 id="1-圆环变形"><a href="#1-圆环变形" class="headerlink" title="1.圆环变形"></a>1.圆环变形</h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/yuanhuan.gif"></p>
+<pre><code>
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;node&quot; v-for=&quot;item in 100&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;style&gt;
+    // 其余所有图案的 card 类标签都套用了这段样式，为了减少文章长度，下略。
+    .card &#123;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    &#125;
+&lt;/style&gt;</code></pre>
+<p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/yuanhuan.jpg"></p>
+<p>通过图片动画效果，我们大致得出动画变化的模式。</p>
 <ul>
-<li>1.什么是 vue 生命周期</li>
-<li>2.vue 生命周期的作用是什么</li>
-<li>3.第一次页面加载会触发哪几个钩子</li>
-<li>4.简述每个周期具体适合哪些场景</li>
-<li>5.created 和 mounted 的区别</li>
-<li>6.vue 获取数据在哪个周期函数</li>
-<li>7.请详细说下你对 vue 生命周期的理解？</li>
+<li><p>有部分圆环变形成两个圆环的长度，并改变了底色。</p>
+<p>观察变长圆环的顺序，能发现“每逢三就变长”这种规律，推测使用了 :nth-child(3) 选择器。</p>
+</li>
 </ul>
-<p><strong>vue 路由面试题</strong></p>
+<p>下面是 CSS 源码。</p>
+<pre><code>
+.card &#123;
+    justify-content: flex-start;
+    overflow: hidden;
+    cursor: pointer;
+
+    // 每逢三个元素，则执行动画，源代码和我们分析的动画的顺序相反，圆环是从长变短，不过不影响
+    .node &#123;
+      border: solid 5px #F29338;
+      border-radius: 50%;
+
+
+      &amp;:nth-child(3n) &#123;
+        width: 40px;
+        flex-basis: 40px;
+        background: #F8C798;
+        animation: change-circle-width 2s ease alternate infinite;
+      &#125;
+    &#125;
+  &#125;
+
+  @keyframes change-circle-width &#123;
+    from &#123;
+      width: 40px;
+      flex-basis: 40px;
+      background: #F8C798;
+    &#125;
+    60% &#123;
+      width: 20px;
+      flex-basis: 20px;
+      background: transparent;
+    &#125;
+    // 动画 60% - 100% 这段时间，属性没有变动，所以图案看起来像是静止的。
+    to &#123;
+      width: 20px;
+      flex-basis: 20px;
+      background: transparent;
+    &#125;
+  &#125;</code></pre>
+<h3 id="2-厕所里的瓷砖"><a href="#2-厕所里的瓷砖" class="headerlink" title="2. 厕所里的瓷砖"></a><strong>2. 厕所里的瓷砖</strong></h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/cesuo.gif"></p>
+<pre><code>&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;node&quot; v-for=&quot;item in 100&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>和上一张图思路类似，只是多出了一些圆形小球。</p>
 <ul>
-<li>1.mvvm 框架是什么？</li>
-<li>2.vue-router 是什么?它有哪些组件</li>
-<li>3.active-class 是哪个组件的属性？</li>
-<li>4.怎么定义 vue-router 的动态路由? 怎么获取传过来的值</li>
-<li>5.vue-router 有哪几种导航钩子?</li>
-<li>6.route 和 router 的区别</li>
-<li>7.vue-router 响应路由参数的变化</li>
-<li>8.vue-router 传参</li>
-<li>9.vue-router 的两种模式</li>
-<li>10.vue-router 实现路由懒加载（ 动态加载路由 ）</li>
+<li><p>小球的动画应该包含位置的偏移和颜色、透明度的改变。</p>
+</li>
+<li><p>当鼠标悬浮时（注意图片右下角的鼠标手势），图中多了一排小圆球，样式和行为和前一排原球几乎一样。</p>
+<p>推测第二排圆球使用了 animation-delay 效果。</p>
+</li>
+<li><p>观察小球的个数，欸？貌似有些问题，圆形小球数量和瓷砖数量对不上。应该是对小球的显隐的顺序做了特殊处理。</p>
+</li>
 </ul>
-<p><strong>vue 常见面试题</strong></p>
+<p>下面是 CSS 源码。</p>
+<pre><code> .card &#123;
+    cursor: pointer;
+
+    // 鼠标悬浮时显示第二排的小圆球
+    &amp;:hover &#123;
+      .node &#123;
+        &amp;:nth-child(2n)::after &#123;
+          visibility: unset;
+        &#125;
+      &#125;
+    &#125;
+
+    .node &#123;
+      background: #71A2DB;
+      outline: solid 1px white;
+
+      // 3n-1，3n+1 一起使用时等价于 3n
+      &amp;:nth-child(3n-1),
+      &amp;:nth-last-child(3n+1) &#123;
+        background: #C2D7F0;
+      &#125;
+
+      // 去除末行及每行末尾的伪元素
+      &amp;:nth-child(10n)::after,
+      &amp;:nth-last-child(-n+10)::after &#123;
+        display: none;
+      &#125;
+
+      &amp;::after &#123;
+        left: 75%;
+        top: 75%;
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        background: white;
+        animation: card-4-circle-move 1s linear alternate infinite;
+      &#125;
+      &amp;:nth-child(2n)::after &#123;
+        animation: card-4-circle-move-delay 1s linear alternate infinite;
+        animation-delay: .3s;
+        visibility: hidden;
+      &#125;
+    &#125;
+  &#125;
+
+  @keyframes card-4-circle-move &#123;
+    from &#123;
+      left: 45%;
+      top: 45%;
+      opacity: 1;
+      background: white;
+    &#125;
+    to &#123;
+      left: 130%;
+      top: 130%;
+      opacity: 0;
+      background: #F2C07D;
+    &#125;
+  &#125;
+  @keyframes card-4-circle-move-delay &#123;
+    from &#123;
+      left: 45%;
+      top: 45%;
+      opacity: 1;
+      background: #F2C07D;
+      z-index: 2;
+    &#125;
+    to &#123;
+      left: 130%;
+      top: 130%;
+      opacity: 0;
+      background: white;
+    &#125;
+  &#125;</code></pre>
+<h3 id="3-三角与圆球印花"><a href="#3-三角与圆球印花" class="headerlink" title="3.三角与圆球印花"></a>3.三角与圆球印花</h3><pre><code>&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;node&quot; v-for=&quot;item in 100&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>乍一眼看，用每个节点的伪元素画一个圆形和一个三角形就完成了这张图。</p>
+<p>其实并不对，先别往下翻答案，想想为什么。</p>
+<p>答案分割线，小心越界：</p>
+<hr>
+<p>观察图案和 HTML 代码：</p>
 <ul>
-<li>1.vue 优点</li>
-<li>2.vue 父组件向子组件传递数据？</li>
-<li>3.子组件像父组件传递事件</li>
-<li>4.v-show 和 v-if 指令的共同点和不同点</li>
-<li>5.如何让 CSS 只在当前组件中起作用</li>
-<li>6.的作用是什么?</li>
-<li>7.如何获取 dom</li>
-<li>8.说出几种 vue 当中的指令和它的用法？</li>
-<li>9.vue-loader 是什么？使用它的用途有哪些？</li>
-<li>10.为什么使用 key</li>
-<li>11.axios 及安装</li>
-<li>12.axios 解决跨域</li>
-<li>13.v-modal 的使用</li>
-<li>14.scss 的安装以及使用</li>
-<li>15.请说出 vue.cli 项目中 src 目录每个文件夹和文件的用法？</li>
-<li>16.分别简述 computed 和 watch 的使用场景</li>
-<li>17.v-on 可以监听多个方法吗</li>
-<li>18.$nextTick 的使用</li>
-<li>19.vue 组件中 data 为什么必须是一个函数</li>
-<li>20.vue 事件对象的使用</li>
-<li>21 组件间的通信</li>
-<li>22.渐进式框架的理解</li>
-<li>23.Vue 中双向数据绑定是如何实现的</li>
-<li>24.单页面应用和多页面应用区别及优缺点</li>
-<li>25.vue 中过滤器有什么作用及详解</li>
-<li>26.v-if 和 v-for 的优先级</li>
-<li>27.assets 和 static 的区别</li>
-<li>28.列举常用的指令</li>
-<li>29.vue 常用的修饰符</li>
-<li>30.数组更新检测</li>
-<li>31.Vue.set 视图更新</li>
-<li>32.自定义指令详解</li>
-<li>33.vue 的两个核心点</li>
-<li>34.vue 和 jQuery 的区别</li>
-<li>35 引进组件的步骤</li>
-<li>36.Vue-cli 打包命令是什么？打包后悔导致路径问题，应该在哪里修改</li>
-<li>37.三大框架的对比</li>
-<li>38.跨组件双向数据绑定</li>
-<li>39.delete 和 Vue.delete 删除数组的区别</li>
-<li>40.SPA 首屏加载慢如何解决</li>
-<li>41.Vue-router 跳转和 location.href 有什么区别</li>
-<li>42.vue slot</li>
-<li>43.你们 vue 项目是打包了一个 js 文件，一个 css 文件，还是有多个文件？</li>
-<li>44.vue 遇到的坑，如何解决的？</li>
-<li>45.Vue 里面 router-link 在电脑上有用，在安卓上没反应怎么解决？</li>
-<li>46.Vue2 中注册在 router-link 上事件无效解决方法</li>
-<li>47.RouterLink 在 IE 和 Firefox 中不起作用（路由不跳转）的问题</li>
-<li>48.axios 的特点有哪些</li>
-<li>49.请说下封装 vue 组件的过程？</li>
-<li>50.vue 各种组件通信方法（父子 子父 兄弟 爷孙 毫无关系的组件）</li>
-<li>51.params 和 query 的区别</li>
-<li>52.vue mock 数据</li>
-<li>53 vue 封装通用组件</li>
-<li>54.vue 初始化页面闪动问题</li>
-<li>55.vue 禁止弹窗后的屏幕滚动</li>
-<li>56.vue 更新数组时触发视图更新的方法</li>
-<li>57.vue 常用的 UI 组件库</li>
-<li>58.vue 如何引进本地背景图片</li>
-<li>59.vue 如何引进 sass</li>
-<li>60.vue 修改打包后静态资源路径的修改</li>
+<li><p>从每行来看，每行有 10 个三角形，但是每行有 9 个圆+2 个半圆。</p>
+<p>猜测圆形是由半圆组装的，再结合纵向观测，可以推测圆形是由 4 个 1/4 圆组成的。</p>
+<p>但是用伪元素没有办法画 1/4 圆。思路不对，再换个思路。</p>
+<p>猜测伪元素是一个整圆，利用 Box-Shadow 复制了 4 份，分别放在了正方形四个角落。.card 或是 .node 使用 overflow 裁剪掉多余元素。</p>
+</li>
+<li><p>再看三角形。</p>
+<p>三角形的画法比较常见，可以用透明 Border + 带颜色的 Border 绘制。</p>
+<p>三角形的角度变化很有规律，可以大致推测，旋转角度和列数有关。</p>
+</li>
 </ul>
-<p><strong>vuex 常见面试题</strong></p>
+<pre><code>.card &#123;
+    overflow: hidden;
+    cursor: pointer;
+
+    // 根据三角形的序号与10的模来确定旋转角度
+    @for $i from 0 through 9 &#123;
+    .node:nth-child(10n - #&#123;$i&#125;)::before &#123;
+        transform: rotate((-19 + $i) + unquote(&#39;deg&#39;));
+    &#125;
+    &#125;
+
+    // 上面那串函数编译出来就成了下面这一长串模样
+    // .node:nth-child(10n)::before &#123;
+    //   transform: rotate(-19deg);
+    // &#125;
+    // .node:nth-child(10n-1)::before &#123;
+    //   transform: rotate(-18deg);
+    // &#125;
+    // .node:nth-child(10n-2)::before &#123;
+    //   transform: rotate(-17deg);
+    // &#125;
+    // .node:nth-child(10n-3)::before &#123;
+    //   transform: rotate(-16deg);
+    // &#125;
+    // .node:nth-child(10n-4)::before &#123;
+    //   transform: rotate(-15deg);
+    // &#125;
+    // .node:nth-child(10n-5)::before &#123;
+    //   transform: rotate(-14deg);
+    // &#125;
+    // .node:nth-child(10n-6)::before &#123;
+    //   transform: rotate(-13deg);
+    // &#125;
+    // .node:nth-child(10n-7)::before &#123;
+    //   transform: rotate(-12deg);
+    // &#125;
+    // .node:nth-child(10n-8)::before &#123;
+    //   transform: rotate(-11deg);
+    // &#125;
+    // .node:nth-child(10n-9)::before &#123;
+    //   transform: rotate(-10deg);
+    // &#125;
+
+    .node &#123;
+    background: #F5C1CB;
+    filter: saturate(1.6);
+
+    // 通过伪元素 Border 绘制的三角形
+    &amp;::before &#123;
+        left: 0;
+        top: -8px;
+        border: solid 10px transparent;
+        border-bottom-color: #D2F3BF;
+        z-index: 1;
+    &#125;
+
+    // 使用 Box-Shadow 属性，将圆形复制了额外的三份
+    &amp;::after &#123;
+        left: -5px;
+        top: -5px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #FBF5C5;
+        z-index: 0;
+        box-shadow: 20px 0 #FBF5C5, 20px 20px #FBF5C5, 0 20px #FBF5C5;
+    &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="4-瓷砖变异"><a href="#4-瓷砖变异" class="headerlink" title="4.瓷砖变异"></a>4.瓷砖变异</h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/cizhuan.gif"></p>
+<pre><code> &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;node&quot; v-for=&quot;item in 100&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>这张图应该大体上来说比较简单。需要额外注意的是，那些特殊颜色的圆出现的位置。</p>
 <ul>
-<li>1.vuex 是什么？怎么使用？哪种功能场景使用它？</li>
-<li>2.vuex 有哪几种属性</li>
-<li>3.不使用 Vuex 会带来什么问题</li>
-<li>4.Vue.js 中 ajax 请求代码应该写在组件的 methods 中还是 vuex 的 actions 中？</li>
-<li>5.vuex 一个例子方法</li>
-<li>6.Vuex 中如何异步修改状态</li>
-<li>7.Vuex 中 actions 和 mutations 的区别</li>
+<li><p>观察鼠标移动时格子的缩放，可以推测每个格子由 4 个 1/4 圆和一个十字组成。</p>
+<p>十字好处理，由 2*2 像素的伪元素通过 Box-Shadow 复制即可完成。</p>
+<p>根据 1/4 圆可推测每个格子都有 overflow: hidden 样式。</p>
+</li>
+<li><p>特殊颜色的圆有多种可能的实现方法。</p>
+<p>第一，在 Scss 编译时，调用随机函数，给这些随机位置圆改变颜色就好。</p>
+<p>第二，使用蝉原则或类似方式实现 CSS 伪随机。</p>
+</li>
 </ul>
-<p><strong>vue 项目实战</strong></p>
+<p>害~ 这里直接上源码。</p>
+<pre><code> card &#123;
+    .node &#123;
+      background: #EE92A5;
+      overflow: hidden;
+      transition: .3s;
+      cursor: pointer;
+
+      // 鼠标在格子上悬浮时的放大效果
+      &amp;:hover &#123;
+        transform: scale(1.4);
+      &#125;
+
+      // 十字线的构成
+      &amp;::before &#123;
+        left: 8px;
+        top: 8px;
+        width: 2px;
+        height: 2px;
+        background: white;
+        z-index: 0;
+        box-shadow: 0 2px white, 2px 0 white, -2px 0 white, 0 -2px white;
+      &#125;
+
+      // 圆形的构成
+      &amp;::after &#123;
+        left: -8px;
+        top: -8px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #F8C798;
+        z-index: 0;
+        box-shadow: 20px 0 #F8C798, 20px 20px #F8C798, 0 20px #F8C798;
+      &#125;
+
+      // CSS 伪随机给特定元素设置特殊色。在实践时，可以自己调整以下参数，以达到想要的效果。
+      &amp;:nth-child(2n)::after &#123;
+        background: #E03A5C;
+      &#125;
+      &amp;:nth-child(3n-1)::after,
+      &amp;:nth-child(3n)::after,
+      &amp;:nth-child(5n)::after,
+      &amp;:nth-child(6n)::after,
+      &amp;:nth-child(7n-3)::after &#123;
+        background: #F8C798
+      &#125;
+    &#125;
+  &#125;</code></pre>
+<h3 id="5-山与云"><a href="#5-山与云" class="headerlink" title="5. 山与云"></a>5. 山与云</h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/shanyuyun.gif"></p>
+<pre><code>  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;node&quot; v-for=&quot;item in 100&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>这个图案，嘛… 讲道理，这谁看的出来是啥玩意儿嘛！其实我心里想，要不是玩意儿是自己画的，我估摸着自己也看不透这图案<del>（红尘）</del>，不过下面还是正经扒一下。</p>
 <ul>
-<li>1.顶部悬停效果</li>
-<li>2.电话本列表效果（ 右边字母分类 上下滑动 旁边字母显示高亮）</li>
-<li>3.vue 做代理</li>
-<li>4.Vue 路由切换时的左滑和右滑效果示例</li>
+<li><p>三角形，好办，用伪元素画。至于颜色么，可以仿照上一张图片的 CSS 伪随机的思路。至于山的动画，不好确定是山在动还是说山在跟随其它元素动。</p>
+</li>
+<li><p>再看横线，欸不对，这图里怎么有这么多横线竖线，到底哪一个伪元素哪一个又不是，害…</p>
+<p>猜测，横线竖线是格子的 Outline。不对，Outline 只能是正方形的。</p>
+<p>那会不会是 Border 呢？能从观察得出，这些横线的边缘又半透明像素，再结合三角形可有 Border 绘制而成，推测，横线竖线是圆角矩形格子的 Border，被形成三角形的伪元素的白色 Border 遮挡而消失了一部分。</p>
+</li>
+<li><p>继续观察线条，发现有的横线会消失，有的横线只会缩短而不会消失，所有竖线都只会缩短不会消失。</p>
+<p>根据竖线变长时，一定伴随着横线的缩短或消失，推测，格子在经历高度的变化，而不是位移。继续推测，三角形可能是跟随格子一起运动。</p>
+<p>再根据垂直方向两座山之间的横线和山的运动趋势是一样的，推测，图中横线是格子的上边而不是下边，下边都被遮住了。</p>
+<p>猜测山把格子的下边遮住了，但这与实际观察不符，因为，山在向上运动时，竖线的伸缩有伸缩。格子的边的一部分的消失并不是构成山的伪元素的 Border 遮挡而成的，而是另一个伪元素，大致也是矩形。</p>
+</li>
+<li><p>我们可以大概构成这副图案了：格子被束缚在了 align-items: center 的 Flex 布局中，三角形以及另一个类似矩形的伪元素随着格子的运动而运动。</p>
+</li>
 </ul>
-<h2 id="ES6-面试题"><a href="#ES6-面试题" class="headerlink" title="ES6 面试题"></a><strong>ES6 面试题</strong></h2><p><strong>ES6 新增方法面试题</strong></p>
+<p>嘛… 长吁一口气，要是上面没看懂的话，还是看下面这张图构好了。这是去掉白色遮罩物的样子。</p>
+<p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/shanyuyun.jpg"></p>
+<p>（谁帮我命个名儿）</p>
+<p>以下是 CSS 源码。</p>
+<pre class=" language-.card"><code class="language-.card">
+.card &#123;
+    cursor: pointer;
+
+    // 横线与竖线并不是节点的 Border，而是背景色+遮罩形成的
+    // 格子会根据动画在高度上变化
+    .node &#123;
+      background: #A45963;
+      border-radius: 90%;
+      animation: card-1 .4s ease alternate infinite;
+
+      // 格子动画延迟处理
+      &:nth-child(2n) &#123;
+        animation-delay: .2s;
+      &#125;
+      &:nth-child(3n) &#123;
+        animation-delay: .3s;
+      &#125;
+      &:nth-child(4n) &#123;
+        animation-delay: .3s;
+      &#125;
+
+      // 山的颜色处理
+      &:nth-child(2n)::before &#123;
+        border-bottom-color: #F5CB6C;
+      &#125;
+      &:nth-child(3n)::before &#123;
+        border-bottom-color: #F5856C;
+      &#125;
+      &:nth-child(4n)::before,
+      &:nth-child(5n)::before,
+      &:nth-child(6n)::before,
+      &:nth-child(7n)::before,
+      &:nth-child(8n)::before,
+      &:nth-child(9n)::before,
+      &:nth-child(10n)::before &#123;
+        border-bottom-color: #D2F3BF;
+      &#125;
+
+      // 山的构成
+      &::before &#123;
+        left: 0;
+        top: -5px;
+        border: solid 10px transparent;
+        border-bottom-color: #D2F3BF;
+        z-index: 2;
+      &#125;
+
+      // 白色遮罩
+      &::after &#123;
+        left: 1px;
+        top: 1px;
+        width: 19px;
+        height: 18px;
+        background: white;
+      &#125;
+
+      // 这是一个特殊处理，为了让白色遮罩长度减少1像素以显示每行格子的背景颜色的最后一列像素
+      &:nth-child(10n)::after &#123;
+        width: 18px;
+      &#125;
+    &#125;
+  &#125;
+
+  @keyframes card-1 &#123;
+    from &#123;
+      height: 19px;
+    &#125;
+    to &#123;
+      height: 8px;
+    &#125;
+  &#125;</code></pre>
+<h3 id="6-冰崖上生长的仙人掌"><a href="#6-冰崖上生长的仙人掌" class="headerlink" title="6. 冰崖上生长的仙人掌"></a>6. 冰崖上生长的仙人掌</h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/bingyashangshengzhangdexianrenzhang.gif"></p>
+<pre><code>&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;node&quot; v-for=&quot;item in 100&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>这张图比较简单。</p>
 <ul>
-<li>1.let const var 比较</li>
-<li>2.反引号（`）标识</li>
-<li>3.函数默认参数</li>
-<li>4.箭头函数</li>
-<li>5.属性简写</li>
-<li>6.方法简写</li>
-<li>7.Object.keys()方法，获取对象的所有属性名或方法名</li>
-<li>8.Object.assign ()原对象的属性和方法都合并到了目标对象</li>
-<li>9.for…of 循环</li>
-<li>10.import 和 export</li>
-<li>11.Promise 对象</li>
-<li>12.解构赋值</li>
-<li>13.set 数据结构（可用于快速去重）</li>
-<li>14.Spread Operator 展开运算符(…)</li>
-<li>15.字符串新增方法</li>
+<li><p>易知格子由横线和虚线及背景颜色组成。</p>
+<p>易知圆柱状的“仙人掌”是每个格子单独控制裁切得来。</p>
+<p>半圆形到正方形变化的动画可以由 Clip-Path 属性裁切得来，推测竖线和横线分别是一种伪元素绘制。</p>
+</li>
 </ul>
-<p><strong>ES6 数组面试题</strong></p>
+<p>以下是 CSS 源码。</p>
+<pre><code>.card &#123;
+    .node &#123;
+      background: #71A2DB;
+
+      // 部分仙人掌添加动画
+      &amp;:nth-child(3n)::after,
+      &amp;:nth-child(3n+2)::after,
+      &amp;:nth-child(5n-3)::after,
+      &amp;:nth-child(6n-2)::after,
+      &amp;:nth-child(7n+1)::after &#123;
+        animation: card-7-grow .6s ease alternate infinite;
+      &#125;
+
+      // 一部分仙人掌不需要添加动画
+      &amp;:nth-child(3n-1)::after,
+      &amp;:nth-child(3n)::after,
+      &amp;:nth-child(5n)::after,
+      &amp;:nth-child(6n)::after,
+      &amp;:nth-child(7n-3)::after &#123;
+        clip-path: circle(75% at 0 50%);
+        animation: none;
+      &#125;
+
+      // 这里使用的是背景色 + Box-Shadow 画线。也可以使用 Border + Box-Shadow 画线
+      &amp;::before &#123;
+        top: 1px;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+        background: white;
+        box-shadow: 0 2px white, 0 4px white, 0 6px white, 0 8px white, 0 10px white, 0 12px white, 0 14px white, 0 16px white, 0 18px white;
+      &#125;
+      &amp;::after &#123;
+        top: 0;
+        left: 1px;
+        width: 1px;
+        height: 100%;
+        background: white;
+        box-shadow: 2px 0 white, 4px 0 white, 6px 0 white, 8px 0 white, 10px 0 white, 12px 0 white, 14px 0 white, 16px 0 white, 18px 0 white;
+        transition: .6s;
+      &#125;
+    &#125;
+
+    // 鼠标悬浮时显示所有的线条（为了使 Clip-Path 有过渡效果，这里不能直接去掉属性，而是要换一个较大的值）
+    &amp;:hover &#123;
+      .node &#123;
+        &amp;::after &#123;
+          animation: none;
+          clip-path: circle(150% at 0% 50%);
+        &#125;
+      &#125;
+    &#125;
+  &#125;
+
+  @keyframes card-7-grow &#123;
+    from &#123;
+      clip-path: circle(50% at 0 50%);
+    &#125;
+    50% &#123;
+      clip-path: circle(50% at 0 50%);
+    &#125;
+    to &#123;
+      clip-path: circle(150% at 0 50%);
+    &#125;
+  &#125;</code></pre>
+<h3 id="7-No-Name-2"><a href="#7-No-Name-2" class="headerlink" title="7. No Name 2"></a><strong>7. No Name 2</strong></h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/noName.jpg"></p>
+<p>这个玩意儿是上一张图的升级版本，误导可能在会猜测伪元素是点，而不是线，然后用空出的一个伪元素去构造菱形格子内其它东西。</p>
+<pre><code>.card:nth-child(8) &#123;
+    .node &#123;
+      border: solid 8px #71A2DB;
+      border-top: 0;
+      border-left: 0;
+      background: #71A2DB;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
+      transition: .3s;
+      cursor: pointer;
+
+      // 给一部分格子去掉 Border
+      &amp;:nth-child(3n-1),
+      &amp;:nth-child(3n),
+      &amp;:nth-child(5n),
+      &amp;:nth-child(6n),
+      &amp;:nth-child(7n-3) &#123;
+        border: none;
+        clip-path: circle(50%);
+
+        &amp;:hover &#123;
+          clip-path: circle(30%);
+        &#125;
+      &#125;
+
+      // 将一部分格子裁剪为菱形区域。Clip-Path 四个值对应菱形四个顶点位置。
+      &amp;:nth-child(2n),
+      &amp;:nth-child(3n) &#123;
+        border: solid 8px #CCDDF2;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
+      &#125;
+
+      &amp;::before &#123;
+        top: 1px;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+        background: white;
+        box-shadow: 0 2px white, 0 4px white, 0 6px white, 0 8px white, 0 10px white, 0 12px white, 0 14px white, 0 16px white, 0 18px white;
+      &#125;
+      &amp;::after &#123;
+        top: 0;
+        left: 1px;
+        width: 1px;
+        height: 100%;
+        background: white;
+        box-shadow: 2px 0 white, 4px 0 white, 6px 0 white, 8px 0 white, 10px 0 white, 12px 0 white, 14px 0 white, 16px 0 white, 18px 0 white;
+      &#125;
+    &#125;
+  &#125;</code></pre>
+<h3 id="8-挤冰淇淋"><a href="#8-挤冰淇淋" class="headerlink" title="8. 挤冰淇淋"></a>8. 挤冰淇淋</h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/jibingqilin.gif"></p>
+<p>(⊙﹏⊙)，我不是故意画这么恶心的，是因为他要用到 CSS contrast 滤镜，这个滤镜会增加对比度，提亮亮色。</p>
+<p>融合效果的原理是这样的：在父元素使用一个 contrast 滤镜，在子元素使用 blur 滤镜，会发现，子元素在互相接近时，会产生融合效果。</p>
+<p>图片边框的处理方法应该很常见了，用 Background-Image 就能搞定，此外，《CSS Secret》还提到一种使用 Background 渐变叠加的方式产生图片边框，</p>
+<p>下面就直接给代码了。</p>
+<pre><code>// 可以看到父元素用到了 filter: contrast 滤镜
+  .card &#123;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: solid .5em transparent;
+    border-image: 8 repeating-linear-gradient(-45deg, #F5E66C 0, #F5E66C .5em, transparent 0, transparent 1em, #DA60D2 0, #DA60D2 1.5em, transparent 0, transparent 2em);
+    background: white;
+    cursor: pointer;
+    filter: contrast(10);
+
+    // 给每个格子分别设定背景颜色和动画延迟
+    $background:(#DA60D2, #E7667E, #E7667E, #F5866C, #F5866C, #F5E66C);
+    @for $i from 1 through 6 &#123;
+      .node:nth-child(#&#123;$i&#125;) &#123;
+        width: (80-(10 * ($i - 1)))+unquote(&#39;px&#39;);
+        animation: card-6 .8s ease-in (0.1*$i)+unquote(&#39;s&#39;) alternate infinite, card-6-margin .8s ease-in alternate infinite;
+        background: nth($background, $i);
+      &#125;
+    &#125;
+
+    // 格子使用了 blur 滤镜
+    .node &#123;
+      flex-basis: 30px;
+      margin-top: -15px;
+      width: 30px;
+      height: 50px;
+      filter: blur(5px);
+    &#125;
+
+    // 鼠标悬浮时暂停动画，因为子元素的融化效果，所以需要把字体调粗一些
+    &amp;:hover &#123;
+      &amp;::before &#123;
+        content: &quot;Paused&quot;;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        font-weight: bolder;
+      &#125;
+      .node &#123;
+        animation-play-state: paused;
+      &#125;
+    &#125;
+
+    @keyframes card-6 &#123;
+      from &#123;
+        border-radius: 50%;
+      &#125;
+      to &#123;
+        width: 80px;
+        border-radius: 0;
+      &#125;
+    &#125;
+    @keyframes card-6-margin &#123;
+      from &#123;
+        margin-top: -13px;
+      &#125;
+      to &#123;
+        margin-top: 0px;
+      &#125;
+    &#125;
+  &#125;</code></pre>
+<h3 id="9-Lionad"><a href="#9-Lionad" class="headerlink" title="9. Lionad"></a><strong>9. Lionad</strong></h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/Lionad.gif"></p>
+<p>马上就到胜利的尾声了，坚持住！w(ﾟ Д ﾟ)w</p>
+<pre><code>&lt;div class=&quot;card 5&quot;&gt;
+    &lt;div class=&quot;node&quot; /&gt;
+  &lt;/div&gt;</code></pre>
+<p>这是我们第一次碰上背景移动的情况，不过这张图片组成简单，以下是分析。</p>
 <ul>
-<li>1.forEach()</li>
-<li>2.map()</li>
-<li>3.filter()</li>
-<li>4.reduce()</li>
-<li>5.some()</li>
-<li>6.every()</li>
-<li>7.all()方法</li>
+<li><p>背景的移动不外乎都是 CSS Animation + Background-* 属性完成的。此图的背景渐变是一个简单的 45deg 的两条纹理渐变，推测背景使用了 Animation + Background-Position 进行平移。</p>
+</li>
+<li><p>再看文字部分，易得文字是由一个带 180deg 渐变的背景 + Text-Shadow 组成。</p>
+<p>文字可以使用渐变背景？对，通过 Background-Clip 可以实现文字对背景图案裁剪功能。</p>
+<p>由于 Text-Shadow 的颜色比渐变深，但是观察发现 Text-Shadow 并没有被裁剪进入字体中，推断文字应该是由两个伪元素组成的，使用 Background-Clip 属性的伪元素层级要比使用 Text-Shadow 的伪元素高。</p>
+</li>
+<li><p>最后是文字下面两道横线。这个的画实现方法太多了，双伪元素 Border 也可，Box-Shadow 也可，Border-Image 也可，Background-Image 也可…</p>
+</li>
 </ul>
-<p><strong>ES6 编程题</strong></p>
+<p>下面看源码。</p>
+<pre><code>.card &#123;
+    background: linear-gradient(45deg, #F5CB6C 0%,#F5CB6C 20%,#F5856C 20%, #F5856C 45%,#F5CB6C 45%,#F5CB6C 70%,#F5856C 70%, #F5856C 95%,#F5CB6C 95%,#F5CB6C 100%);
+    background-size:30px 30px;
+    background-position:0 0;
+    animation: card-5 1s infinite linear;
+    cursor: pointer;
+
+    .node &#123;
+      // 使用 Background-Clip 的伪元素
+      &amp;::before &#123;
+        content: &quot;Lionad&quot;;
+        left: -1.5em;
+        top: -.7em;
+        font-size: 50px;
+        font-family: didot;
+        font-weight: bolder;
+        color: transparent;
+        background: linear-gradient(180deg, #F5CB6C, #F5856C);
+        background-size: 1px 2px;
+        background-clip: text;
+        -webkit-background-clip: text;
+        z-index: 2;
+      &#125;
+
+      // 生产 Text-Shadow 的伪元素
+      &amp;::after &#123;
+        content: &quot;Lionad&quot;;
+        left: -1.5em;
+        top: -.7em;
+        font-size: 50px;
+        font-family: didot;
+        font-weight: bolder;
+        color: transparent;
+        text-shadow: 4px 4px 0px #F5856C;
+        box-shadow: 0 5px 0px #F5CB6C, 0 12px 0px #F5856C;
+      &#125;
+    &#125;
+    @keyframes card-5 &#123;
+      0%&#123;
+        background-position: 0 0;
+      &#125;
+      100%&#123;
+        background-position: 30px 0;
+      &#125;
+    &#125;
+  &#125;</code></pre>
+<h3 id="10-amp-11-万花筒"><a href="#10-amp-11-万花筒" class="headerlink" title="10.&amp;11.万花筒"></a>10.&amp;11.万花筒</h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/10wanhuatong.gif"></p>
+<pre><code>&lt;div class=&quot;card 10&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;card 11&quot;&gt;&lt;/div&gt;</code></pre>
+<p>把这两个图案放到一起是因为思路是一样的。实话说，第一次见到这种花纹，我也对这莫名其妙的色彩变化一脸懵逼，所以这里就直接讲原理了。</p>
 <ul>
-<li>1.使用解构，实现两个变量的值的交换</li>
-<li>2.利用数组推导，计算出数组 [1,2,3,4] 每一个元素的平方并组成新的数组。</li>
-<li>3.使用 ES6 改下面的模板</li>
-<li>4.把以下代码使用两种方法，来依次输出 0 到 9？</li>
-</ul>
-<h2 id="react-面试题"><a href="#react-面试题" class="headerlink" title="react 面试题"></a><strong>react 面试题</strong></h2><p><strong>react 生命周期面试题</strong></p>
-<ul>
-<li>1.react 生命周期函数</li>
-<li>2.react 生命周期中，最适合与服务端进行数据交互的是哪个函数</li>
-<li>3.运行阶段生命周期调用顺序</li>
-<li>4.shouldComponentUpdate 是做什么的，（react 性能优化是哪个周期函数？）</li>
-<li>5.指出(组件)生命周期方法的不同</li>
-</ul>
-<p><strong>react 基础面试题</strong></p>
-<ul>
-<li>1.React 中 keys 的作用是什么？</li>
-<li>2.React 中 refs 的作用是什么？</li>
-<li>3.React 中有三种构建组件的方式</li>
-<li>4.调用 setState 之后发生了什么？</li>
-<li>5.react diff 原理（常考，大厂必考）</li>
-<li>6.为什么建议传递给 setState 的参数是一个 callback 而不是一个对象</li>
-<li>7.除了在构造函数中绑定 this，还有其它方式吗</li>
-<li>8.setState 第二个参数的作用</li>
-<li>9.(在构造函数中)调用 super(props) 的目的是什么</li>
-<li>10.简述 flux 思想</li>
-<li>11.在 React 当中 Element 和 Component 有何区别？</li>
-<li>12.描述事件在 React 中的处理方式。</li>
-<li>13.createElement 和 cloneElement 有什么区别？</li>
-<li>14.如何告诉 React 它应该编译生产环境版本？</li>
-<li>15.Controlled Component 与 Uncontrolled Component 之间的区别是什么？</li>
-</ul>
-<p><strong>react 组件面试题</strong></p>
-<ul>
-<li>1.展示组件(Presentational component)和容器组件(Container component)之间有何不同</li>
-<li>2.类组件(Class component)和函数式组件(Functional component)之间有何不同</li>
-<li>3.(组件的)状态(state)和属性(props)之间有何不同</li>
-<li>4.何为受控组件(controlled component)</li>
-<li>5.何为高阶组件(higher order component)</li>
-<li>6.应该在 React 组件的何处发起 Ajax 请求</li>
-<li>7.react 中组件传值</li>
-<li>8.什么时候在功能组件( Class Component )上使用类组件( Functional Component )？</li>
-<li>9.受控组件( controlled component )与不受控制的组件( uncontrolled component )有什么区别？</li>
-<li>10.react 组件的划分业务组件技术组件？</li>
-</ul>
-<p><strong>redux 面试题</strong></p>
-<ul>
-<li>1.redux 中间件</li>
-<li>2.redux 有什么缺点</li>
-<li>3.了解 redux 么，说一下 redux 把</li>
-</ul>
-<p><strong>react 性能比较面试题</strong></p>
-<ul>
-<li>1.vue 和 react 的区别</li>
-<li>2.react 性能优化的方案</li>
-<li>3.React 项目用过什么脚手架</li>
-<li>4.介绍一下 webpack webpack</li>
-<li>5.如果你创建了类似于下面的 Twitter 元素，那么它相关的类定义是啥样子的？</li>
-<li>6.为什么我们需要使用 React 提供的 Children API 而不是 JavaScript 的 map？</li>
-</ul>
-<h2 id="js-面试题"><a href="#js-面试题" class="headerlink" title="js 面试题"></a><strong>js 面试题</strong></h2><ul>
-<li>1.简述同步和异步的区别</li>
-<li>2.怎么添加、移除、复制、创建、和查找节点</li>
-<li>3.实现一个函数 clone 可以对 Javascript 中的五种主要数据类型（Number、string、Object、Array、Boolean）进行复制</li>
-<li>4.如何消除一个数组里面重复的元素</li>
-<li>5.写一个返回闭包的函数</li>
-<li>6.使用递归完成 1 到 100 的累加</li>
-<li>7.Javascript 有哪几种数据类型</li>
-<li>8.如何判断数据类型</li>
-<li>9.console.log(1+’2’)和 console.log(1-‘2’)的打印结果</li>
-<li>10.Js 的事件委托是什么，原理是什么</li>
-<li>11.如何改变函数内部的 this 指针的指向</li>
-<li>12.列举几种解决跨域问题的方式，且说明原理</li>
-<li>13.谈谈垃圾回收机制的方式及内存管理</li>
-<li>14.写一个 function ，清除字符串前后的空格</li>
-<li>15.js 实现继承的方法有哪些</li>
-<li>16.判断一个变量是否是数组，有哪些办法</li>
-<li>17.let ，const ，var 有什么区别</li>
-<li>18.箭头函数与普通函数有什么区别</li>
-<li>19.随机取 1-10 之间的整数</li>
-<li>20.new 操作符具体干了什么</li>
-<li>21.Ajax 原理</li>
-<li>22.模块化开发怎么做</li>
-<li>23.异步加载 Js 的方式有哪些</li>
-<li>24.xml 和 json 的区别</li>
-<li>25.webpack 如何实现打包的</li>
-<li>26.常见 web 安全及防护原理</li>
-<li>27.用过哪些设计模式</li>
-<li>28.为什么要同源限制</li>
-<li>29.offsetWidth/offsetHeight,clientWidth/clientHeight 与 scrollWidth/scrollHeight 的区别</li>
-<li>30.javascript 有哪些方法定义对象</li>
-<li>31.说说你对 promise 的了解</li>
-<li>32.谈谈你对 AMD、CMD 的理解</li>
-<li>33.web 开发中会话跟踪的方法有哪些</li>
-<li>34.介绍 js 有哪些内置对象？</li>
-<li>35.说几条写 JavaScript 的基本规范？</li>
-<li>36.javascript 创建对象的几种方式？</li>
-<li>37.eval 是做什么的？</li>
-<li>38.null，undefined 的区别？</li>
-<li>39.[“1”, “2”, “3”].map(parseInt) 答案是多少？</li>
-<li>40.javascript 代码中的”use strict”;是什么意思 ? 使用它区别是什么？</li>
-<li>41.js 延迟加载的方式有哪些？</li>
-<li>42.defer 和 async</li>
-<li>43.说说严格模式的限制</li>
-<li>44.attribute 和 property 的区别是什么？</li>
-<li>45.ECMAScript6 怎么写 class 么，为什么会出现 class 这种东西?</li>
-<li>46.常见兼容性问题</li>
-<li>47.函数防抖节流的原理</li>
-<li>48.原始类型有哪几种？null 是对象吗？</li>
-<li>49.为什么 console.log(0.2+0.1==0.3) //false</li>
-<li>50.说一下 JS 中类型转换的规则？</li>
-<li>51.深拷贝和浅拷贝的区别？如何实现</li>
-<li>52.如何判断 this？箭头函数的 this 是什么</li>
-<li>53.== 和 ===的区别</li>
-<li>54.什么是闭包</li>
-<li>55.JavaScript 原型，原型链 ? 有什么特点？</li>
-<li>56.typeof()和 instanceof()的用法区别</li>
-<li>57.什么是变量提升</li>
-<li>58.all、apply 以及 bind 函数内部实现是怎么样的</li>
-<li>59.为什么会出现 setTimeout 倒计时误差？如何减少</li>
-<li>60.谈谈你对 JS 执行上下文栈和作用域链的理解</li>
-<li>61.new 的原理是什么？通过 new 的方式创建对象和通过字面量创建有什么区别？</li>
-<li>62.prototype 和 proto 区别是什么？</li>
-<li>63.使用 ES5 实现一个继承？</li>
-<li>64.取数组的最大值（ES5、ES6）</li>
-<li>65.ES6 新的特性有哪些？</li>
-<li>66.promise 有几种状态, Promise 有什么优缺点 ?</li>
-<li>67.Promise 构造函数是同步还是异步执行，then 呢 ?promise 如何实现 then 处理 ?</li>
-<li>68.Promise 和 setTimeout 的区别 ?</li>
-<li>69.如何实现 Promise.all ?</li>
-<li>70.如何实现 Promise.finally ?</li>
-<li>71.如何判断 img 加载完成</li>
-<li>72.如何阻止冒泡？</li>
-<li>73.如何阻止默认事件？</li>
-<li>74.ajax 请求时，如何解释 json 数据</li>
-<li>75.json 和 jsonp 的区别?</li>
-<li>76.如何用原生 js 给一个按钮绑定两个 onclick 事件？</li>
-<li>77.拖拽会用到哪些事件</li>
-<li>78.document.write 和 innerHTML 的区别</li>
-<li>79.jQuery 的事件委托方法 bind 、live、delegate、on 之间有什么区别？</li>
-<li>80.浏览器是如何渲染页面的？</li>
-<li>81.$(document).ready()方法和 window.onload 有什么区别？</li>
-<li>82.jquery 中.get()提交和 post()提交有区别吗？</li>
-<li>83.对前端路由的理解？前后端路由的区别？</li>
-<li>84.手写一个类的继承</li>
-<li>85.XMLHttpRequest：XMLHttpRequest.readyState;状态码的意思</li>
-</ul>
-<p><strong>正则表达式常见面试题</strong></p>
-<ul>
-<li>1.给一个连字符串例如：get-element-by-id 转化成驼峰形式。</li>
-<li>2.匹配二进制数字</li>
-<li>3.非零的十进制数字 (有至少一位数字, 但是不能以 0 开头)</li>
-<li>4.匹配一年中的 12 个月</li>
-<li>5.匹配 qq 号最长为 13 为</li>
-<li>6.匹配常见的固定电话号码</li>
-<li>7.匹配 ip 地址</li>
-<li>8.匹配用尖括号括起来的以 a 开头的字符串</li>
-<li>9.分割数字每三个以一个逗号划分</li>
-<li>10.判断字符串是否包含数字</li>
-<li>11.判断电话号码</li>
-<li>12.判断是否符合指定格式</li>
-<li>13.判断是否符合 USD 格式</li>
-<li>14.JS 实现千位分隔符</li>
-<li>15.获取 url 参数</li>
-<li>16.验证邮箱</li>
-<li>17.验证身份证号码</li>
-<li>18.匹配汉字</li>
-<li>19.去除首尾的’/‘</li>
-<li>20.判断日期格式是否符合 ‘2017-05-11’的形式，简单判断，只判断格式</li>
-<li>21.判断日期格式是否符合 ‘2017-05-11’的形式，严格判断（比较复杂）</li>
-<li>22.IPv4 地址正则</li>
-<li>23.十六进制颜色正则</li>
-<li>24.车牌号正则</li>
-<li>25.过滤 HTML 标签</li>
-<li>26.密码强度正则，最少 6 位，包括至少 1 个大写字母，1 个小写字母，1 个数字，1 个特殊字符</li>
-<li>27.URL 正则</li>
-<li>28.匹配浮点数</li>
-</ul>
-<p><strong>浏览器/html/css 面试题</strong></p>
-<p>1.什么是盒模型</p>
-<p>2.行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？行内元素和块级元素有什么区别？</p>
-<p>3.简述 src 和 href 的区别</p>
-<p>4.什么是 css Hack</p>
-<p>5.什么叫优雅降级和渐进增强</p>
-<p>6.px 和 em 的区别</p>
-<p>7.HTML5 为什么只写</p>
-<p>8.Http 的状态码有哪些</p>
-<p>9.一次完整的 HTTP 事务是怎么一个过程</p>
-<p>10.HTTPS 是如何实现加密</p>
-<p>11.浏览器是如何渲染页面的</p>
-<p>12.浏览器的内核有哪些？分别有什么代表的浏览器</p>
-<p>13.页面导入时，使用 link 和@import 有什么区别</p>
-<p>14.如何优化图像，图像格式的区别</p>
-<p>15.列举你了解 Html5. Css3 新特性</p>
-<p>16.可以通过哪些方法优化 css3 animation 渲染</p>
-<p>17.列举几个前端性能方面的优化</p>
-<p>18.如何实现同一个浏览器多个标签页之间的通信</p>
-<p>19.浏览器的存储技术有哪些</p>
-<p>20.css 定位方式</p>
-<p>21.尽可能多的写出浏览器兼容性问题</p>
-<p>22.垂直上下居中的方法</p>
-<p>23.响应式布局原理</p>
-<p>25.清除浮动的方法</p>
-<p>26.http 协议和 tcp 协议</p>
-<p>27.刷新页面，js 请求一般会有哪些地方有缓存处理</p>
-<p>28.如何对网站的文件和资源进行优化</p>
-<p>29.你对网页标准和 W3C 重要性的理解</p>
-<p>30.Http 和 https 的区别</p>
-<p>31.data-属性的作用</p>
-<p>32.如何让 Chrome 浏览器显示小于 12px 的文字</p>
-<p>33.哪些操作会引起页面回流（Reflow）</p>
-<p>34.CSS 预处理器的比较 less sass</p>
-<p>35.如何实现页面每次打开时清除本页缓存</p>
-<p>36.什么是 Virtual DOM,为何要用 Virtual DOM</p>
-<p>37.伪元素和伪类的区别</p>
-<p>38.http 的几种请求方法和区别</p>
-<p>39.前端需要注意哪些 SEO</p>
-<p>40.的 title 和 alt 有什么区别</p>
-<p>41.从浏览器地址栏输入 url 到显示页面的步骤</p>
-<p>42.如何进行网站性能优化</p>
-<p>43.语义化的理解</p>
-<p>44.HTML5 的离线储存怎么使用，工作原理能不能解释一下？</p>
-<p>45.浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢</p>
-<p>46.iframe 有那些缺点？</p>
-<p>47.WEB 标准以及 W3C 标准是什么?</p>
-<p>48.Doctype 作用? 严格模式与混杂模式如何区分？它们有何意义?</p>
-<p>49.HTML 全局属性(global attribute)有哪些</p>
-<p>50.Canvas 和 SVG 有什么区别？</p>
-<p>51.如何在页面上实现一个圆形的可点击区域？</p>
-<p>52.网页验证码是干嘛的，是为了解决什么安全问题</p>
-<p>53.请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
-<p>54.CSS 选择器有哪些？哪些属性可以继承？</p>
-<p>55.CSS 优先级算法如何计算？</p>
-<p>56.CSS3 有哪些新特性？</p>
-<p>57.请解释一下 CSS3 的 flexbox（弹性盒布局模型）,以及适用场景？</p>
-<p>58.用纯 CSS 创建一个三角形的原理是什么？</p>
-<p>59.常见的兼容性问题？</p>
-<p>60.为什么要初始化 CSS 样式</p>
-<p>61.absolute 的 containing block 计算方式跟正常流有什么不同？</p>
-<p>62.CSS 里的 visibility 属性有个 collapse 属性值？在不同浏览器下以后什么区别？</p>
-<p>63.display:none 与 visibility：hidden 的区别？</p>
-<p>64.position 跟 display、overflow、float 这些特性相互叠加后会怎么样？</p>
-<p>65.对 BFC 规范(块级格式化上下文：block formatting context)的理解？</p>
-<p>66.为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？</p>
-<p>67.上下 margin 重合的问题</p>
-<p>68.设置元素浮动后，该元素的 display 值是多少？</p>
-<p>69.移动端的布局用过媒体查询吗？</p>
-<p>70.CSS 优化、提高性能的方法有哪些？</p>
-<p>71.浏览器是怎样解析 CSS 选择器的？</p>
-<p>72.在网页中的应该使用奇数还是偶数的字体？为什么呢？</p>
-<p>73.margin 和 padding 分别适合什么场景使用？</p>
-<p>74.元素竖向的百分比设定是相对于容器的高度吗？</p>
-<p>75.全屏滚动的原理是什么？用到了 CSS 的哪些属性？</p>
-<p>76.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的 IE？</p>
-<p>77.视差滚动效果？</p>
-<p>78.::before 和 :after 中双冒号和单冒号有什么区别？解释一下这 2 个伪元素的作用</p>
-<p>79.让页面里的字体变清晰，变细用 CSS 怎么做？</p>
-<p>80.position:fixed;在 android 下无效怎么处理？</p>
-<p>81.如果需要手动写动画，你认为最小时间间隔是多久，为什么？</p>
-<p><a href="https://link.zhihu.com/?target=http://82.xn--lili-jb5fd32bwa86hl07a2vimuze9ufxcqx2ggdah43vi90a275ejkqr67bha459a/">82.li 与 li 之间有看不见的空白间隔是什么原因引起的</a>？有什么解决办法？</p>
-<p>83.display:inline-block 什么时候会显示间隙？</p>
-<p>84.有一个高度自适应的 div，里面有两个 div，一个高度 100px，希望另一个填满剩下的高度</p>
-<p>85.png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过 webp？</p>
-<p>86.style 标签写在 body 后与 body 前有什么区别？</p>
-<p>87.CSS 属性 overflow 属性定义溢出元素内容区的内容会如何处理?</p>
-<p>88.阐述一下 CSS Sprites</p>
-<h2 id="微信小程序开发"><a href="#微信小程序开发" class="headerlink" title="微信小程序开发"></a><strong>微信小程序开发</strong></h2><p><strong>初识小程序</strong></p>
-<ul>
-<li><p>1.注册小程序</p>
+<li><p>两张图片都是用渐变画的，仔细观察能发现左边和右边的图案都是三层渐变的叠加。</p>
+<p>不同的地方在于，左图最小的那层渐变是辐射渐变（Radial-Gradient），右图的则是圆锥渐变（英文叫 Conic-Gradient，饼图就可以用这玩意儿画）</p>
 </li>
-<li><p>2.微信开发者工具</p>
+<li><p>莫名其妙的颜色变换（如左图中心点）使用的是 CSS 混合模式（CSS Blend-Mode）效果，它负责计算当两种色彩层叠在一起时最终显示的颜色，可以理解为滤镜。</p>
 </li>
-<li><p>3.小程序与普通网页开发的区别</p>
-</li>
-<li><p>4.小程序尺寸单位 rpx</p>
-</li>
-<li><p>5.样式导入（WeUI for）</p>
-</li>
-<li><p>6.选择器</p>
-</li>
-<li><p>7.小程序 image 高度自适应及裁剪问题</p>
-</li>
-<li><p>8.微信小程序长按识别二维码</p>
-</li>
-<li><p>9.给页面加背景色</p>
-</li>
-<li><p>10.微信小程序获取用户信息</p>
-</li>
-<li><p>11.代码审核和发布</p>
-</li>
-<li><p>12.小程序微信认证</p>
-</li>
-<li><p>13.小程序申请微信支付</p>
-</li>
-<li><p>14.小程序的目录解构及四种文件类型</p>
-</li>
-<li><p>15.小程序文件的作用域</p>
-</li>
-<li><p>16.小程序常用组件</p>
-<ul>
-<li>1.view</li>
-<li>2.scroll-view</li>
-<li>3.swiper 组件</li>
-<li>4.movable-view</li>
-<li>5.cover-view</li>
-<li>6.cover-image</li>
-</ul>
+<li><p>背景移动之前看过，左图是变换 Background-Position，右图是变换 Background-Size</p>
 </li>
 </ul>
-<p><strong>小程序基础</strong></p>
-<ul>
-<li><p>17.授权得到用户信息</p>
-</li>
-<li><p>18.数据绑定</p>
-</li>
-<li><p>19.列表渲染</p>
-</li>
-<li><p>20.条件渲染</p>
-</li>
-<li><p>21.公共模板建立</p>
-</li>
-<li><p>22.事件及事件绑定</p>
-</li>
-<li><p>23.引用</p>
-</li>
-<li><p>24.页面跳转</p>
-<ul>
-<li>1.wx.switchTab</li>
-<li>2.wx.reLaunch</li>
-<li>3.wx.redirectTo</li>
-<li>4.wx.navigateTo</li>
-<li>5.wx.navigateBack</li>
-</ul>
-</li>
-<li><p>25.设置 tabBar</p>
-</li>
-<li><p>26.页面生命周期</p>
-</li>
-<li><p>27.转发分享</p>
-</li>
-</ul>
-<p><strong>小程序高级</strong></p>
-<ul>
-<li>28.request 请求后台接口</li>
-<li>29.http-promise 封装</li>
-<li>30.webview</li>
-<li>31.获取用户收货地址</li>
-<li>32.获取地里位置</li>
-<li>33.自定义组件</li>
-<li>34.微信小程序支付问题</li>
-</ul>
-<p><strong>小程序项目实战</strong></p>
-<ul>
-<li>35.微信小程序本地数据缓存</li>
-<li>36.下拉刷新和下拉加载</li>
-<li>37.列表页向详情页跳转（动态修改 title）</li>
-<li>38.客服电话</li>
-<li>39.星级评分组件</li>
-<li>40.小程序插槽的使用 slot</li>
-<li>41.模糊查询</li>
-<li>42.wxs 过滤</li>
-<li>43.小程序动画</li>
-<li>44.列表根据索引值渲染</li>
-<li>45.小程序动态修改 class</li>
-<li>46.小程序常用框架</li>
-<li>47.参数传值的方法</li>
-<li>48.提高小程序的应用速度</li>
-<li>49.微信小程序的优劣势</li>
-<li>50.小程序的双向绑定和 vue 的区别</li>
-<li>51.微信小程序给按钮添加动画</li>
-<li>52.微信小程序的 tab 按钮的转换</li>
-<li>53.微信小程序引进 echarts</li>
-<li>54.APP 打开小程序流程</li>
-<li>55.小程序解析富文本编辑器</li>
-</ul>
-<p><strong>小程序常见 bug</strong></p>
-<ul>
-<li>1.域名必须是 HTTPS</li>
-<li>2.input 组件 placeholder 字体颜色</li>
-<li>3.wx.navigateTo 无法跳转到带 tabbar 的页面</li>
-<li>4.tabbar 在切换时页面数据无法刷新</li>
-<li>5.如何去掉自定义 button 灰色的圆角边框</li>
-<li>6.input textarea 是 APP 的原生组件，z-index 层级最高</li>
-<li>7.一段文字如何换行</li>
-<li>8.设置最外层标签的 margin-bottom 在 IOS 下不生效</li>
-<li>9.小程序中 canvas 的图片不支持 base64 格式</li>
-<li>10.回到页面顶部</li>
-<li>11.wx.setStorageSync 和 wx.getStorageSync 报错问题</li>
-<li>12.如何获取微信群名称？</li>
-<li>13.new Date 跨平台兼容性问题</li>
-<li>14.wx.getSystemInfoSync 获取 windowHeight 不准确</li>
-<li>15.图片本地资源名称，尽量使用小写命名</li>
-</ul>
-<h2 id="移动端热点问题"><a href="#移动端热点问题" class="headerlink" title="移动端热点问题"></a><strong>移动端热点问题</strong></h2><ul>
-<li>px border 问题</li>
-<li>2.2X 图 3X 图适配</li>
-<li>3.图片在安卓上，有些设备模糊问题</li>
-<li>4.固定定位布局 键盘挡住输入框内容</li>
-<li>5.click 的 300ms 延迟问题和点击穿透问题</li>
-<li>6.phone 及 ipad 下输入框默认内阴影</li>
-<li>7.防止手机中页面放大和缩小</li>
-<li>8.flex 布局</li>
-<li>9.px、em、rem、%、vw、vh、vm 这些单位的区别</li>
-<li>10.移动端适配- dpr 浅析</li>
-<li>11.移动端扩展点击区域</li>
-<li>12 上下拉动滚动条时卡顿、慢</li>
-<li>13 长时间按住页面出现闪退</li>
-<li>14.ios 和 android 下触摸元素时出现半透明灰色遮罩</li>
-<li>15.active 兼容处理 即 伪类：active 失效</li>
-<li>16.webkit mask 兼容处理</li>
-<li>17.pc 端与移动端字体大小的问题</li>
-<li>18.transiton 闪屏</li>
-<li>19.圆角 bug</li>
-<li>20.如何解决禁用表单后移动端样式不统一问题 ?</li>
-</ul>
+<p>以下是源码。</p>
+<pre><code> // 右图的样式代码
+  .card &#123;
+
+    // 这里使用了三层背景渐变，两层圆锥渐变和一层辐射渐变
+    background-image:
+      repeating-conic-gradient(red 50%, #E1F5C4 60%),
+      repeating-conic-gradient(red 50%, #E1F5C4 60%),
+      radial-gradient(
+        gold 0%, gold 35%,
+        red 35%, red 40%,
+        orangered 40%, orangered 50%,
+        gold 50%, gold 60%,
+        yellowgreen 60%, yellowgreen 70%,
+        skyblue 70%, skyblue 80%,
+        steelblue 80%, steelblue 90%,
+        violet 90%
+      );
+
+    // 对每一层被渐变分别设置混合模式
+    background-blend-mode:
+      lighten,
+      overlay,
+      lighten;
+
+    // 对每一层被渐变分别设置背景大小（40px 是因为正好能被 200px 的盒子整除）
+    background-size:
+      40px 40px,
+      6em 6em,
+      8em 8em;
+    background-position: 50% 50%;
+    transition: .45s ease-in;
+    cursor: pointer;
+
+    // 鼠标悬浮时，变换渐变大小
+    &amp;:hover &#123;
+      background-size:
+        40px 40px,
+        4em 4em,
+        12em 12em;
+    &#125;
+  &#125;</code></pre>
+<h3 id="12-トラ酱（Tiger）"><a href="#12-トラ酱（Tiger）" class="headerlink" title="12. トラ酱（Tiger）"></a><strong>12. トラ酱（Tiger）</strong></h3><p><strong>图片下载 : 右键此图片另存为可保存此图片</strong></p>
+<p><img src="/images/Tiger.jpg"></p>
+<p>一整图片而已，有啥了不起的？</p>
+<p>不，这不是图片。</p>
+<p>你以为有外链么？不，没有。这是仅用 Box-Shadow 绘制成的トラ酱。</p>
+<p>它的 CSS 代码长这样：</p>
+<pre><code>
+ // 灰色 Border
+  .card &#123;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid 10px #eee;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    // トラ酱
+    .node &#123;
+      width: 1px;
+      height: 1px;
+      box-shadow: ????? 你猜，使劲儿猜这后面有多长
+    &#125;
+  &#125;</code></pre>
+<hr>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p>最后，这里有几个需要稍微思考的练习，给尚存斗志的同学实践<del>（我不是白嫖！）</del>。</p>
+<ol>
+<li>《トラ酱》，利用 Box-Shadow + CSS Animation 实现 GIF 的播放</li>
+<li>《冰崖上生长的仙人掌》，能不能让这些横着长的仙人掌生长的长度超过两格？</li>
+</ol>
+<p>哦对了，千万别问我这些练习题有啥用。</p>
+<p>这些练习题的作用就和我画的这些图案一样——我也不知道有啥用，只是好玩。</p>
 
             </div>
             <hr/>
@@ -989,7 +1209,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/05/shi-shang-zui-quan-qian-duan-mian-shi-ti/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/05/shi-shang-zui-quan-qian-duan-mian-shi-ti/</a>
+                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/05/12-ge-hua-li-hu-shao-de-css-xuan-ku-an-li-fu-yuan-ma/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/05/12-ge-hua-li-hu-shao-de-css-xuan-ku-an-li-fu-yuan-ma/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1027,8 +1247,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                    <span class="chip bg-color">面试题</span>
+                                <a href="/tags/%E6%BA%90%E7%A0%81/">
+                                    <span class="chip bg-color">源码</span>
+                                </a>
+                            
+                                <a href="/tags/css/">
+                                    <span class="chip bg-color">css</span>
                                 </a>
                             
                         </div>
@@ -1200,20 +1424,23 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/05/12-ge-hua-li-hu-shao-de-css-xuan-ku-an-li-fu-yuan-ma/">
+                <a href="/2020/12/05/you-qu-de-zhu-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="12个花里胡哨的CSS炫酷案例！（附源码）">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="有趣的注释">
                         
-                        <span class="card-title">12个花里胡哨的CSS炫酷案例！（附源码）</span>
+                        <span class="card-title">有趣的注释</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言上个礼拜看了许多关于平面构成的资料，我就边用 CSS 画了一些类似背景图案的玩意儿。这里给大家选了 12 种，从观察者的角度由易到难的给大家解一下思路。
-**预警，本文没有对基础知识的详解，不过推荐一边看文章实践一边学习，效率更高。**
+                            // ----------------------------------------------------------------------------------------
+// 1. 在我变身之前快跑吧
+
+/*
+        
                         
                     </div>
                     <div class="publish-info">
@@ -1224,8 +1451,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/css/" class="post-category">
-                                    css
+                            <a href="/categories/%E6%B3%A8%E9%87%8A/" class="post-category">
+                                    注释
                                 </a>
                             
                             
@@ -1235,12 +1462,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%BA%90%E7%A0%81/">
-                        <span class="chip bg-color">源码</span>
-                    </a>
-                    
-                    <a href="/tags/css/">
-                        <span class="chip bg-color">css</span>
+                    <a href="/tags/%E6%B3%A8%E9%87%8A/">
+                        <span class="chip bg-color">注释</span>
                     </a>
                     
                 </div>
@@ -1254,34 +1477,38 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/30/javascript-zhuang-bi-zhi-nan/">
+                <a href="/2020/12/05/shi-shang-zui-quan-qian-duan-mian-shi-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JavaScript装逼指南">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="史上最全前端面试题">
                         
-                        <span class="card-title">JavaScript装逼指南</span>
+                        <span class="card-title">史上最全前端面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-如何写JavaScript才能逼格更高呢？怎样才能组织JavaScript才能让别人一眼看出你不简单呢？是否很期待别人在看完你的代码之后感叹一句“原来还可以这样写”呢？下面列出一些在JavaScript时的装逼技巧。
+                            Vue 面试题生命周期函数面试题
 
-1. 匿名函数的N
+1.什么是 vue 生命周期
+2.vue 生命周期的作用是什么
+3.第一次页面加载会触发哪几个钩子
+4.简述每个周期具体适合哪些场景
+5.created 和 mounted 的区别
+6.vue 获取数据在
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                    面试题
                                 </a>
                             
                             
@@ -1291,12 +1518,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/tags/JS%E6%89%8B%E8%AE%B0/">
-                        <span class="chip bg-color">JS手记</span>
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
                     </a>
                     
                 </div>
