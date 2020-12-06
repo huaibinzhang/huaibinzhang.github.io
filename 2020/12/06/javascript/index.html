@@ -1,0 +1,2756 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="JavaScript, 博客">
+    <meta name="description" content="Charles的博客">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JavaScript | Charles的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Charles的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Charles的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Charles的博客</div>
+        <div class="logo-desc">
+            
+            Charles的博客
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JavaScript</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JavaScript/" class="post-category">
+                                JavaScript
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-06
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-06
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    11.5k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><h2 id="1-alter"><a href="#1-alter" class="headerlink" title="1.alter()"></a>1.alter()</h2><p>自带的弹出消息框的方法，可以在 onclick 中直接调用，如：onclick=”alert(‘欢迎!’)”；点击后就会弹出消息框；</p>
+<h2 id="2-匹配属性"><a href="#2-匹配属性" class="headerlink" title="2.匹配属性"></a>2.匹配属性</h2><p>​ 如下，先获取 myimage 这个 id，赋值给 element，然后判断 element 的 src 属性中是否有 bulboff 这个字段，然后修改其 src 属性。</p>
+<pre><code>&lt;script&gt;
+function changeImage()
+&#123;
+ element=document.getElementById(&#39;myimage&#39;)
+ if (element.src.match(&quot;bulboff&quot;))
+ &#123;
+  element.src=&quot;/images/pic_bulbon.gif&quot;;
+ &#125;
+ else
+ &#123;
+  element.src=&quot;/images/pic_bulboff.gif&quot;;
+ &#125;
+&#125;
+&lt;/script&gt;</code></pre>
+<h2 id="3-用法"><a href="#3-用法" class="headerlink" title="3.用法"></a>3.用法</h2><p>​ 通常的做法是把函数放入&lt;head&gt; 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。外部脚本不能包含 &lt;script&gt; 标签。</p>
+<h2 id="4-输出"><a href="#4-输出" class="headerlink" title="4.输出"></a>4.输出</h2><p>JavaScript 可以通过不同的方式来输出数据：</p>
+<ul>
+<li><p>使用 <strong>window.alert()</strong> 弹出警告框。</p>
+</li>
+<li><p>使用 <strong>document.write()</strong> 方法将内容写到 HTML 文档中。</p>
+<blockquote>
+<pre><code>&lt;p&gt;我的第一个段落。&lt;/p&gt;
+&lt;script&gt;
+document.write(Date());
+&lt;/script&gt;</code></pre>
+</blockquote>
+<p>使用 document.write() 仅仅向文档输出写内容。如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。</p>
+<p>如下，日期会覆盖之前的内容，因为点击事件是后面在页面加载完再去点击触发的：</p>
+<pre><code>&lt;body&gt;
+  &lt;h1&gt;我的第一个 Web 页面&lt;/h1&gt;
+  &lt;p&gt;我的第一个段落。&lt;/p&gt;
+  &lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;
+  &lt;script&gt;
+    function myFunction() &#123;
+      document.write(Date());
+    &#125;
+  &lt;/script&gt;
+&lt;/body&gt;</code></pre>
+</li>
+<li><p>使用 <strong>innerHTML</strong> 写入到 HTML 元素。</p>
+<blockquote>
+<pre><code>&lt;p id=&quot;demo&quot;&gt;我的第一个段落&lt;/p&gt;
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML = &quot;段落已修改。&quot;;
+&lt;/script&gt;</code></pre>
+</blockquote>
+<p><strong>document.getElementById(“demo”)</strong> 是使用 id 属性来查找 HTML 元素的 JavaScript 代码 。</p>
+<p><strong>innerHTML = “段落已修改。”</strong> 是用于修改元素的 HTML 内容(innerHTML)的 JavaScript 代码。</p>
+</li>
+<li><p>使用 <strong>console.log()</strong> 写入到浏览器的控制台。</p>
+</li>
+</ul>
+<h2 id="5-语法"><a href="#5-语法" class="headerlink" title="5.语法"></a>5.语法</h2><p>JavaScript 使用 Unicode 字符集。Unicode 覆盖了所有的字符，包含标点等字符。</p>
+<h2 id="6-数据类型"><a href="#6-数据类型" class="headerlink" title="6.数据类型"></a>6.数据类型</h2><ul>
+<li><p>JavaScript 拥有动态类型</p>
+<p>JavaScript 拥有动态类型。这意味着相同的变量可用作不同的类型：</p>
+<blockquote>
+<p>实例</p>
+<p>var x; // x 为 undefined<br>var x = 5; // 现在 x 为数字<br>var x = “John”; // 现在 x 为字符串</p>
+</blockquote>
+</li>
+<li><p>字符串</p>
+<p>字符串是存储字符（比如 “Bill Gates”）的变量。字符串可以是引号中的任意文本。您可以使用单引号或双引号。</p>
+</li>
+<li><p>JavaScript 只有一种数字类型。数字可以带小数点，也可以不带；极大或极小的数字可以通过科学（指数）计数法来书写。</p>
+</li>
+<li><p>数组</p>
+<blockquote>
+<p>var cars=new Array();<br>cars[0]=”Saab”;<br>cars[1]=”Volvo”;<br>cars[2]=”BMW”;</p>
+<p>或：var cars=new Array(“Saab”,”Volvo”,”BMW”);</p>
+<p>或：var cars=[“Saab”,”Volvo”,”BMW”];</p>
+</blockquote>
+</li>
+<li><p>对象</p>
+<p>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：</p>
+<p>var person={firstname:”John”, lastname:”Doe”, id:5566};</p>
+<ul>
+<li><p>对象属性有两种寻址方式：</p>
+<blockquote>
+<p>name=person.lastname;<br>name=person[“lastname”];</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>声明变量类型</p>
+<p>当您声明新变量时，可以使用关键词 “new” 来声明其类型：</p>
+<blockquote>
+<p>var carname=new String;<br>var x= new Number;<br>var y= new Boolean;<br>var cars= new Array;<br>var person= new Object;</p>
+</blockquote>
+</li>
+<li><p>数据类型</p>
+</li>
+</ul>
+<blockquote>
+<p>在 JavaScript 中有 5 种不同的数据类型：</p>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>object</li>
+<li>function</li>
+</ul>
+<p>3 种对象类型：</p>
+<ul>
+<li>Object</li>
+<li>Date</li>
+<li>Array</li>
+</ul>
+<p>2 个不包含任何值的数据类型：</p>
+<ul>
+<li>null</li>
+<li>undefined</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>constructor</strong> 属性返回所有 JavaScript 变量的构造函数。返回 String()等类型的构造函数</li>
+<li>类型转换<ul>
+<li>全局方法 <strong>String()</strong> 可以将数字转换为字符串；该方法可用于任何类型的数字，字母，变量，表达式；Number 方法 <strong>toString()</strong> 也是有同样的效果。String()还可以将布尔类型的转换为字符串</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-函数"><a href="#7-函数" class="headerlink" title="7.函数"></a>7.函数</h2><p>​ 可以用 return 返回值，当执行完 return 时，函数会停止执行，也可以当初使用 return 去结束函数；可以用变量去接收返回的值。</p>
+<ul>
+<li><p>局部变量</p>
+<blockquote>
+<p>在 JavaScript 函数内部声明的变量（使用 var）是<em>局部</em>变量，所以只能在函数内部访问它。（该变量的作用域是局部的），可以在不同的函数中使用名称相同的局部变量，因为只有声明过该变量的函数才能识别出该变量。只要函数运行完毕，本地变量就会被删除。</p>
+</blockquote>
+<p>在函数外声明的变量是<em>全局</em>变量，网页上的所有脚本和函数都能访问它。</p>
+</li>
+<li><p>变量生存期</p>
+<blockquote>
+<p>JavaScript 变量的生命期从它们被声明的时间开始；局部变量会在函数运行以后被删除；全局变量会在页面关闭后被删除。</p>
+</blockquote>
+</li>
+<li><p>未声明的变量</p>
+<p>如果把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。</p>
+<p>如：var1=”Volvo”; 可以用 console.log(window.var1); 打印，可以用 delete var1 删除。</p>
+</li>
+</ul>
+<h2 id="8-常见的-HTML-事件"><a href="#8-常见的-HTML-事件" class="headerlink" title="8.常见的 HTML 事件"></a>8.常见的 HTML 事件</h2><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onchange</td>
+<td>HTML 元素改变</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>用户点击 HTML 元素</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>用户在一个 HTML 元素上移动鼠标</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>用户从一个 HTML 元素上移开鼠标</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>用户按下键盘按键</td>
+</tr>
+<tr>
+<td>onload</td>
+<td>浏览器已完成页面的加载</td>
+</tr>
+</tbody></table>
+<h2 id="9-字符串"><a href="#9-字符串" class="headerlink" title="9.字符串"></a>9.字符串</h2><p>​ 可以用单引号或者双引号表示字符串，可以使用索引位置来访问字符串中的每个字符。</p>
+<p>常见的转义字符：</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#39;</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>tab(制表符)</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符</td>
+</tr>
+</tbody></table>
+<p>通常， JavaScript 字符串是原始值，可以使用字符创建： <strong>var firstName = “John”</strong></p>
+<p>但我们也可以使用 new 关键字将字符串定义为一个对象： <strong>var firstName = new String(“John”)</strong></p>
+<pre><code>var x = &quot;John&quot;;
+var y = new String(&quot;John&quot;);
+typeof x; // 返回 String
+typeof y; // 返回 Object</code></pre>
+<blockquote>
+<p>var x = “John”;<br>var y = new String(“John”);<br>(x === y) // 结果为 false，因为 x 是字符串，y 是对象</p>
+<p>=== 为绝对相等，即数据类型与值都必须相等。</p>
+</blockquote>
+<p>原始值字符串，如 “John”, 没有属性和方法(因为他们不是对象)。</p>
+<p>原始值可以使用 JavaScript 的属性和方法，因为 JavaScript 在执行方法和属性时可以把原始值当作对象。</p>
+<h2 id="10-break-和-continue-标签"><a href="#10-break-和-continue-标签" class="headerlink" title="10.break 和 continue 标签"></a>10.break 和 continue 标签</h2><p>break 和 continue 这两个关键字带或不带标签都可以跳出代码块。</p>
+<p>所谓标签引用，即如下，labelname: break labelname</p>
+<pre><code>&lt;script&gt;
+cars=[&quot;BMW&quot;,&quot;Volvo&quot;,&quot;Saab&quot;,&quot;Ford&quot;,&quot;asfa&quot;];
+list:&#123;
+ document.write(cars[0] + &quot;&lt;br&gt;&quot;);
+ document.write(cars[1] + &quot;&lt;br&gt;&quot;);
+ document.write(cars[2] + &quot;&lt;br&gt;&quot;);
+ continue list;
+ document.write(cars[3] + &quot;&lt;br&gt;&quot;);
+ document.write(cars[4] + &quot;&lt;br&gt;&quot;);
+ document.write(cars[5] + &quot;&lt;br&gt;&quot;);
+&#125;
+&lt;/script&gt;</code></pre>
+<h2 id="11-正则表达式"><a href="#11-正则表达式" class="headerlink" title="11.正则表达式"></a>11.正则表达式</h2><p>语法：/正则表达式主体/修饰符(可选)</p>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>i</td>
+<td>执行对大小写不敏感的匹配。</td>
+</tr>
+<tr>
+<td>g</td>
+<td>执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。</td>
+</tr>
+<tr>
+<td>m</td>
+<td>执行多行匹配。</td>
+</tr>
+</tbody></table>
+<p>在 JavaScript 中，正则表达式通常用于两个字符串方法 : search() 和 replace()。</p>
+<p><strong>search() 方法</strong> 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。</p>
+<p><strong>replace() 方法</strong> 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
+<pre><code>var str = &quot;Visit Runoob!&quot;;
+var n = str.search(/Runoob/i);
+//返回：6
+var str = document.getElementById(&quot;demo&quot;).innerHTML;
+var txt = str.replace(/microsoft/i, &quot;Runoob&quot;);
+// 等同于var txt = str.replace(&quot;Microsoft&quot;,&quot;Runoob&quot;);
+// 返回：Visit Runoob!</code></pre>
+<h3 id="正则表达式模式"><a href="#正则表达式模式" class="headerlink" title="正则表达式模式"></a>正则表达式模式</h3><p>方括号用于查找某个范围内的字符：</p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[abc]</td>
+<td>查找方括号之间的任何字符。</td>
+</tr>
+<tr>
+<td>[0-9]</td>
+<td>查找任何从 0 至 9 的数字。</td>
+</tr>
+<tr>
+<td>(x|y)</td>
+<td>查找任何以 | 分隔的选项。</td>
+</tr>
+</tbody></table>
+<p>元字符是拥有特殊含义的字符：</p>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\d</td>
+<td>查找数字。</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>查找空白字符。</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配单词边界。</td>
+</tr>
+<tr>
+<td>\uxxxx</td>
+<td>查找以十六进制数 xxxx 规定的 Unicode 字符。</td>
+</tr>
+</tbody></table>
+<p>量词:</p>
+<table>
+<thead>
+<tr>
+<th>量词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n+</td>
+<td>匹配任何包含至少一个 <em>n</em> 的字符串。</td>
+</tr>
+<tr>
+<td>n*</td>
+<td>匹配任何包含零个或多个<em>n</em> 的字符串。</td>
+</tr>
+<tr>
+<td>n?</td>
+<td>匹配任何包含零个或一个 <em>n</em> 的字符串。</td>
+</tr>
+</tbody></table>
+<p><strong>在 JavaScript 中，RegExp 对象是一个预定义了属性和方法的正则表达式对象。</strong></p>
+<h2 id="12-表单"><a href="#12-表单" class="headerlink" title="12.表单"></a>12.表单</h2><h3 id="HTML-约束验证"><a href="#HTML-约束验证" class="headerlink" title="HTML 约束验证"></a>HTML 约束验证</h3><p>HTML5 新增了 HTML 表单的验证方式：约束验证（constraint validation）。</p>
+<p>约束验证是表单被提交时浏览器用来实现验证的一种算法。</p>
+<p>HTML 约束验证基于：</p>
+<ul>
+<li><strong>HTML 输入属性</strong></li>
+<li><strong>CSS 伪类选择器</strong></li>
+<li><strong>DOM 属性和方法</strong></li>
+</ul>
+<h4 id="约束验证-HTML-输入属性"><a href="#约束验证-HTML-输入属性" class="headerlink" title="约束验证 HTML 输入属性"></a>约束验证 HTML 输入属性</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>disabled</td>
+<td>规定输入的元素不可用</td>
+</tr>
+<tr>
+<td>max</td>
+<td>规定输入元素的最大值</td>
+</tr>
+<tr>
+<td>min</td>
+<td>规定输入元素的最小值</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>规定输入元素值的模式</td>
+</tr>
+<tr>
+<td>required</td>
+<td>规定输入元素字段是必需的</td>
+</tr>
+<tr>
+<td>type</td>
+<td>规定输入元素的类型</td>
+</tr>
+</tbody></table>
+<p>完整列表，请查看 <a target="_blank" rel="noopener" href="https://www.runoob.com/html/html5-form-attributes.html">HTML 输入属性</a>。</p>
+<h4 id="约束验证-CSS-伪类选择器"><a href="#约束验证-CSS-伪类选择器" class="headerlink" title="约束验证 CSS 伪类选择器"></a>约束验证 CSS 伪类选择器</h4><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:disabled</td>
+<td>选取属性为 “disabled” 属性的 input 元素</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>选取无效的 input 元素</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>选择没有”required”属性的 input 元素</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>选择有”required”属性的 input 元素</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>选取有效值的 input 元素</td>
+</tr>
+</tbody></table>
+<p>完整列表，请查看 <a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-pseudo-classes.html">CSS 伪类</a>。</p>
+<h3 id="JavaScript-表单验证"><a href="#JavaScript-表单验证" class="headerlink" title="JavaScript 表单验证"></a>JavaScript 表单验证</h3><p>​ ==JavaScript 可用来在数据被送往服务器前对 HTML 表单中的这些输入数据进行验证。==</p>
+<blockquote>
+<p>表单数据经常需要使用 JavaScript 来验证其正确性：</p>
+<ul>
+<li>验证表单数据是否为空？</li>
+<li>验证输入是否是一个正确的 email 地址？</li>
+<li>验证日期是否输入正确？</li>
+<li>验证表单输入内容是否为数字型？</li>
+</ul>
+</blockquote>
+<p>下面的函数用来检查用户是否已填写表单中的必填（或必选）项目。假如必填或必选项为空，那么警告框会弹出，并且函数的返回值为 false，否则函数的返回值则为 true（意味着数据没有问题）：</p>
+<pre><code>&lt;script&gt;
+function validateForm()&#123;
+    // 获取myForm标签中的fname属性
+var x=document.forms[&quot;myForm&quot;][&quot;fname&quot;].value;
+if (x==null || x==&quot;&quot;)&#123;
+  alert(&quot;姓必须填写&quot;);
+  return false;
+  &#125;
+&#125;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form name=&quot;myForm&quot; action=&quot;demo-form.php&quot; onsubmit=&quot;return validateForm()&quot; method=&quot;post&quot;&gt;
+姓: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
+&lt;/form&gt;</code></pre>
+<h3 id="E-mail-验证"><a href="#E-mail-验证" class="headerlink" title="E-mail 验证"></a>E-mail 验证</h3><p>下面的函数检查输入的数据是否符合电子邮件地址的基本语法。</p>
+<p>意思就是说，输入的数据必须包含 @ 符号和点号(.)。同时，@ 不可以是邮件地址的首字符，并且 @ 之后需有至少一个点号：</p>
+<pre><code>&lt;script&gt;
+function validateForm()&#123;
+    // 获取myForm这个标签的email的value
+ var x=document.forms[&quot;myForm&quot;][&quot;email&quot;].value;
+ var atpos=x.indexOf(&quot;@&quot;);
+ var dotpos=x.lastIndexOf(&quot;.&quot;);
+ if (atpos&lt;1 || dotpos&lt;atpos+2 || dotpos+2&gt;=x.length)&#123;
+  alert(&quot;不是一个有效的 e-mail 地址&quot;);
+    return false;
+ &#125;
+&#125;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form name=&quot;myForm&quot; action=&quot;demo-form.php&quot; onsubmit=&quot;return validateForm();&quot; method=&quot;post&quot;&gt;
+Email: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
+&lt;/form&gt;</code></pre>
+<h3 id="JavaScript-验证-API"><a href="#JavaScript-验证-API" class="headerlink" title="JavaScript 验证 API"></a>JavaScript 验证 API</h3><h4 id="约束验证-DOM-方法"><a href="#约束验证-DOM-方法" class="headerlink" title="约束验证 DOM 方法"></a>约束验证 DOM 方法</h4><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>checkValidity()</td>
+<td>如果 input 元素中的数据是合法的返回 true，否则返回 false。</td>
+</tr>
+<tr>
+<td>setCustomValidity()</td>
+<td>设置 input 元素的 validationMessage 属性，用于自定义错误提示信息的方法。使用 setCustomValidity 设置了自定义提示后，validity.customError 就会变成 true，则 checkValidity 总是会返回 false。如果要重新判断需要取消自定义提示，方式如下：<code>setCustomValidity(&#39;&#39;) ，setCustomValidity(null)， setCustomValidity(undefined)</code></td>
+</tr>
+</tbody></table>
+<pre><code>&lt;body&gt;
+&lt;p&gt;输入数字并点击验证按钮:&lt;/p&gt;
+&lt;input id=&quot;id1&quot; type=&quot;number&quot; min=&quot;100&quot; max=&quot;300&quot; required&gt;
+&lt;button onclick=&quot;myFunction()&quot;&gt;验证&lt;/button&gt;
+&lt;p&gt;如果输入的数字小于 100 或大于300，会提示错误信息。&lt;/p&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+function myFunction() &#123;
+    // 获取&quot;id1&quot;这个对象
+    var inpObj = document.getElementById(&quot;id1&quot;);
+    if (inpObj.checkValidity() == false) &#123;
+        document.getElementById(&quot;demo&quot;).innerHTML = inpObj.validationMessage;
+    &#125; else &#123;
+        document.getElementById(&quot;demo&quot;).innerHTML = &quot;输入正确&quot;;
+    &#125;
+&#125;
+&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+<h3 id="约束验证-DOM-属性"><a href="#约束验证-DOM-属性" class="headerlink" title="约束验证 DOM 属性"></a>约束验证 DOM 属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>validity</td>
+<td>布尔属性值，返回 input 输入值是否合法</td>
+</tr>
+<tr>
+<td>validationMessage</td>
+<td>浏览器错误提示信息</td>
+</tr>
+<tr>
+<td>willValidate</td>
+<td>指定 input 是否需要验证</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Validity-属性"><a href="#Validity-属性" class="headerlink" title="Validity 属性"></a>Validity 属性</h3><p>input 元素的 <strong>validity 属性</strong>包含一系列关于 validity 数据属性:</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>customError</td>
+<td>设置为 true, 如果设置了自定义的 validity 信息。</td>
+</tr>
+<tr>
+<td>patternMismatch</td>
+<td>设置为 true, 如果元素的值不匹配它的模式属性。</td>
+</tr>
+<tr>
+<td>rangeOverflow</td>
+<td>设置为 true, 如果元素的值大于设置的最大值。</td>
+</tr>
+<tr>
+<td>rangeUnderflow</td>
+<td>设置为 true, 如果元素的值小于它的最小值。</td>
+</tr>
+<tr>
+<td>stepMismatch</td>
+<td>设置为 true, 如果元素的值不是按照规定的 step 属性设置。</td>
+</tr>
+<tr>
+<td>tooLong</td>
+<td>设置为 true, 如果元素的值超过了 maxLength 属性设置的长度。</td>
+</tr>
+<tr>
+<td>typeMismatch</td>
+<td>设置为 true, 如果元素的值不是预期相匹配的类型。</td>
+</tr>
+<tr>
+<td>valueMissing</td>
+<td>设置为 true，如果元素 (required 属性) 没有值。</td>
+</tr>
+<tr>
+<td>valid</td>
+<td>设置为 true，如果元素的值是合法的。</td>
+</tr>
+</tbody></table>
+<pre><code>&lt;p&gt;输入数字并点击验证按钮:&lt;/p&gt;
+&lt;input id=&quot;id1&quot; type=&quot;number&quot; max=&quot;100&quot;&gt;
+&lt;button onclick=&quot;myFunction()&quot;&gt;验证&lt;/button&gt;
+&lt;p&gt;如果输入的数字大于 100 ( input 的 max 属性), 会显示错误信息。&lt;/p&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+function myFunction() &#123;
+    var txt = &quot;&quot;;
+    if (document.getElementById(&quot;id1&quot;).validity.rangeOverflow) &#123;
+        txt = &quot;输入的值太大了&quot;;
+    &#125; else &#123;
+        txt = &quot;输入正确&quot;;
+    &#125;
+    document.getElementById(&quot;demo&quot;).innerHTML = txt;
+&#125;
+&lt;/script&gt;</code></pre>
+<h2 id="13-this-关键字"><a href="#13-this-关键字" class="headerlink" title="13.this 关键字"></a>13.this 关键字</h2><p>面向对象语言中 this 表示当前对象的一个引用。</p>
+<p>但在 JavaScript 中 this 不是固定不变的，它会随着执行环境的改变而改变。</p>
+<ul>
+<li><p>==在方法中，this 表示该方法所属的对象==。</p>
+</li>
+<li><p>在函数中，this 表示全局对象。</p>
+</li>
+<li><p>在函数中，在严格模式下，this 是未定义的(undefined)。</p>
+</li>
+<li><p>在事件中，this 表示接收事件的元素。</p>
+<blockquote>
+<pre><code>&lt;h2&gt;JavaScript &lt;b&gt;this&lt;/b&gt; 关键字&lt;/h2&gt;
+//修改button的样式，点击后button会消失
+&lt;button onclick=&quot;this.style.display=&#39;none&#39;&quot;&gt;点我后我就消失了&lt;/button&gt;</code></pre>
+</blockquote>
+</li>
+<li><p>类似 call() 和 apply() 方法可以将 this 引用到任何对象。</p>
+</li>
+<li><p>单独使用 this，则它指向全局(Global)对象。在浏览器中，window 就是该全局对象为 [<strong>object Window</strong>]。</p>
+</li>
+</ul>
+<pre><code>&lt;h2&gt;JavaScript &lt;b&gt;this&lt;/b&gt; 关键字&lt;/h2&gt;
+&lt;p&gt;实例中，&lt;b&gt;this&lt;/b&gt; 指向了 window 对象:&lt;/p&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+var x = this;
+document.getElementById(&quot;demo&quot;).innerHTML = x;
+&lt;/script&gt;
+//会输出
+JavaScript this 关键字
+实例中，this 指向了 window 对象:
+[object Window]</code></pre>
+<ul>
+<li><p>显式函数绑定</p>
+<p>在 JavaScript 中函数也是对象，对象则有方法，apply 和 call 就是函数对象的方法。这两个方法异常强大，他们允许切换函数执行的上下文环境（context），即 this 绑定的对象。</p>
+<p>在下面实例中，==当我们使用 person2 作为参数来调用 person1.fullName 方法时, <strong>this</strong> 将指向 person2, 即便它是 person1 的方法==：</p>
+<pre><code>&lt;h2&gt;JavaScript this 关键字&lt;/h2&gt;
+&lt;p&gt;实例中 &lt;strong&gt;this&lt;/strong&gt; 指向了 person2，即便它是 person1 的方法:&lt;/p&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+var person1 = &#123;
+  fullName: function() &#123;
+    return this.firstName + &quot; &quot; + this.lastName;
+  &#125;
+&#125;
+var person2 = &#123;
+  firstName:&quot;John&quot;,
+  lastName: &quot;Doe&quot;,
+&#125;
+var x = person1.fullName.call(person2);
+document.getElementById(&quot;demo&quot;).innerHTML = x;
+&lt;/script&gt;</code></pre>
+</li>
+</ul>
+<h2 id="14-let-和-const"><a href="#14-let-和-const" class="headerlink" title="14.let 和 const"></a>14.let 和 const</h2><p>let 声明的变量只在 let 命令所在的代码块内有效。</p>
+<p>const 声明一个只读的常量，一旦声明，常量的值就不能改变。</p>
+<p>使用 var 关键字声明的变量不具备块级作用域的特性，它在 {} 外依然能被访问到。</p>
+<p>在 ES6 之前，是没有块级作用域的概念的，ES6 可以使用 let 关键字来实现块级作用域。</p>
+<p>==let 声明的变量只在 let 命令所在的代码块 <strong>{}</strong> 内有效，在 <strong>{}</strong> 之外不能访问。==</p>
+<pre><code>var x = 10;
+// 这里输出 x 为 10
+&#123;
+  let x = 2;
+  // 这里输出 x 为 2
+&#125;
+// 这里输出 x 为 10</code></pre>
+<p>在 JavaScript 中, 全局作用域是针对 JavaScript 环境。在 HTML 中, 全局作用域是针对 window 对象。</p>
+<p>使用 <strong>var</strong> 关键字声明的全局作用域变量属于 window 对象，使用 <strong>let</strong> 关键字声明的全局作用域变量不属于 window 对象。</p>
+<p>==const 用于声明一个或多个常量，声明时必须进行初始化，且初始化后值不可再修改。==</p>
+<p>const 定义常量与使用 let 定义的变量相似：</p>
+<ul>
+<li>二者都是块级作用域</li>
+<li>都不能和它所在作用域内的其他变量或函数拥有相同的名称</li>
+</ul>
+<p>两者还有以下两点区别：</p>
+<ul>
+<li><code>const</code>声明的常量必须初始化，而<code>let</code>声明的变量不用</li>
+<li>const 定义常量的值不能通过再赋值修改，也不能再次声明。而 let 定义的变量值可以修改。</li>
+</ul>
+<p><strong>const 的本质: const 定义的变量并非常量，并非不可变，它定义了一个常量引用一个值。使用 const 定义的对象或者数组，其实是可变的。</strong></p>
+<h2 id="15-JSON"><a href="#15-JSON" class="headerlink" title="15.JSON"></a>15.JSON</h2><p>JSON 是用于存储和传输数据的格式，它通常用于服务端向网页传递数据 。</p>
+<blockquote>
+<p>==JSON 使用 JavaScript 语法，但是 JSON 格式仅仅是一个文本。文本可以被任何编程语言读取及作为数据格式传递。==</p>
+</blockquote>
+<h3 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h3><ul>
+<li>数据为 键/值 对。</li>
+<li>数据由逗号分隔。</li>
+<li>大括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
+<h3 id="JSON-对象保存在大括号内"><a href="#JSON-对象保存在大括号内" class="headerlink" title="JSON 对象保存在大括号内"></a>JSON 对象保存在大括号内</h3><p>就像在 JavaScript 中, 对象可以保存多个 键/值 对：</p>
+<p>{“name”:”Runoob”, “url”:”<a target="_blank" rel="noopener" href="http://www.runoob.com&quot;}/">www.runoob.com&quot;}</a></p>
+<h3 id="JSON-数组保存在中括号内"><a href="#JSON-数组保存在中括号内" class="headerlink" title="JSON 数组保存在中括号内"></a>JSON 数组保存在中括号内</h3><p>就像在 JavaScript 中, 数组可以包含对象：</p>
+<p>“sites”:[ {“name”:”Runoob”, “url”:”<a target="_blank" rel="noopener" href="http://www.runoob.com&quot;}/">www.runoob.com&quot;}</a>, {“name”:”Google”, “url”:”<a target="_blank" rel="noopener" href="http://www.google.com&quot;}/">www.google.com&quot;}</a>, {“name”:”Taobao”, “url”:”<a target="_blank" rel="noopener" href="http://www.taobao.com&quot;}/">www.taobao.com&quot;}</a> ]</p>
+<pre><code>&lt;h2&gt;为 JSON 字符串创建对象&lt;/h2&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+var text = &#39;&#123; &quot;sites&quot; : [&#39; +
+ &#39;&#123; &quot;name&quot;:&quot;Runoob&quot; , &quot;url&quot;:&quot;www.runoob.com&quot; &#125;,&#39; +
+ &#39;&#123; &quot;name&quot;:&quot;Google&quot; , &quot;url&quot;:&quot;www.google.com&quot; &#125;,&#39; +
+ &#39;&#123; &quot;name&quot;:&quot;Taobao&quot; , &quot;url&quot;:&quot;www.taobao.com&quot; &#125; ]&#125;&#39;;
+
+obj = JSON.parse(text); // 转换为JS对象
+document.getElementById(&quot;demo&quot;).innerHTML = obj.sites[2].name + &quot; &quot; + obj.sites[1].url;
+&lt;/script&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/javascript-json-parse.html">JSON.parse()</a></td>
+<td>用于将一个 JSON 字符串转换为 JavaScript 对象。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/javascript-json-stringify.html">JSON.stringify()</a></td>
+<td>用于将 JavaScript 值转换为 JSON 字符串。</td>
+</tr>
+</tbody></table>
+<h2 id="16-void"><a href="#16-void" class="headerlink" title="16.void"></a>16.void</h2><p><strong>href=”#”与 href=”javascript:void(0)”的区别</strong></p>
+<p><strong>#</strong> 包含了一个位置信息，默认的锚是**#top** 也就是网页的上端；而 javascript:void(0), 仅仅表示一个死链接。</p>
+<p>在页面很长的时候会使用 <strong>#</strong> 来定位页面的具体位置，格式为：**# + id**。</p>
+<p>如果你要定义一个死链接请使用 javascript:void(0) 。</p>
+<h1 id="二、HTML-DOM"><a href="#二、HTML-DOM" class="headerlink" title="二、HTML DOM"></a>二、HTML DOM</h1><p>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
+<p><strong>HTML DOM</strong> 模型被构造为<strong>对象</strong>的树：</p>
+<p><img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/pic_htmltree.gif" alt="DOM HTML tree"></p>
+<p>通过可编程的对象模型，JavaScript 获得了足够的能力来创建动态的 HTML。</p>
+<ul>
+<li>JavaScript 能够改变页面中的所有 HTML 元素</li>
+<li>JavaScript 能够改变页面中的所有 HTML 属性</li>
+<li>JavaScript 能够改变页面中的所有 CSS 样式</li>
+<li>JavaScript 能够对页面中的所有事件做出反应</li>
+</ul>
+<h2 id="查找-HTML-元素"><a href="#查找-HTML-元素" class="headerlink" title="查找 HTML 元素"></a>查找 HTML 元素</h2><p>有三种查找 HTML 元素的方法：</p>
+<ul>
+<li>通过 id 找到 HTML 元素</li>
+<li>通过标签名找到 HTML 元素</li>
+<li>通过类名找到 HTML 元素</li>
+</ul>
+<h3 id="通过-id-查找-HTML-元素"><a href="#通过-id-查找-HTML-元素" class="headerlink" title="通过 id 查找 HTML 元素"></a>通过 id 查找 HTML 元素</h3><p>在 DOM 中查找 HTML 元素的最简单的方法，是通过使用元素的 id。</p>
+<p>本例查找 id=”intro” 元素：var x=document.getElementById(“intro”);</p>
+<blockquote>
+<p>如果找到该元素，则该方法将以对象（在 x 中）的形式返回该元素。如果未找到该元素，则 x 将包含 null。</p>
+</blockquote>
+<h3 id="通过标签名查找-HTML-元素"><a href="#通过标签名查找-HTML-元素" class="headerlink" title="通过标签名查找 HTML 元素"></a>通过标签名查找 HTML 元素</h3><p>本例查找 id=”main” 的元素，然后查找 id=”main” 元素中的所有&lt;p&gt; 元素：</p>
+<blockquote>
+<p>var x=document.getElementById(“main”);<br>var y=x.getElementsByTagName(“p”);</p>
+</blockquote>
+<h3 id="通过类名找到-HTML-元素"><a href="#通过类名找到-HTML-元素" class="headerlink" title="通过类名找到 HTML 元素"></a>通过类名找到 HTML 元素</h3><p>本例通过 <strong>getElementsByClassName</strong> 函数来查找 class=”intro” 的元素：</p>
+<p>var x=document.getElementsByClassName(“intro”);</p>
+<h2 id="改变-HTML"><a href="#改变-HTML" class="headerlink" title="改变 HTML"></a>改变 HTML</h2><h3 id="改变-HTML-标签的内容"><a href="#改变-HTML-标签的内容" class="headerlink" title="改变 HTML 标签的内容"></a>改变 HTML 标签的内容</h3><p>document.getElementById(<em>id</em>Name).innerHTML=<em>新的 HTML</em></p>
+<h3 id="改变-HTML-属性"><a href="#改变-HTML-属性" class="headerlink" title="改变 HTML 属性"></a>改变 HTML 属性</h3><p>document.getElementById(<em>id</em>).<em>attribute=新属性值</em></p>
+<blockquote>
+<p>比如改变图片的属性：</p>
+<pre><code>&lt;img id=&quot;image&quot; src=&quot;smiley.gif&quot;&gt;
+&lt;script&gt;
+document.getElementById(&quot;image&quot;).src=&quot;landscape.jpg&quot;;
+&lt;/script&gt;</code></pre>
+</blockquote>
+<h2 id="改变-CSS"><a href="#改变-CSS" class="headerlink" title="改变 CSS"></a>改变 CSS</h2><h3 id="改变-HTML-样式"><a href="#改变-HTML-样式" class="headerlink" title="改变 HTML 样式"></a>改变 HTML 样式</h3><p>document.getElementById(<em>id</em>).style.<em>property</em>=<em>新样式</em></p>
+<p>如下面改变 p 标签的颜色，字体和大小</p>
+<pre><code>&lt;body&gt;
+&lt;p id=&quot;p1&quot;&gt;Hello World!&lt;/p&gt;
+&lt;p id=&quot;p2&quot;&gt;Hello World!&lt;/p&gt;
+&lt;script&gt;
+document.getElementById(&quot;p2&quot;).style.color=&quot;blue&quot;;
+document.getElementById(&quot;p2&quot;).style.fontFamily=&quot;Arial&quot;;
+document.getElementById(&quot;p2&quot;).style.fontSize=&quot;larger&quot;;
+&lt;/script&gt;
+&lt;p&gt;以上段落通过脚本修改。&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+<h2 id="HTML-DOM-事件"><a href="#HTML-DOM-事件" class="headerlink" title="HTML DOM 事件"></a>HTML DOM 事件</h2><p>在事件发生时执行 JavaScript，比如当用户在 HTML 元素上点击时。如需在用户点击某个元素时执行代码，请向一个 HTML 事件属性添加 JavaScript 代码：</p>
+<p>onclick=<em>JavaScript</em></p>
+<p>HTML 事件的例子：</p>
+<ul>
+<li>当用户点击鼠标时</li>
+<li>当网页已加载时</li>
+<li>当图像已加载时</li>
+<li>当鼠标移动到元素上时</li>
+<li>当输入字段被改变时</li>
+<li>当提交 HTML 表单时</li>
+<li>当用户触发按键时</li>
+</ul>
+<p>如：&lt;h1 onclick=”this.innerHTML=’Ooops!’”&gt;点击文本!&lt;/h1&gt; 点击时文本会变成 Ooops</p>
+<h2 id="各种事件"><a href="#各种事件" class="headerlink" title="各种事件"></a>各种事件</h2><ul>
+<li><strong>onload 和 onunload 事件，它们会在用户进入或离开==页面==时被触发。</strong></li>
+</ul>
+<blockquote>
+<p>onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本。</p>
+</blockquote>
+<ul>
+<li>onload 和 onunload 事件可用于处理 cookie。</li>
+<li>onchange 事件，常结合对输入字段的验证来使用。</li>
+<li>onmouseover 和 onmouseout 事件可用于在用户的鼠标移至 HTML 元素上方或移出元素时触发函数。</li>
+<li><strong>onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。</strong>首先当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件。</li>
+</ul>
+<h3 id="addEventListener-方法"><a href="#addEventListener-方法" class="headerlink" title="addEventListener() 方法"></a>addEventListener() 方法</h3><p>addEventListener() 方法用于向指定元素添加事件句柄，它添加的事件句柄不会覆盖已存在的事件句柄。</p>
+<p>可以向一个元素添加多个事件句柄，也可以向同个元素添加多个同类型的事件句柄，如：两个 “click” 事件。</p>
+<p>可以向任何 DOM 对象添加事件监听，不仅仅是 HTML 元素。如： window 对象。</p>
+<p>addEventListener() 方法可以更简单的控制事件（冒泡与捕获）。</p>
+<p>当你使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制 HTML 标记时也可以添加事件监听。</p>
+<p>可以使用 removeEventListener() 方法来移除事件的监听。</p>
+<blockquote>
+<p>如在用户点击按钮时触发监听事件：</p>
+<p>document.getElementById(“myBtn”).addEventListener(“click”, displayDate);</p>
+</blockquote>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>==<em>element</em>.addEventListener(<em>event, function, useCapture</em>);==</p>
+<blockquote>
+<p>第一个参数是事件的类型 (如 “click” 或 “mousedown”).</p>
+<p>第二个参数是事件触发后调用的函数。</p>
+<p>第三个参数是个布尔值用于描述事件是冒泡还是捕获。该参数是可选的。</p>
+<p><strong>注意:不要使用 “on” 前缀。 例如，使用 “click” ,而不是使用 “onclick”。</strong></p>
+</blockquote>
+<h4 id="向原元素添加事件句柄"><a href="#向原元素添加事件句柄" class="headerlink" title="向原元素添加事件句柄"></a>向原元素添加事件句柄</h4><p>可以引用外部函数名</p>
+<pre><code>element.addEventListener(&quot;click&quot;, myFunction);
+function myFunction() &#123;
+  alert(&quot;Hello World!&quot;);
+&#125;</code></pre>
+<h4 id="向同一个元素中添加多个事件句柄"><a href="#向同一个元素中添加多个事件句柄" class="headerlink" title="向同一个元素中添加多个事件句柄"></a>向同一个元素中添加多个事件句柄</h4><p>addEventListener() 方法允许向同一个元素添加多个事件，且不会覆盖已存在的事件：</p>
+<pre><code>element.addEventListener(&quot;mouseover&quot;, myFunction);
+element.addEventListener(&quot;click&quot;, mySecondFunction);
+element.addEventListener(&quot;mouseout&quot;, myThirdFunction);</code></pre>
+<h4 id="向-Window-对象添加事件句柄"><a href="#向-Window-对象添加事件句柄" class="headerlink" title="向 Window 对象添加事件句柄"></a>向 Window 对象添加事件句柄</h4><p>​ addEventListener() 方法允许你在 HTML DOM 对象添加事件监听， HTML DOM 对象如： HTML 元素, HTML 文档, window 对象。或者其他支出的事件对象如: xmlHttpRequest 对象。</p>
+<pre><code>//当用户重置窗口大小时添加事件监听：
+window.addEventListener(&quot;resize&quot;, function()&#123;
+    document.getElementById(&quot;demo&quot;).innerHTML = sometext;
+&#125;);</code></pre>
+<h4 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h4><p>当传递参数值时，使用”匿名函数”调用带参数的函数：</p>
+<pre><code>&lt;button id=&quot;myBtn&quot;&gt;点我&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+var p1 = 5;
+var p2 = 7;
+    //不能直接引用myFunction(p1, p2)
+document.getElementById(&quot;myBtn&quot;).addEventListener(&quot;click&quot;, function() &#123;
+    myFunction(p1, p2);
+&#125;);
+function myFunction(a, b) &#123;
+    var result = a * b;
+    document.getElementById(&quot;demo&quot;).innerHTML = result;
+&#125;
+&lt;/script&gt;</code></pre>
+<h4 id="冒泡与捕获"><a href="#冒泡与捕获" class="headerlink" title="冒泡与捕获"></a>冒泡与捕获</h4><p>==事件传递有两种方式：冒泡与捕获。==</p>
+<p>事件传递定义了元素事件触发的顺序。 如果你将&lt;p&gt; 元素插入到 &lt;div&gt; 元素中，用户点击 &lt;p&gt; 元素, 哪个元素的 “click” 事件先被触发呢？</p>
+<p>在 <em>冒泡</em> 中，内部元素的事件会先被触发，然后再触发外部元素，即： &lt;p&gt; 元素的点击事件先触发，然后会触发 &lt;div&gt; 元素的点击事件。</p>
+<p>在 <em>捕获</em> 中，外部元素的事件会先被触发，然后才会触发内部元素的事件，即： &lt;div&gt; 元素的点击事件先触发 ，然后再触发 &lt;p&gt; 元素的点击事件。</p>
+<p>addEventListener() 方法可以指定 “useCapture” 参数来设置传递类型：</p>
+<pre><code>addEventListener(event, function, useCapture);</code></pre>
+<p>默认值为 false, 即冒泡传递，当值为 true 时, 事件使用捕获传递。</p>
+<h4 id="removeEventListener-方法"><a href="#removeEventListener-方法" class="headerlink" title="removeEventListener() 方法"></a>removeEventListener() 方法</h4><blockquote>
+<p>removeEventListener() 方法移除由 addEventListener() 方法添加的事件句柄:</p>
+<p><em>element</em>.removeEventListener(“mousemove”, myFunction);</p>
+</blockquote>
+<h4 id="创建新的-HTML-元素-节点-appendChild"><a href="#创建新的-HTML-元素-节点-appendChild" class="headerlink" title="创建新的 HTML 元素 (节点) - appendChild()"></a>创建新的 HTML 元素 (节点) - appendChild()</h4><p>要创建新的 HTML 元素 (节点)需要先创建一个元素，然后在已存在的元素中添加它。</p>
+<pre><code>&lt;script&gt;
+var para = document.createElement(&quot;p&quot;);  // 创建 &lt;p&gt; 元素
+var node = document.createTextNode(&quot;这是一个新的段落。&quot;); //为 &lt;p&gt; 元素添加文本节点
+para.appendChild(node);  // 将文本节点添加到 &lt;p&gt; 元素中,在一个已存在的元素中添加 p 元素。
+
+var element = document.getElementById(&quot;div1&quot;); //查找已存在的元素
+element.appendChild(para); //添加到已存在的元素中
+&lt;/script&gt;</code></pre>
+<h4 id="创建新的-HTML-元素-节点-insertBefore"><a href="#创建新的-HTML-元素-节点-insertBefore" class="headerlink" title="创建新的 HTML 元素 (节点) - insertBefore()"></a>创建新的 HTML 元素 (节点) - insertBefore()</h4><p>将新元素添加到开始位置，可以使用 <strong>insertBefore()</strong> 方法:</p>
+<h4 id="移除已存在的元素"><a href="#移除已存在的元素" class="headerlink" title="移除已存在的元素"></a>移除已存在的元素</h4><p>要移除一个元素，你需要知道该元素的父元素,removeChild()方法</p>
+<h4 id="替换-HTML-元素-replaceChild"><a href="#替换-HTML-元素-replaceChild" class="headerlink" title="替换 HTML 元素 - replaceChild()"></a>替换 HTML 元素 - replaceChild()</h4><h3 id="DOM-集合"><a href="#DOM-集合" class="headerlink" title="DOM 集合"></a>DOM 集合</h3><p>getElementsByTagName() 方法返回 <a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/dom-htmlcollection.html">HTMLCollection</a> 对象。</p>
+<pre><code>//获取文档所有的 &lt;p&gt; 元素：
+var x = document.getElementsByTagName(&quot;p&quot;);
+//集合中的元素可以通过索引(以 0 为起始位置)来访问,访问第二个 &lt;p&gt; 元素:
+y = x[1];
+//HTMLCollection 对象的 length 属性定义了集合中元素的数量，如：x.length表示&lt;p&gt; 元素的数量</code></pre>
+<p>修改所有&lt;p&gt;元素的背景颜色：</p>
+<pre><code>var myCollection = document.getElementsByTagName(&quot;p&quot;);
+var i;
+for (i = 0; i &lt; myCollection.length; i++) &#123;
+  myCollection[i].style.backgroundColor = &quot;red&quot;;
+&#125;</code></pre>
+<h1 id="二、高级"><a href="#二、高级" class="headerlink" title="二、高级"></a>二、高级</h1><h2 id="JavaScript-对象"><a href="#JavaScript-对象" class="headerlink" title="JavaScript 对象"></a>JavaScript 对象</h2><p>JavaScript 提供多个内建对象，比如 String、Date、Array 等等。 对象只是带有属性和方法的特殊数据类型。</p>
+<ul>
+<li>布尔型可以是一个对象。</li>
+<li>数字型可以是一个对象。</li>
+<li>字符串也可以是一个对象</li>
+<li>日期是一个对象</li>
+<li>数学和正则表达式也是对象</li>
+<li>数组是一个对象</li>
+<li>甚至函数也可以是对象</li>
+</ul>
+<p>==对象只是一种特殊的数据。对象拥有<strong>属性</strong>和<strong>方法</strong>==。</p>
+<h3 id="创建-JavaScript-对象"><a href="#创建-JavaScript-对象" class="headerlink" title="创建 JavaScript 对象"></a>创建 JavaScript 对象</h3><p>通过 JavaScript，您能够定义并创建自己的对象。创建新对象有两种不同的方法：</p>
+<ul>
+<li><p>定义并创建对象的实例</p>
+<pre><code>person=new Object();
+person.firstname=&quot;John&quot;;
+person.lastname=&quot;Doe&quot;;
+person.age=50;
+person.eyecolor=&quot;blue&quot;;</code></pre>
+</li>
+<li><p>使用函数来定义对象，然后创建新的对象实例</p>
+<pre><code>function person(firstname, lastname, age, eyecolor) &#123;
+  this.firstname = firstname;
+  this.lastname = lastname;
+  this.age = age;
+  this.eyecolor = eyecolor;
+&#125;</code></pre>
+</li>
+</ul>
+<h3 id="prototype（原型对象）"><a href="#prototype（原型对象）" class="headerlink" title="prototype（原型对象）"></a>prototype（原型对象）</h3><p>所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法。</p>
+<h4 id="prototype-继承"><a href="#prototype-继承" class="headerlink" title="prototype 继承"></a>prototype 继承</h4><p>所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法：</p>
+<ul>
+<li><code>Date</code> 对象从 <code>Date.prototype</code> 继承。</li>
+<li><code>Array</code> 对象从 <code>Array.prototype</code> 继承。</li>
+<li><code>Person</code> 对象从 <code>Person.prototype</code> 继承。</li>
+</ul>
+<p>所有 JavaScript 中的对象都是位于原型链顶端的 Object 的实例。</p>
+<p>JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象的原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。</p>
+<p><code>Date</code> 对象, <code>Array</code> 对象, 以及 <code>Person</code> 对象从 <code>Object.prototype</code> 继承。</p>
+<h4 id="添加属性和方法"><a href="#添加属性和方法" class="headerlink" title="添加属性和方法"></a>添加属性和方法</h4><p>在所有已经存在的对象添加新的属性或方法，可以通过 prototype 实现。</p>
+<p>使用 prototype 属性就可以给对象的构造函数添加新的属性：</p>
+<pre><code>function Person(first, last, age, eyecolor) &#123;
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+&#125;
+Person.prototype.nationality = &quot;English&quot;;
+//添加方法
+Person.prototype.name = function () &#123;
+  return this.firstName + &quot; &quot; + this.lastName;
+&#125;;</code></pre>
+<h3 id="Number-对象"><a href="#Number-对象" class="headerlink" title="Number 对象"></a>Number 对象</h3><p>JavaScript 只有一种数字类型，可以使用也可以不使用小数点来书写数字，极大或极小的数字可通过科学（指数）计数法来写。</p>
+<p><strong>所有 JavaScript 数字均为 64 位。</strong></p>
+<h4 id="NaN-非数字值"><a href="#NaN-非数字值" class="headerlink" title="NaN - 非数字值"></a>NaN - 非数字值</h4><p>NaN 属性是代表非数字值的特殊值。该属性用于指示某个值不是数字。可以把 Number 对象设置为该值，来指示其不是数字值。可以使用 isNaN() 全局函数来判断一个值是否是 NaN 值。</p>
+<h3 id="字符串（String）-对象"><a href="#字符串（String）-对象" class="headerlink" title="字符串（String） 对象"></a>字符串（String） 对象</h3><p>字符串的属性和方法与 Java 中的大多数一样，一个字符串可以使用单引号或双引号。</p>
+<ul>
+<li><p>**match()**函数用来查找字符串中特定的字符，并且如果找到的话，则返回这个字符。</p>
+</li>
+<li><p><strong>replace()</strong> 方法在字符串中用某些字符替换另一些字符。</p>
+</li>
+<li><p>字符串大小写转换使用函数 <strong>toUpperCase()</strong> / <strong>toLowerCase()。</strong></p>
+</li>
+<li><p>字符串使用**split()**函数转为数组:</p>
+<pre><code>&lt;script&gt;
+function myFunction()&#123;
+ var str=&quot;a,b,c,d,e,f&quot;;
+ var n=str.split(&quot;,&quot;);
+ document.getElementById(&quot;demo&quot;).innerHTML=n[0];
+&#125;
+&lt;/script&gt;</code></pre>
+</li>
+<li><p>特殊字符</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#39;</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\</td>
+<td>斜杆</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>tab</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>空格</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="Date（日期）-对象"><a href="#Date（日期）-对象" class="headerlink" title="Date（日期） 对象"></a>Date（日期） 对象</h3><h4 id="在线实例"><a href="#在线实例" class="headerlink" title="在线实例"></a>在线实例</h4><pre><code>// 显示当前日期
+&lt;script&gt;
+var d=new Date();
+document.write(d);
+&lt;/script&gt;
+//使用 getFullYear() 获取年份。
+&lt;script&gt;
+function myFunction()&#123;
+ var d = new Date();
+ var x = document.getElementById(&quot;demo&quot;);
+ x.innerHTML=d.getFullYear();
+    d.getTime(); //getTime() 返回从 1970 年 1 月 1 日至今的毫秒数。
+    x.innerHTML=d.toUTCString(); //使用 toUTCString() 将当日的日期（根据 UTC）转换为字符串。
+&#125;
+&lt;/script&gt;</code></pre>
+<p>使用 getDay() 和数组来显示星期，而不仅仅是数字。</p>
+<pre><code>&lt;script&gt;
+function myFunction()&#123;
+ var d = new Date();
+ var weekday=new Array(7);
+ weekday[0]=&quot;周日&quot;;
+ weekday[1]=&quot;周一&quot;;
+ weekday[2]=&quot;周二&quot;;
+ weekday[3]=&quot;周三&quot;;
+ weekday[4]=&quot;周四&quot;;
+ weekday[5]=&quot;周五&quot;;
+ weekday[6]=&quot;周六&quot;;
+ var x = document.getElementById(&quot;demo&quot;);
+ x.innerHTML=weekday[d.getDay()];
+&#125;
+&lt;/script&gt;</code></pre>
+<p>在网页上显示一个钟表。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+    &lt;script&gt;
+      function startTime() &#123;
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds(); // 在小于10的数字前加一个‘0’
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById(&quot;txt&quot;).innerHTML = h + &quot;:&quot; + m + &quot;:&quot; + s;
+        t = setTimeout(function () &#123;
+          startTime();
+        &#125;, 500);
+      &#125;
+      function checkTime(i) &#123;
+        if (i &lt; 10) &#123;
+          i = &quot;0&quot; + i;
+        &#125;
+        return i;
+      &#125;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload=&quot;startTime()&quot;&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h3 id="Array（数组）-对象"><a href="#Array（数组）-对象" class="headerlink" title="Array（数组） 对象"></a>Array（数组） 对象</h3><h4 id="在线实例-1"><a href="#在线实例-1" class="headerlink" title="在线实例"></a>在线实例</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//合并两个数组,如下输出：Cecilie,Lone,Emil,Tobias,Linus</span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token keyword">var</span> hege <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Cecilie"</span><span class="token punctuation">,</span> <span class="token string">"Lone"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">var</span> stale <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Emil"</span><span class="token punctuation">,</span> <span class="token string">"Tobias"</span><span class="token punctuation">,</span> <span class="token string">"Linus"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">var</span>
+  children <span class="token operator">=</span> hege<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>stale<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">var</span> family <span class="token operator">=</span> parents<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>brothers<span class="token punctuation">,</span>
+  children<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 合并三个数组，其中brothers,children和parents都是数组</span>
+  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<h5 id="用数组元素组成字符串"><a href="#用数组元素组成字符串" class="headerlink" title="用数组元素组成字符串"></a>用数组元素组成字符串</h5><pre><code>&lt;script&gt;
+function myFunction()&#123;
+ var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+    fruits.toString(); // 将数组转换为字符串
+    fruits.pop(); // 删除最后一个元素
+    fruits.shift(); // 删除第一个元素
+    var citrus = fruits.slice(1,3);  // 截取数组下标 1 到 2 的元素，从一个数组中选择元素
+    fruits.push(&quot;Kiwi&quot;)  // 在数组末尾添加新的元素
+    fruits.unshift(&quot;Lemon&quot;,&quot;Pineapple&quot;); // 在数组的开头添加新元素
+    fruits.splice(2,0,&quot;Lemon&quot;,&quot;Kiwi&quot;); // 在第二个位置添加两个元素
+    fruits.reverse();  //将一个数组中的元素的顺序反转排序
+ var x=document.getElementById(&quot;demo&quot;);
+ x.innerHTML=fruits.join();
+&#125;
+&lt;/script&gt;</code></pre>
+<h5 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h5><pre><code>// 按字母升序排序
+&lt;script&gt;
+function myFunction()&#123;
+ var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+ fruits.sort();
+ var x=document.getElementById(&quot;demo&quot;);
+ x.innerHTML=fruits;
+&#125;
+&lt;/script&gt;
+// 按数字升/降序排序
+&lt;script&gt;
+function myFunction()&#123;
+ var points = [40,100,1,5,25,10];
+ points.sort(function(a,b)&#123;return a-b&#125;);  // 升序
+    points.sort(function(a,b)&#123;return b-a&#125;);  // 降序
+ var x=document.getElementById(&quot;demo&quot;);
+ x.innerHTML=points;
+&#125;
+&lt;/script&gt;</code></pre>
+<h3 id="RegExp-对象"><a href="#RegExp-对象" class="headerlink" title="RegExp 对象"></a>RegExp 对象</h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><blockquote>
+<p>var patt=new RegExp(pattern,modifiers); 或</p>
+<p>var patt=/pattern/modifiers;</p>
+<p>如：var patt1 = /runoob/i;</p>
+</blockquote>
+<ul>
+<li>模式描述了一个表达式模型。</li>
+<li>修饰符(modifiers)描述了检索是否是全局，区分大小写等。</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong>当使用构造函数创造正则对象时，需要常规的字符转义规则（在前面加反斜杠 \）。比如，以下是等价的：</p>
+<pre><code>var re = new RegExp(&quot;\\w+&quot;);
+var re = /\w+/;</code></pre>
+</blockquote>
+<p>exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。</p>
+<h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><p>修饰符用于执行区分大小写和全局匹配:</p>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/jsref-regexp-i.html">i</a></td>
+<td>执行对大小写不敏感的匹配。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/jsref-regexp-g.html">g</a></td>
+<td>执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。</td>
+</tr>
+<tr>
+<td>m</td>
+<td>执行多行匹配。</td>
+</tr>
+</tbody></table>
+<h4 id="方括号"><a href="#方括号" class="headerlink" title="方括号"></a>方括号</h4><p>方括号用于查找某个范围内的字符：</p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-charset.html">abc]</a></td>
+<td>查找方括号之间的任何字符。</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-charset-not.html">^abc]</a></td>
+<td>查找任何不在方括号之间的字符。</td>
+</tr>
+<tr>
+<td>[0-9]</td>
+<td>查找任何从 0 至 9 的数字。</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>查找任何从小写 a 到小写 z 的字符。</td>
+</tr>
+<tr>
+<td>[A-Z]</td>
+<td>查找任何从大写 A 到大写 Z 的字符。</td>
+</tr>
+<tr>
+<td>[A-z]</td>
+<td>查找任何从大写 A 到小写 z 的字符。</td>
+</tr>
+<tr>
+<td>[adgk]</td>
+<td>查找给定集合内的任何字符。</td>
+</tr>
+<tr>
+<td>[^adgk]</td>
+<td>查找给定集合外的任何字符。</td>
+</tr>
+<tr>
+<td>(red|blue|green)</td>
+<td>查找任何指定的选项。</td>
+</tr>
+</tbody></table>
+<h4 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h4><p>元字符（Metacharacter）是拥有特殊含义的字符：</p>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-dot.html">.</a></td>
+<td>查找单个字符，除了换行和行结束符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-wordchar.html">\w</a></td>
+<td>查找单词字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-wordchar-non.html">\W</a></td>
+<td>查找非单词字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-digit.html">\d</a></td>
+<td>查找数字。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-digit-non.html">\D</a></td>
+<td>查找非数字字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-whitespace.html">\s</a></td>
+<td>查找空白字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-whitespace-non.html">\S</a></td>
+<td>查找非空白字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-begin.html">\b</a></td>
+<td>匹配单词边界。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-begin-not.html">\B</a></td>
+<td>匹配非单词边界。</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>查找 NULL 字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-newline.html">\n</a></td>
+<td>查找换行符。</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>查找换页符。</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>查找回车符。</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>查找制表符。</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>查找垂直制表符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-octal.html">\xxx</a></td>
+<td>查找以八进制数 xxx 规定的字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-hex.html">\xdd</a></td>
+<td>查找以十六进制数 dd 规定的字符。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-unicode-hex.html">\uxxxx</a></td>
+<td>查找以十六进制数 xxxx 规定的 Unicode 字符。</td>
+</tr>
+</tbody></table>
+<h4 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h4><table>
+<thead>
+<tr>
+<th>量词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-onemore.html">n+</a></td>
+<td>匹配任何包含至少一个 n 的字符串。例如，/a+/ 匹配 “candy” 中的 “a”，”caaaaaaandy” 中所有的 “a”。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-zeromore.html">n*</a></td>
+<td>匹配任何包含零个或多个 n 的字符串。例如，/bo*/ 匹配 “A ghost booooed” 中的 “boooo”，”A bird warbled” 中的 “b”，但是不匹配 “A goat grunted”。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-zeroone.html">n?</a></td>
+<td>匹配任何包含零个或一个 n 的字符串。例如，/e?le?/ 匹配 “angel” 中的 “el”，”angle” 中的 “le”。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-nx.html">n{X}</a></td>
+<td>匹配包含 X 个 n 的序列的字符串。例如，/a{2}/ 不匹配 “candy,” 中的 “a”，但是匹配 “caandy,” 中的两个 “a”，且匹配 “caaandy.” 中的前两个 “a”。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-nxcomma.html">n{X,}</a></td>
+<td>X 是一个正整数。前面的模式 n 连续出现至少 X 次时匹配。例如，/a{2,}/ 不匹配 “candy” 中的 “a”，但是匹配 “caandy” 和 “caaaaaaandy.” 中所有的 “a”。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-nxy.html">n{X,Y}</a></td>
+<td>X 和 Y 为正整数。前面的模式 n 连续出现至少 X 次，至多 Y 次时匹配。例如，/a{1,3}/ 不匹配 “cndy”，匹配 “candy,” 中的 “a”，”caandy,” 中的两个 “a”，匹配 “caaaaaaandy” 中的前面三个 “a”。注意，当匹配 “caaaaaaandy” 时，即使原始字符串拥有更多的 “a”，匹配项也是 “aaa”。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-ndollar.html">n$</a></td>
+<td>匹配任何结尾为 n 的字符串。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-ncaret.html">^n</a></td>
+<td>匹配任何开头为 n 的字符串。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-nfollow.html">?=n</a></td>
+<td>匹配任何其后紧接指定字符串 n 的字符串。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-nfollow-not.html">?!n</a></td>
+<td>匹配任何其后没有紧接指定字符串 n 的字符串。</td>
+</tr>
+</tbody></table>
+<h4 id="RegExp-对象方法"><a href="#RegExp-对象方法" class="headerlink" title="RegExp 对象方法"></a>RegExp 对象方法</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-compile.html">compile</a></td>
+<td>在 1.5 版本中已废弃。 编译正则表达式。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-exec-regexp.html">exec</a></td>
+<td>检索字符串中指定的值。返回找到的值，并确定其位置。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-test-regexp.html">test</a></td>
+<td>检索字符串中指定的值。返回 true 或 false。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-tostring.html">toString</a></td>
+<td>返回正则表达式的字符串。</td>
+</tr>
+</tbody></table>
+<h4 id="支持正则表达式的-String-对象的方法"><a href="#支持正则表达式的-String-对象的方法" class="headerlink" title="支持正则表达式的 String 对象的方法"></a>支持正则表达式的 String 对象的方法</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+<th>FF</th>
+<th>IE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/jsref-search.html">search</a></td>
+<td>检索与正则表达式相匹配的值。</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/jsref-match.html">match</a></td>
+<td>找到一个或多个正则表达式的匹配。</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/jsref-replace.html">replace</a></td>
+<td>替换与正则表达式匹配的子串。</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/js/jsref-split.html">split</a></td>
+<td>把字符串分割为字符串数组。</td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="RegExp-对象属性"><a href="#RegExp-对象属性" class="headerlink" title="RegExp 对象属性"></a>RegExp 对象属性</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-constructor.html">constructor</a></td>
+<td>返回一个函数，该函数是一个创建 RegExp 对象的原型。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-global.html">global</a></td>
+<td>判断是否设置了 “g” 修饰符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-regexp-ignorecase.html">ignoreCase</a></td>
+<td>判断是否设置了 “i” 修饰符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-lastindex-regexp.html">lastIndex</a></td>
+<td>用于规定下次匹配的起始位置</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-multiline-regexp.html">multiline</a></td>
+<td>判断是否设置了 “m” 修饰符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/jsref-source-regexp.html">source</a></td>
+<td>返回正则表达式的匹配模式</td>
+</tr>
+</tbody></table>
+<h2 id="Window-浏览器对象模型"><a href="#Window-浏览器对象模型" class="headerlink" title="Window - 浏览器对象模型"></a>Window - 浏览器对象模型</h2><h3 id="Window-Location"><a href="#Window-Location" class="headerlink" title="Window Location"></a>Window Location</h3><p>==window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。==</p>
+<p><strong>window.location</strong> 对象在编写时可不使用 window 这个前缀。</p>
+<ul>
+<li>location.hostname 返回 web 主机的域名</li>
+<li>location.pathname 返回当前页面的路径和文件名</li>
+<li>location.port 返回 web 主机的端口 （80 或 443）</li>
+<li>location.protocol 返回所使用的 web 协议（http:// 或 https://）</li>
+</ul>
+<h3 id="Window-History"><a href="#Window-History" class="headerlink" title="Window History"></a>Window History</h3><p>window.history 对象包含浏览器的历史,在编写时可不使用 window 这个前缀。</p>
+<ul>
+<li>history.back() - 与在浏览器点击后退按钮相同，加载历史列表中的前一个 URL。</li>
+<li>history.forward() - 与在浏览器中点击向前按钮相同，加载历史列表中的下一个 URL。</li>
+</ul>
+<h3 id="弹窗"><a href="#弹窗" class="headerlink" title="弹窗"></a>弹窗</h3><p>可以在 JavaScript 中创建三种消息框：警告框、确认框、提示框。</p>
+<h4 id="警告框"><a href="#警告框" class="headerlink" title="警告框"></a>警告框</h4><p>警告框经常用于确保用户可以得到某些信息。当警告框出现后，用户需要点击确定按钮才能继续进行操作。</p>
+<p>window.alert(“<em>sometext</em>“);</p>
+<p><strong>window.alert()</strong> 方法可以不带上 window 对象，直接使用**alert()**方法。</p>
+<h4 id="确认框"><a href="#确认框" class="headerlink" title="确认框"></a>确认框</h4><p>确认框通常用于验证是否接受用户操作。</p>
+<blockquote>
+<p>当确认卡弹出时，用户可以点击 “确认” 或者 “取消” 来确定用户操作。</p>
+<p>当你点击 “确认”, 确认框返回 true， 如果点击 “取消”, 确认框返回 false。</p>
+</blockquote>
+<p><strong>window.confirm()</strong> 方法可以不带上 window 对象，直接使用**confirm()**方法。</p>
+<h4 id="提示框"><a href="#提示框" class="headerlink" title="提示框"></a>提示框</h4><p>提示框经常用于提示用户在进入页面前输入某个值。</p>
+<blockquote>
+<p>当提示框出现后，用户需要输入某个值，然后点击确认或取消按钮才能继续操纵。</p>
+<p>如果用户点击确认，那么返回值为输入的值。如果用户点击取消，那么返回值为 null。</p>
+</blockquote>
+<p>window.prompt(“<em>sometext</em>“,”<em>defaultvalue</em>“);</p>
+<pre><code>&lt;script&gt;
+function myFunction()&#123;
+ var x;
+ var person=prompt(&quot;请输入你的名字&quot;,&quot;Harry Potter&quot;);
+ if (person!=null &amp;&amp; person!=&quot;&quot;)&#123;
+     x=&quot;你好 &quot; + person + &quot;! 今天感觉如何?&quot;;
+     document.getElementById(&quot;demo&quot;).innerHTML=x;
+ &#125;
+&#125;
+&lt;/script&gt;</code></pre>
+<h3 id="计时事件"><a href="#计时事件" class="headerlink" title="计时事件"></a>计时事件</h3><ul>
+<li>setInterval() - 间隔指定的毫秒数不停地执行指定的代码。(多次)</li>
+<li>setTimeout() - 在指定的毫秒数后执行指定代码。(一次)</li>
+</ul>
+<p><strong>注意:</strong> setInterval() 和 setTimeout() 是 HTML DOM Window 对象的两个方法。</p>
+<h4 id="setInterval-方法"><a href="#setInterval-方法" class="headerlink" title="setInterval() 方法"></a>setInterval() 方法</h4><p>==setInterval() 间隔指定的毫秒数不停地执行指定的代码==</p>
+<p>window.setInterval(“<em>javascript function</em>“,<em>milliseconds</em>);</p>
+<p><strong>window.setInterval()</strong> 方法可以不使用 window 前缀，直接使用函数 **setInterval()**。</p>
+<blockquote>
+<p>setInterval() 第一个参数是函数（function）。第二个参数间隔的毫秒数。<strong>注意:</strong> 1000 毫秒是一秒。</p>
+</blockquote>
+<pre><code>&lt;p&gt;在页面显示一个时钟&lt;/p&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+  var myVar = setInterval(function () &#123;
+    myTimer();
+  &#125;, 1000);
+  function myTimer() &#123;
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById(&quot;demo&quot;).innerHTML = t;
+  &#125;
+&lt;/script&gt;</code></pre>
+<h5 id="clearInterval-方法用于停止-setInterval-方法执行的函数代码"><a href="#clearInterval-方法用于停止-setInterval-方法执行的函数代码" class="headerlink" title="clearInterval() 方法用于停止 setInterval() 方法执行的函数代码"></a>clearInterval() 方法用于停止 setInterval() 方法执行的函数代码</h5><p>window.clearInterval(<em>intervalVariable</em>)</p>
+<p><strong>window.clearInterval()</strong> 方法可以不使用 window 前缀，直接使用函数**clearInterval()**。</p>
+<blockquote>
+<p>要使用 clearInterval() 方法, 在创建计时方法时你必须使用全局变量：</p>
+<p>myVar=setInterval(“<em>javascript function</em>“,<em>milliseconds</em>);</p>
+</blockquote>
+<h4 id="setTimeout-方法"><a href="#setTimeout-方法" class="headerlink" title="setTimeout() 方法"></a>setTimeout() 方法</h4><p>myVar= window.setTimeout(“<em>javascript function</em>“, <em>milliseconds</em>);</p>
+<p>setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 myVar 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。</p>
+<p>setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 “alert(‘5 seconds!’)”，或者对函数的调用，诸如 alertMsg。</p>
+<p>第二个参数指示从当前起多少毫秒后执行第一个参数。</p>
+<p>提示：1000 毫秒等于一秒。</p>
+<pre><code>//等待3秒，然后弹出 &quot;Hello&quot;:
+setTimeout(function () &#123;
+  alert(&quot;Hello&quot;);
+&#125;, 3000);</code></pre>
+<h5 id="clearTimeout-方法用于停止执行-setTimeout-方法的函数代码"><a href="#clearTimeout-方法用于停止执行-setTimeout-方法的函数代码" class="headerlink" title="clearTimeout() 方法用于停止执行 setTimeout()方法的函数代码"></a>clearTimeout() 方法用于停止执行 setTimeout()方法的函数代码</h5><p>window.clearTimeout(<em>timeoutVariable</em>)</p>
+<blockquote>
+<p><strong>window.clearTimeout()</strong> 方法可以不使用 window 前缀。</p>
+<p>要使用 clearTimeout() 方法, 你必须在创建超时方法中（setTimeout）使用全局变量:</p>
+<p>myVar=setTimeout(“<em>javascript function</em>“,<em>milliseconds</em>);</p>
+<p>如果函数还未被执行，你可以使用 clearTimeout() 方法来停止执行函数代码。</p>
+</blockquote>
+<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><p>​ Cookie 是一些数据, 用于存储 web 页面的用户信息，存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。</p>
+<p>Cookie 的作用就是用于解决 “如何记录客户端的用户信息”:</p>
+<ul>
+<li>当用户访问 web 页面时，他的名字可以记录在 cookie 中。</li>
+<li>在用户下一次访问该页面时，可以在 cookie 中读取用户访问记录。</li>
+</ul>
+<p>Cookie 以名/值对形式存储，如: username=John Doe</p>
+<p>当浏览器从服务器上请求 web 页面时， 属于该页面的 cookie 会被添加到该请求中。服务端通过这种方式来获取用户的信息。</p>
+<h3 id="创建-Cookie"><a href="#创建-Cookie" class="headerlink" title="创建 Cookie"></a>创建 Cookie</h3><p>可以使用 <strong>document.cookie</strong> 属性来创建 、读取、及删除 cookie。</p>
+<p>JavaScript 中，创建 cookie 如下所示：</p>
+<blockquote>
+<p>document.cookie=”username=John Doe”;</p>
+</blockquote>
+<p>为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：</p>
+<blockquote>
+<p>document.cookie=”username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT”;</p>
+</blockquote>
+<p>使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。</p>
+<blockquote>
+<p>document.cookie=”username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/“;</p>
+</blockquote>
+<p><strong>读取 cookie： var x = document.cookie;</strong></p>
+<blockquote>
+<p>document.cookie 将以字符串的方式返回所有的 cookie，类型格式： cookie1=value; cookie2=value; cookie3=value;</p>
+</blockquote>
+<p><strong>修改 cookie 类似于创建 cookie，如下所示：</strong></p>
+<blockquote>
+<p>document.cookie=”username=John Smith; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/“;</p>
+<p>旧的 cookie 将被覆盖。</p>
+</blockquote>
+<p>删除 cookie 非常简单，只需要设置 expires 参数为以前的时间即可，如下所示，设置为 Thu, 01 Jan 1970 00:00:00 GMT:</p>
+<blockquote>
+<p>document.cookie = “username=; expires=Thu, 01 Jan 1970 00:00:00 GMT”;</p>
+<p>注意，当您删除时不必指定 cookie 的值。</p>
+</blockquote>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>创建 cookie 来存储访问者名称。</p>
+<p>首先，访问者访问 web 页面, 他将被要求填写自己的名字。该名字会存储在 cookie 中。访问者下一次访问页面时，他会看到一个欢迎的消息。在这个实例中我们会创建 3 个 JavaScript 函数:</p>
+<ol>
+<li>设置 cookie 值的函数</li>
+<li>获取 cookie 值的函数</li>
+<li>检测 cookie 值的函数</li>
+</ol>
+<pre><code>&lt;script&gt;
+//创建一个函数用于存储访问者的名字，cookie 的名称为 cname，cookie 的值为 cvalue，并设置了 cookie 的过期时间 expires。
+//该函数设置了 cookie 名、cookie 值、cookie过期时间。
+function setCookie(cname,cvalue,exdays)&#123;
+ var d = new Date();
+ d.setTime(d.getTime()+(exdays*24*60*60*1000));
+ var expires = &quot;expires=&quot;+d.toGMTString();
+ document.cookie = cname+&quot;=&quot;+cvalue+&quot;; &quot;+expires;
+&#125;
+/*创建一个函数用户返回指定 cookie 的值，cookie 名的参数为 cname。创建一个文本变量用于检索指定 cookie :cname + &quot;=&quot;；使用分号来分割 document.cookie 字符串，并将分割后的字符串数组赋值给 ca (ca = document.cookie.split(&#39;;&#39;))。
+循环 ca 数组 (i=0;i&lt;ca.length;i++)，然后读取数组中的每个值，并去除前后空格 (c=ca[i].trim())。
+如果找到 cookie(c.indexOf(name) == 0)，返回 cookie 的值 (c.substring(name.length,c.length)。
+如果没有找到 cookie, 返回 &quot;&quot;。
+*/
+function getCookie(cname)&#123;
+ var name = cname + &quot;=&quot;;
+ var ca = document.cookie.split(&#39;;&#39;);
+ for(var i=0; i&lt;ca.length; i++) &#123;
+  var c = ca[i].trim();
+  if (c.indexOf(name)==0) &#123; return c.substring(name.length,c.length); &#125;
+ &#125;
+ return &quot;&quot;;
+&#125;
+//创建一个检测 cookie 是否创建的函数。如果设置了 cookie，将显示一个问候信息。如果没有设置 cookie，将会显示一个弹窗用于询问访问者的名字，并调用 setCookie 函数将访问者的名字存储 365 天：
+function checkCookie()&#123;
+ var user=getCookie(&quot;username&quot;);
+ if (user!=&quot;&quot;)&#123;
+  alert(&quot;欢迎 &quot; + user + &quot; 再次访问&quot;);
+ &#125;
+ else &#123;
+  user = prompt(&quot;请输入你的名字:&quot;,&quot;&quot;);
+    if (user!=&quot;&quot; &amp;&amp; user!=null)&#123;
+      setCookie(&quot;username&quot;,user,30);
+     &#125;
+ &#125;
+&#125;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;checkCookie()&quot;&gt;&lt;/body&gt;</code></pre>
+<p>参照：菜鸟教程</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Charles</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/javascript/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/javascript/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Charles</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/12/06/javascript/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="JavaScript">
+                        
+                        <span class="card-title">JavaScript</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一、基础1.alter()自带的弹出消息框的方法，可以在 onclick 中直接调用，如：onclick=”alert(‘欢迎!’)”；点击后就会弹出消息框；
+2.匹配属性​ 如下，先获取 myimage 这个 id，赋值给 element
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JavaScript/" class="post-category">
+                                    JavaScript
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/06/jquery/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="jQuery">
+                        
+                        <span class="card-title">jQuery</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一、简介jQuery 库包含以下功能：
+
+HTML 元素选取
+HTML 元素操作
+CSS 操作
+HTML 事件函数
+JavaScript 特效和动画
+HTML DOM 遍历和修改
+AJAX
+Utilities
+
+提示： 除此之外，Jquer
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/jQuery/">
+                        <span class="chip bg-color">jQuery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Charles的博客<br />'
+            + '文章作者: Charles<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="7689823053"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Charles</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "4";
+                    var startHour = "11";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/huaibinzhang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1207510422@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1207510422" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1207510422" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-space-shuttle"></i>
+    </a>
+</div>
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?code-HPokNTio6o.huaibinzhang.github.io";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "4f275905"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":200,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>

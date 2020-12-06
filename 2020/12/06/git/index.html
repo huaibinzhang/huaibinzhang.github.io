@@ -1,0 +1,1594 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Git, 博客">
+    <meta name="description" content="Charles的博客">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Git | Charles的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Charles的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Charles的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Charles的博客</div>
+        <div class="logo-desc">
+            
+            Charles的博客
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Git</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-06
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-06
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.2k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/37923f2478edc5709b36562b26c9e008.png" alt="脑图"></p>
+<h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><h2 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h2><p><img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/3054153c1904dfd5f3b9d3fbc6bf2375.jpeg" alt="Git å¸¸ç¨å½ä&quot;¤"></p>
+<ul>
+<li><p><code>git init</code>：创建 Git 库。</p>
+<ul>
+<li><code>git status</code> ：查看当前仓库的状态。</li>
+</ul>
+</li>
+<li><p><code>git show</code> ：# 显示某次提交的内容 git show $id</p>
+</li>
+<li><p><code>git diff</code> ：查看本次修改与上次修改的内容的区别。</p>
+</li>
+<li><p><code>git add &lt;file&gt;</code> ：把现在所要添加的文件放到暂存区中。</p>
+<ul>
+<li><p><code>git log -p &lt;file&gt;</code> ：查看每次详细修改内容的 diff 。</p>
+</li>
+<li><p><code>git rm &lt;file&gt;</code> ：从版本库中删除文件。</p>
+</li>
+<li><p><code>git reset &lt;file&gt;</code> ：从暂存区恢复到工作文件。</p>
+</li>
+<li><p><code>git reset HEAD^</code> ：恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改` 。</p>
+<blockquote>
+<p>HEAD 本身是一個游标，它通常會指向某一个本地端分支或是其它 commit，所以你也可以把 HEAD 当做是目前所在的分支（current branch）。 可参见 <a target="_blank" rel="noopener" href="https://juejin.im/entry/59a38c5d6fb9a0248e5cc884">《Git 中 HEAD 是什么东西》</a> 。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>git commit</code> ：把 Git add 到暂存区的内容提交到代码区中。</p>
+</li>
+<li><p><code>git clone</code> ：从远程仓库拷贝代码到本地。</p>
+</li>
+<li><p>git branch：查看当前的分支名称。</p>
+<ul>
+<li><code>git branch -r</code> ：查看远程分支。</li>
+</ul>
+</li>
+<li><p><code>git checkout</code> ：切换分支。</p>
+</li>
+<li><p><code>git merge &lt;branch&gt;</code> ：将 branch 分支合并到当前分支。</p>
+</li>
+<li><p>git stash：暂存。</p>
+<ul>
+<li><code>git stash pop</code> ：恢复最近一次的暂存。</li>
+</ul>
+</li>
+<li><p>git pull：抓取远程仓库所有分支更新并合并到本地。</p>
+<ul>
+<li><code>git push origin master</code> ：将本地主分支推到远程主分支。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/033f8d41d6f67a01a7cfefa6b9aa4cf4.png" alt="整体流程"></p>
+<p>​ IDEA Git 插件越来越强大，很多时候，我们日常使用 Git ，更多使用它。具体的教程，可以看看 <a target="_blank" rel="noopener" href="https://blog.csdn.net/huangfan322/article/details/53220060">《IntelliJ IDEA 下的使用 git》</a></p>
+<p>Git 仓库由三个组成部分：</p>
+<ul>
+<li>工作区(Working Directory)：在 Git 管理下的正常目录都算是工作区，我们平时的编辑工作都是在工作区完成。</li>
+<li>暂存区(Stage)：临时区域。里面存放将要提交文件的快照。</li>
+<li>历史记录区(History)：<code>git commit</code> 后的记录区。</li>
+</ul>
+<p>然后，是这三个区的转换关系以及转换所使用的命令：<img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/2135c3721109d120d0bde7f2ac0a1faa.png" alt="三个区的转换关系"></p>
+<p><code>git add</code> 和 <code>git stage</code> ：</p>
+<ul>
+<li><strong>其实，他们两是同义的</strong>，因为要跟 <code>svn add</code> 区分，两者的功能是完全不一样的，svn add 是将某个文件加入版本控制，而 git add 则是把某个文件加入暂存区。</li>
+<li>因为在 Git 出来之前大家用 SVN 比较多，所以为了避免误导，Git 引入了 <code>git stage</code> ，然后把 <code>git diff --staged</code> 做为 <code>git diff --cached</code> 的相同命令。基于这个原因，建议使用 <code>git stage</code> 以及 <code>git diff --staged</code> 。</li>
+</ul>
+<h2 id="2-Git-和-Svn-的比较"><a href="#2-Git-和-Svn-的比较" class="headerlink" title="2.Git 和 Svn 的比较"></a>2.Git 和 Svn 的比较</h2><p>Git 是分布式版本控制系统，SVN 是集中式版本控制系统。</p>
+<p>1）SVN 的优缺点</p>
+<ul>
+<li>优点<ul>
+<li>1、管理方便，逻辑明确，符合一般人思维习惯。</li>
+<li>2、易于管理，集中式服务器更能保证安全性。</li>
+<li>3、代码一致性非常高。</li>
+<li>4、适合开发人数不多的项目开发。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>1、服务器压力太大，数据库容量暴增。</li>
+<li>2、如果不能连接到服务器上，基本上不可以工作，因为 SVN 是集中式服务器，如果服务器不能连接上，就不能提交，还原，对比等等。</li>
+<li>3、不适合开源开发（开发人数非常非常多，但是 Google App Engine 就是用 SVN 的）。但是一般集中式管理的有非常明确的权限管理机制（例如分支访问限制），可以实现分层管理，从而很好的解决开发人数众多的问题。</li>
+</ul>
+</li>
+</ul>
+<p>2）Git 优缺点</p>
+<ul>
+<li>优点<ul>
+<li>1、适合分布式开发，强调个体。</li>
+<li>2、公共服务器压力和数据量都不会太大。</li>
+<li>3、速度快、灵活。</li>
+<li>4、任意两个开发者之间可以很容易的解决冲突。</li>
+<li>5、离线工作。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>1、学习周期相对而言比较长。</li>
+<li>2、不符合常规思维。</li>
+<li>3、代码保密性差，一旦开发者把整个库克隆下来就可以完全公开所有代码和版本信息。</li>
+</ul>
+</li>
+</ul>
+<p>所以，很多公司的开发团队使用 Git 作为版本管理，而产品团队使用 SVN 。</p>
+<h2 id="3-常用操作"><a href="#3-常用操作" class="headerlink" title="3.常用操作"></a>3.常用操作</h2><h3 id="创建分支步骤"><a href="#创建分支步骤" class="headerlink" title="创建分支步骤"></a>创建分支步骤</h3><ul>
+<li>1、<code>git branch xxx_dev</code> ：创建名字为 <code>xxx_dev</code> 的分支。</li>
+<li>2、<code>git checkout xxx_dev</code> ：切换到名字为 <code>xxx_dev</code> 的分支。</li>
+<li>3、<code>git push origin xxx_dev</code> ：执行推送的操作，完成本地分支向远程分支的同步。</li>
+</ul>
+<p>更详细的，可以看看 <a target="_blank" rel="noopener" href="https://blog.csdn.net/top_code/article/details/51931916">《Github 创建新分支》</a> 文章。</p>
+<h3 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h3><p>tag ，指向一次 commit 的 id ，通常用来给分支做一个标记。</p>
+<ul>
+<li>打标签 ：<code>git tag -a v1.01 -m &quot;Release version 1.01&quot;</code> 。</li>
+<li>提交标签到远程仓库 ：<code>git push origin --tags</code> 。</li>
+<li>查看标签 ：<code>git tag</code> 。</li>
+<li>查看某两次 tag 之间的 commit ：<code>git log --pretty=oneline tagA..tagB</code> 。</li>
+<li>查看某次 tag 之后的 commit ：<code>git log --pretty=oneline tagA..</code> 。</li>
+</ul>
+<p>修改<strong>提交时写错的 commit 信息</strong>，可以通过 <code>git commit --amend</code> 来对本次 commit 进行修改。</p>
+<h3 id="如何从-Git-中删除文件，而不将其从文件系统中删除？"><a href="#如何从-Git-中删除文件，而不将其从文件系统中删除？" class="headerlink" title="如何从 Git 中删除文件，而不将其从文件系统中删除？"></a><strong>如何从 Git 中删除文件，而不将其从文件系统中删除？</strong></h3><p>​ 如果你在 <code>git add</code> 过程中误操作，你最终会添加不想提交的文件。但是，<code>git rm</code> 则会把你的文件从你暂存区（索引）和文件系统（工作树）中删除，这可能不是你想要的。</p>
+<p>换成 <code>git reset</code> 操作：</p>
+<pre><code>git reset filename          # or
+echo filename &gt;&gt; .gitingore # add it to .gitignore to avoid re-adding it</code></pre>
+<ul>
+<li>上面意思是，<code>git reset &lt;file&gt;</code> 是 <code>git add &lt;file&gt;</code> 的逆操作。</li>
+</ul>
+<h3 id="merge-和-rebase-的区别"><a href="#merge-和-rebase-的区别" class="headerlink" title="merge 和 rebase 的区别"></a>merge 和 rebase 的区别</h3><p>Git 合并的两种方法。</p>
+<ul>
+<li><code>git merge</code> ，把本地代码和已经取得的远程仓库代码合并。</li>
+<li><code>git rebase</code> ，是复位基底的意思。</li>
+</ul>
+<p><code>git merge</code> 会生成一个新的节点，之前的提交会分开显示；而 <code>git rebase</code> 操作不会生成新的操作，将两个分支融合成一个线性的提交。</p>
+<p>推荐看看 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f23f72251abc">《git rebase 和 git merge 的区别》</a> 和 <a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangyulin54321/article/details/79996768">《git merge 和 git rebase 的区别》</a>。</p>
+<h3 id="rebase-和-merge-命令"><a href="#rebase-和-merge-命令" class="headerlink" title="rebase 和 merge 命令"></a>rebase 和 merge 命令</h3><p>这两个命令都是把修改从一个分支集成到另一个分支上，它们只是以非常不同的方式进行。</p>
+<ul>
+<li><p>考虑一下场景，在合并和变基前：</p>
+<pre><code>A &lt;- B &lt;- C    [master]
+^
+ \
+  D &lt;- E       [branch]</code></pre>
+</li>
+<li><p>在 <code>git merge master</code> 之后：</p>
+<pre><code>A &lt;- B &lt;- C
+^         ^
+ \         \
+  D &lt;- E &lt;- F</code></pre>
+</li>
+<li><p>在 <code>git rebase master</code> 之后：</p>
+<pre><code>A &lt;- B &lt;- C &lt;- D &lt;- E</code></pre>
+</li>
+</ul>
+<p>使用变基时，意味着使用另一个分支作为集成修改的新基础。</p>
+<ul>
+<li>何时使用：<ul>
+<li>如果你对修改不够果断，请使用合并操作。</li>
+<li>根据你希望的历史记录的样子，而选择使用变基或合并操作。</li>
+</ul>
+</li>
+<li>更多需要考虑的因素：<ul>
+<li>分支是否与团队外部的开发人员共享修改（如开源、公开项目）？如果是这样，请不要使用变基操作。变基会破坏分支，除非他们使用 <code>git pull --rebase</code> ，否则这些开发人员将会得到损坏的或不一致的仓库。</li>
+<li>你的开发团队技术是否足够娴熟？变基是一种破坏性操作。这意味着，如果你没有正确使用它，你可能会丢失提交，并且/或者会破坏其他开发者仓库的一致性。</li>
+<li>分支本身是否代表有用的信息？一些团队使用功能分支（branch-per-feature）模式，每个分支代表一个功能（或错误修复，或子功能等）。在此模式中，分支有助于识别相关提交的集合。在每个开发人员分支（branch-per-developer）模式中，分支本身不会传达任何其他信息（提交信息已有作者）。则在这种模式下，变基不会有任何破坏。</li>
+<li>是否无论如何都要还原合并？恢复（如在撤销中）变基，是相当困难的，并且/或者在变基中存在冲突时，是不可能完成的。如果你考虑到日后可能需要恢复，请使用合并操作。</li>
+</ul>
+</li>
+</ul>
+<h3 id="reset-与-rebase-的区别"><a href="#reset-与-rebase-的区别" class="headerlink" title="reset 与 rebase 的区别"></a><strong>reset 与 rebase 的区别</strong></h3><ul>
+<li>reset 操作，不修改 commit 相关的东西，只会去修改 <code>.git</code> 目录下的东西。</li>
+<li>rebase 操作，会试图修改你已经 commit 的东西，比如覆盖 commit 的历史等，但是不能使用 rebase 来修改已经 push 过的内容，容易出现兼容性问题。rebase 还可以来解决内容的冲突，解决两个人修改了同一份内容，然后失败的问题。</li>
+</ul>
+<p>推荐看看 <a target="_blank" rel="noopener" href="https://codeday.me/bug/20171012/84739.html">《“git reset”和“git rebase”有什么区别？》</a> 。</p>
+<h3 id="reset-与-revert-与-checkout-的区别"><a href="#reset-与-revert-与-checkout-的区别" class="headerlink" title="reset 与 revert 与 checkout 的区别"></a><strong>reset 与 revert 与 checkout 的区别</strong></h3><p><strong>首先是它们的共同点：用来撤销代码仓库中的某些更改。</strong></p>
+<p>然后是不同点：</p>
+<ul>
+<li><p>1）从 commit 层面来说：</p>
+<ul>
+<li><p><code>git reset</code> ，可以将一个分支的末端指向之前的一个 commit 。然后再下次 Git 执行垃圾回收的时候，会把这个 commit 之后的 commit 都扔掉。<code>git reset</code> 还支持三种标记，用来标记 reset 指令影响的范围：</p>
+<ul>
+<li><p><code>--mixed</code> ：会影响到暂存区和历史记录区。也是默认选项；</p>
+</li>
+<li><p><code>--soft</code> ：只影响历史记录区；</p>
+</li>
+<li><p><code>--hard</code>：影响工作区、暂存区和历史记录区。</p>
+<blockquote>
+<p>注意：因为 <code>git reset</code> 是直接删除 commit 记录，从而会影响到其他开发人员的分支，所以不要在公共分支（比如 develop）做这个操作。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>git checkout</code> ，可以将 HEAD 移到一个新的分支，并更新工作目录。因为可能会覆盖本地的修改，所以执行这个指令之前，你需要 stash 或者 commit 暂存区和工作区的更改。</p>
+</li>
+<li><p><code>git revert</code> ，和 <code>git reset</code> 的目的是一样的，但是做法不同，它会以创建新的 commit 的方式来撤销 commit ，这样能保留之前的 commit 历史，比较安全。另外，同样因为可能会覆盖本地的修改，所以执行这个指令之前，你需要 stash 或者 commit 暂存区和工作区的更改。</p>
+</li>
+</ul>
+</li>
+<li><p>2）从文件层面来说</p>
+<ul>
+<li><code>git reset</code> ，只是把文件从历史记录区拿到暂存区，不影响工作区的内容，而且不支持 <code>--mixed</code>、<code>--soft</code> 和 <code>--hard</code> 。</li>
+<li><code>git checkout</code> ，则是把文件从历史记录拿到工作区，不影响暂存区的内容。</li>
+<li><code>git revert</code> ，不支持文件层面的操作。</li>
+</ul>
+</li>
+</ul>
+<p>总的来说，回答关键点：</p>
+<ul>
+<li>对于 commit 层面和文件层面，这三个指令本身功能差别很大。</li>
+<li><code>git revert</code> 不支持文件层面的操作。</li>
+<li>不要在公共分支做 <code>git reset</code> 操作。</li>
+</ul>
+<h3 id="git-reset-–hard-指令把提交理掉了，怎么办"><a href="#git-reset-–hard-指令把提交理掉了，怎么办" class="headerlink" title="git reset –hard 指令把提交理掉了，怎么办"></a><strong>git reset –hard 指令把提交理掉了，怎么办</strong></h3><p>​ 基本上东西进了 Git 就不容易消失，它們只是以一种我们肉眼看不懂的格式存放在 Git 空间裡。我们可以透過 <code>git reflog</code> 指令去翻一下被 reset 的那個 Commit 的编号值，然後再做一次 <code>git reset --hard</code> 就可以把它救回來了。</p>
+<h3 id="Git-解决代码冲突"><a href="#Git-解决代码冲突" class="headerlink" title="Git 解决代码冲突"></a>Git 解决代码冲突</h3><pre><code>git stash
+git pull
+git stash pop</code></pre>
+<blockquote>
+<p>最常用。</p>
+</blockquote>
+<ul>
+<li>这个操作就是把自己修改的代码隐藏，然后把远程仓库的代码拉下来，然后把自己隐藏的修改的代码释放出来，让 Git 自动合并。</li>
+</ul>
+<pre><code>git reset –hard
+git pull</code></pre>
+<p><strong>假如你现在的分支为 main_dev，并在这个分支上修复了一个 Bug ，但是在 main_zh_test 分支也发现了同样的一个 Bug ，如果不用 copy 代码的方式，你如何把 main_dev 修复这个 Bug 提交的代码合并到 main_zh_test 分支上，请贴出你的 Git 操作指令和指令的含义?</strong></p>
+<blockquote>
+<p>假设合并时没有冲突</p>
+</blockquote>
+<ul>
+<li>1、在 <code>main_dev</code> 分支上，通过 gitlog 命令，使用 bugid 搜索提交的 commit id 。</li>
+<li>2、使用 <code>git checkout main_zh_test</code> 命令，切换到 <code>main_zh_test</code> 分支。</li>
+<li>3、使用 <code>git cherry-pick commitid</code> 将对 Bug 的修改批量移植到该分支上。</li>
+<li>4、<code>git commit</code> ，提交到本地。</li>
+<li>5、<code>git push</code> ，推送到远程仓库。</li>
+</ul>
+<p>所以，重心在于 cherry-pick 使用，参见 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/08c3f1804b36">《git cherry-pick 使用指南》</a> 文章。</p>
+<p><strong>如果你正在某个分支进行开发，突然要忙于别的事，如何处理</strong></p>
+<ul>
+<li>一种是直接先 <code>git commit</code> ，等要处理的问题解決後再回來這個分支，再 <code>git reset</code> 把 Commit 拆开來继续接著做。</li>
+<li>另一种做法，則是使用 <code>git stash</code> 指令，先把目前的进度存在 stash 上，等任务結束后可以再使用 <code>git stash pop</code> 或 <code>git stash apply</code> 把当时的及大怒再拿出來。</li>
+</ul>
+<h3 id="pull-与-fetch-的区别"><a href="#pull-与-fetch-的区别" class="headerlink" title="pull 与 fetch 的区别"></a>pull 与 fetch 的区别</h3><pre><code>pull = fetch + merge</code></pre>
+<ul>
+<li>使用 <code>git fetch</code> 是取回远端更新，不会对本地执行 merge 操作，不会去动你的本地的内容。</li>
+<li>而是用 git pull 会更新你本地代码到服务器上对应分支的最新版本。</li>
+<li>如果要代码库的文件完全覆盖本地版本。</li>
+</ul>
+<h2 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h2><p>​ <strong>fork 是对一个仓库的克隆。克隆一个仓库允许你自由试验各种改变，而不影响原始的项目。</strong></p>
+<p>​ 一般来说，fork 被用于去更改别人的项目（贡献代码给已经开源的项目）或者使用别人的项目作为你自己想法的初始开发点。</p>
+<blockquote>
+<p>使用 fork 提出改变的一个很好的例子是漏洞修复。与其记录一个你发现的问题，不如：</p>
+<ul>
+<li>fork 这个仓库</li>
+<li>进行修复</li>
+<li>向这个项目的拥有者提交一个 pull requset</li>
+</ul>
+<p>如果这个项目的拥有者认同你的成果，他们可能会将你的修复更新到原始的仓库中！</p>
+</blockquote>
+<ul>
+<li>目前很多开源项目，采用 fork + pull request 的方式，实现新功能的开发，Code Review 等等。</li>
+</ul>
+<h3 id="fork-和-clone-的区别"><a href="#fork-和-clone-的区别" class="headerlink" title="fork 和 clone 的区别"></a><strong>fork 和 clone 的区别</strong></h3><p>​ Clone ，不是 Fork ，克隆是个对某个远程仓库的本地拷贝。克隆时，实际上是拷贝整个源存储仓库，包括所有历史记录和分支。</p>
+<h3 id="Fork-和-Branch-的区别"><a href="#Fork-和-Branch-的区别" class="headerlink" title="Fork 和 Branch 的区别"></a><strong>Fork 和 Branch 的区别</strong></h3><p>Branch ，是一种机制，用于处理单一存储仓库中的变更，并最终目的是用于与其他部分代码合并。</p>
+<h3 id="Git-服务器"><a href="#Git-服务器" class="headerlink" title="Git 服务器"></a>Git 服务器</h3><p>Git 服务器的选择，实际上是比较多的。</p>
+<ul>
+<li><p>公有服务方案</p>
+<ul>
+<li>Github</li>
+<li>Gitee</li>
+</ul>
+</li>
+<li><p>私有化部署方案</p>
+<ul>
+<li><p>GitLab</p>
+</li>
+<li><p>Gogs</p>
+</li>
+<li><p>Bitbucket</p>
+<blockquote>
+<p>注意，Gitlab 和 Bitbucket 也提供公有服务的方案。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>一般情况下，大多数公司使用 GitLab 作为 Git 服务器。</p>
+<blockquote>
+<p>GitLab 是一个利用 <a target="_blank" rel="noopener" href="http://www.oschina.net/p/ruby+on+rails">Ruby on Rails</a> 开发的开源应用程序，实现一个自托管的<a target="_blank" rel="noopener" href="http://www.oschina.net/p/git">Git</a>项目仓库，可通过 Web 界面进行访问公开的或者私人项目。</p>
+<p>它拥有与<a target="_blank" rel="noopener" href="http://www.oschina.net/p/github">Github</a>类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。它还提供一个代码片段收集功能可以轻松实现代码复用，便于日后有需要的时候进行查找。</p>
+</blockquote>
+<ul>
+<li>不过因为 GitLb 使用 Ruby on Rails 实现，所以占用的系统资源会比较多。</li>
+</ul>
+<h2 id="4-Git-工作流"><a href="#4-Git-工作流" class="headerlink" title="4.Git 工作流"></a>4.Git 工作流</h2><p>Git 因为其灵活性，所以提供了多种工作流的方式：</p>
+<ol>
+<li>集中式工作流。</li>
+<li>功能分支工作流。</li>
+<li>Gitflow 工作流</li>
+</ol>
+<h3 id="Git-集中式工作流"><a href="#Git-集中式工作流" class="headerlink" title="Git 集中式工作流"></a>Git 集中式工作流</h3><p>参见 <a target="_blank" rel="noopener" href="http://blog.jobbole.com/76847/">《Git 工作流指南：集中式工作流》</a> 文章。</p>
+<h3 id="Git-功能分支工作流"><a href="#Git-功能分支工作流" class="headerlink" title="Git 功能分支工作流"></a>Git 功能分支工作流</h3><p>参见 <a target="_blank" rel="noopener" href="http://blog.jobbole.com/76857/">《Git 工作流指南：功能分支工作流》</a> 文章。</p>
+<h3 id="Gitflow-工作流"><a href="#Gitflow-工作流" class="headerlink" title="Gitflow 工作流"></a>Gitflow 工作流</h3><p>参见 <a target="_blank" rel="noopener" href="http://blog.jobbole.com/76867/">《Git 工作流指南：Gitflow 工作流》</a> 文章。</p>
+<ul>
+<li>两个长期维护分支<ul>
+<li>主分支(master)</li>
+<li>开发分支(develop)</li>
+</ul>
+</li>
+<li>三种短期分支<ul>
+<li>功能分支(feature branch)</li>
+<li>补丁分支(hotfix branch)</li>
+<li>预发分支(release branch)</li>
+</ul>
+</li>
+</ul>
+<h5 id="GitFlow-的优势"><a href="#GitFlow-的优势" class="headerlink" title="GitFlow 的优势"></a>GitFlow 的优势</h5><ul>
+<li>1、并行开发：GitFlow 可以很方便的实现并行开发：每个新功能都会建立一个新的 feature 分支，从而和已经完成的功能隔离开来，而且只有在新功能完成开发的情况下，其对应的 feature 分支才会合并到主开发分支上（也就是我们经常说的 develop 分支）。另外，如果你正在开发某个功能，同时又有一个新的功能需要开发，你只需要提交当前 feature 的代码，然后创建另外一个 feature 分支并完成新功能开发。然后再切回之前的 feature 分支即可继续完成之前功能的开发。</li>
+<li>2、协作开发：GitFlow 还支持多人协同开发，因为每个 feature 分支上改动的代码都只是为了让某个新的 feature 可以独立运行。同时我们也很容易知道每个人都在干啥。</li>
+<li>3、发布阶段：当一个新 feature 开发完成的时候，它会被合并到 develop 分支，这个分支主要用来暂时保存那些还没有发布的内容，所以如果需要再开发新的 feature，我们只需要从 develop 分支创建新分支，即可包含所有已经完成的 feature 。</li>
+<li>4、支持紧急修复：GitFlow 还包含了 hotfix 分支。这种类型的分支是从某个已经发布的 tag 上创建出来并做一个紧急的修复，而且这个紧急修复只影响这个已经发布的 tag，而不会影响到你正在开发的新 feature 。</li>
+</ul>
+<h2 id="5-Forking-工作流程"><a href="#5-Forking-工作流程" class="headerlink" title="5.Forking 工作流程"></a>5.Forking 工作流程</h2><p><strong>Forking 工作流程</strong>，与其他流行的 Git 工作流程有着根本的区别。它不是用单个服务端仓库充当“中央”代码库，而是为每个开发者提供自己的服务端仓库。Forking 工作流程最常用于公共开源项目中。</p>
+<ul>
+<li>Forking 工作流程的<strong>主要优点</strong>是可以汇集提交贡献，又无需每个开发者提交到一个中央仓库中，从而实现干净的项目历史记录。开发者可以推送（push）代码到自己的服务端仓库，而只有项目维护人员才能直接推送（push）代码到官方仓库中。</li>
+<li>当开发者准备发布本地提交时，他们的提交会推送到自己的公共仓库中，而不是官方仓库。然后他们向主仓库提交请求拉取（pull request），这会告知项目维护人员有可以集成的更新。</li>
+</ul>
+<p>当然，这并不是说 Forking 工作流程和上述的工作流是冲突的关系，而是可以相互结合。目前，很多公司都采用 <strong>Gitflow 工作流 + Forking 工作流程结合</strong>的方式。原因如下：</p>
+<ul>
+<li><p>1、对于主仓库，读权限是所有开发人员都有，但是写权限是只有部分“管理”开发人员有，从而对主仓库的统一管理。</p>
+<blockquote>
+<p>😈 如果不酱紫，主仓库岂不是可以被各种乱改。</p>
+</blockquote>
+</li>
+<li><p>2、所有开发人员，提交代码到自己的服务端仓库，通过 pull request 到主仓库。这样，“管理”开发人员就可以对代码进行 Code Review ，保证代码质量。</p>
+</li>
+</ul>
+<h2 id="6-PR-和-MR-的区别"><a href="#6-PR-和-MR-的区别" class="headerlink" title="6.PR 和 MR 的区别"></a>6.PR 和 MR 的区别</h2><p>PR 和 MR 的全称分别是 pull request 和 merge request。</p>
+<p>解释它们两者的区别之前，我们需要先了解一下 Code Review，因为 PR 和 MR 的引入正是为了进行 Code Review。</p>
+<ul>
+<li>Code Review 是指在开发过程中，对代码的系统性检查。通常的目的是查找系统缺陷，保证代码质量和提高开发者自身水平。 Code Review 是轻量级代码评审，相对于正式代码评审，轻量级代码评审所需要的各种成本要明显低的多，如果流程正确，它可以起到更加积极的效果。</li>
+<li>进行 Code Review 的原因：<ul>
+<li>提高代码质量</li>
+<li>及早发现潜在缺陷与 BUG ，降低事故成本。</li>
+<li>促进团队内部知识共享，提高团队整体水平</li>
+<li>评审过程对于评审人员来说，也是一种思路重构的过程，帮助更多的人理解系统。</li>
+</ul>
+</li>
+</ul>
+<p>然后我们需要了解下 fork 和 branch ，因为这是 PR 和 MR 各自所属的协作流程。</p>
+<ul>
+<li><strong>fork</strong> 是 git 上的一个协作流程。通俗来说就是把别人的仓库备份到自己仓库，修修改改，然后再把修改的东西提交给对方审核，对方同意后，就可以实现帮别人改代码的小目标了。fork 包含了两个流程：<ul>
+<li>fork 并更新某个仓库 <img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/6227935e023affd4e0a339ccd197c8a6.png" alt="img"></li>
+<li>同步 fork <img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/a87e005d714e9fd3b8da23c3b20c4fff.png" alt="img"></li>
+</ul>
+</li>
+<li>和 fork 不同，<strong>branch</strong> 并不涉及其他的仓库，操作都在当前仓库完成。<img src="https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/7200ee4a67dad8b11387fab7abef9f76.png" alt="img"></li>
+</ul>
+<p>考察关键点：</p>
+<ul>
+<li>Code review；</li>
+<li>PR 和 MR 所属流程的细节。</li>
+</ul>
+<p>回答关键点：</p>
+<ul>
+<li>回答这个问题的时候不要单单只说它们的区别。而是要从 PR 和 MR 产生的原因，分析它们所属的流程，然后再得出两者的区别。</li>
+</ul>
+<p>参考与推荐如下文章：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://gitbook.tw/interview">《Git 面試題》</a></p>
+<blockquote>
+<p>读者写的非常棒，即使不准备面试，也可以看看，作为平时使用 Git 一些场景下的解决方案。</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_26768741/article/details/66975516">《面试当中的 Git 问题》</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.breakyizhan.com/git/5035.html">《Git 的常见问题以及面试题汇总》</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://blog.jobbole.com/114297/">《泪流满面的 11 个 Git 面试题》</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cocoachina.com/ios/20171023/20873.html">《面试中的那些 Git 问题 - 基础部分》</a></p>
+</li>
+<li><p>芋道源码</p>
+</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Charles</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/git/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/git/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Charles</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/12/06/jquery/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="jQuery">
+                        
+                        <span class="card-title">jQuery</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一、简介jQuery 库包含以下功能：
+
+HTML 元素选取
+HTML 元素操作
+CSS 操作
+HTML 事件函数
+JavaScript 特效和动画
+HTML DOM 遍历和修改
+AJAX
+Utilities
+
+提示： 除此之外，Jquer
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/jQuery/">
+                        <span class="chip bg-color">jQuery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/05/you-qu-de-zhu-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="有趣的注释">
+                        
+                        <span class="card-title">有趣的注释</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            // ----------------------------------------------------------------------------------------
+// 1. 在我变身之前快跑吧
+
+/*
+        
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B3%A8%E9%87%8A/" class="post-category">
+                                    注释
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B3%A8%E9%87%8A/">
+                        <span class="chip bg-color">注释</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Charles的博客<br />'
+            + '文章作者: Charles<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="7689823053"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Charles</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "4";
+                    var startHour = "11";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/huaibinzhang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1207510422@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1207510422" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1207510422" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-space-shuttle"></i>
+    </a>
+</div>
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?code-HPokNTio6o.huaibinzhang.github.io";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "4f275905"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":200,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>

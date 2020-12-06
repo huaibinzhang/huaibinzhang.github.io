@@ -1,0 +1,2081 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="jQuery, 博客">
+    <meta name="description" content="Charles的博客">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>jQuery | Charles的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Charles的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Charles的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Charles的博客</div>
+        <div class="logo-desc">
+            
+            Charles的博客
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">jQuery</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/jQuery/">
+                                <span class="chip bg-color">jQuery</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-06
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-06
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.8k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h1><p>jQuery 库包含以下功能：</p>
+<ul>
+<li>HTML 元素选取</li>
+<li>HTML 元素操作</li>
+<li>CSS 操作</li>
+<li>HTML 事件函数</li>
+<li>JavaScript 特效和动画</li>
+<li>HTML DOM 遍历和修改</li>
+<li>AJAX</li>
+<li>Utilities</li>
+</ul>
+<p><strong>提示：</strong> 除此之外，Jquery 还提供了大量的插件。</p>
+<h2 id="1-语法"><a href="#1-语法" class="headerlink" title="1.语法"></a>1.语法</h2><p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。</p>
+<p>基础语法： <strong>$(selector).action()</strong></p>
+<ul>
+<li>美元符号定义 jQuery</li>
+<li>选择符（selector）”查询”和”查找” HTML 元素</li>
+<li>jQuery 的 action() 执行对元素的操作</li>
+</ul>
+<p>实例:</p>
+<ul>
+<li>$(this).hide() - 隐藏当前元素</li>
+<li>$(“p”).hide() - 隐藏所有 <p> 元素</p></li>
+<li>$(“p.test”).hide() - 隐藏所有 class=”test” 的 <p> 元素</p></li>
+<li>$(“#test”).hide() - 隐藏所有 id=”test” 的元素</li>
+</ul>
+<h3 id="文档就绪事件"><a href="#文档就绪事件" class="headerlink" title="文档就绪事件"></a>文档就绪事件</h3><pre><code>$(document).ready(function()&#123;
+   // 开始写 jQuery 代码...
+&#125;);</code></pre>
+<p>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作。如果在文档没有完全加载之前就运行函数，操作可能失败。</p>
+<h2 id="2-jQuery-选择器"><a href="#2-jQuery-选择器" class="headerlink" title="2.jQuery 选择器"></a>2.jQuery 选择器</h2><p>jQuery 选择器可以对 HTML 元素组或单个元素进行操作。</p>
+<p><strong>jQuery 中所有选择器都以美元符号开头：$()。</strong></p>
+<h4 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h4><p>jQuery 元素选择器基于元素名选取元素。</p>
+<p>在页面中选取所有 &lt;p&gt; 元素:$(“p”)</p>
+<h4 id="id-选择器"><a href="#id-选择器" class="headerlink" title="#id 选择器"></a>#id 选择器</h4><p>jQuery #id 选择器通过 HTML 元素的 id 属性选取指定的元素。</p>
+<p>页面中元素的 id 应该是唯一的，所以您要在页面中选取唯一的元素需要通过 #id 选择器。</p>
+<p>通过 id 选取元素语法如下：$(“#test”)</p>
+<h4 id="class-选择器"><a href="#class-选择器" class="headerlink" title=".class 选择器"></a>.class 选择器</h4><p>jQuery 类选择器可以通过指定的 class 查找元素。</p>
+<p>语法如下：$(“.test”)</p>
+<h4 id="更多实例"><a href="#更多实例" class="headerlink" title="更多实例"></a>更多实例</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$(“*“)</td>
+<td>选取所有元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_all2">在线实例</a></td>
+</tr>
+<tr>
+<td>$(this)</td>
+<td>选取当前 HTML 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_this">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“p.intro”)</td>
+<td>选取 class 为 intro 的 &lt;p&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_pclass">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“p:first”)</td>
+<td>选取第一个 &lt;p&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_pfirst">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“ul li:first”)</td>
+<td>选取第一个 &lt;ul&gt; 元素的第一个 &lt;li&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_ullifirst">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“ul li:first-child”)</td>
+<td>选取每个 &lt;ul&gt; 元素的第一个 &lt;li&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_ullifirstchild">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“[href]”)</td>
+<td>选取带有 href 属性的元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_hrefattr">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“a[target=’_blank’]”)</td>
+<td>选取所有 target 属性值等于 “_blank” 的 &lt;a&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_hrefattrblank">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“a[target!=’_blank’]”)</td>
+<td>选取所有 target 属性值不等于 “_blank” 的 &lt;a&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_hrefattrnotblank">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“:button”)</td>
+<td>选取所有 type=”button” 的 &lt;input&gt; 元素 和 &lt;button&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_button2">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“tr:even”)</td>
+<td>选取偶数位置的 &lt;tr&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_even">在线实例</a></td>
+</tr>
+<tr>
+<td>$(“tr:odd”)</td>
+<td>选取奇数位置的 &lt;tr&gt; 元素</td>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjquery_sel_odd">在线实例</a></td>
+</tr>
+</tbody></table>
+<h2 id="3-常用的-jQuery-事件方法"><a href="#3-常用的-jQuery-事件方法" class="headerlink" title="3.常用的 jQuery 事件方法"></a>3.常用的 jQuery 事件方法</h2><ul>
+<li>$(document).ready()，在文档完全加载完后执行函数。</li>
+<li>click(),当按钮点击事件被触发时会调用一个函数。</li>
+<li>dblclick()，当双击元素时，会发生 dblclick 事件。</li>
+<li>mouseenter()，当鼠标指针穿过元素时，会发生 mouseenter 事件。</li>
+<li>mouseleave()，当鼠标指针离开元素时，会发生 mouseleave 事件。</li>
+<li>mousedown()，当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown 事件。</li>
+<li>mouseup()，当在元素上松开鼠标按钮时，会发生 mouseup 事件。</li>
+<li>hover(),用于模拟光标悬停事件，当鼠标移动到元素上时，会触发指定的第一个函数(mouseenter);当鼠标移出这个元素时，会触发指定的第二个函数(mouseleave)。</li>
+<li>focus()，当元素获得焦点时，发生 focus 事件。当通过鼠标点击选中元素或通过 tab 键定位到元素时，该元素就会获得焦点。</li>
+<li>blur()，当元素失去焦点时，发生 blur 事件。</li>
+</ul>
+<h1 id="二、jQuery-效果"><a href="#二、jQuery-效果" class="headerlink" title="二、jQuery 效果"></a>二、jQuery 效果</h1><h2 id="hide-和-show"><a href="#hide-和-show" class="headerlink" title="hide() 和 show()"></a>hide() 和 show()</h2><p>用来隐藏和显示 HTML 元素，</p>
+<blockquote>
+<p>$(<em>selector</em>).hide(<em>speed,callback</em>);</p>
+<p>$(<em>selector</em>).show(<em>speed,callback</em>);</p>
+<p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</p>
+</blockquote>
+<h2 id="toggle"><a href="#toggle" class="headerlink" title="toggle()"></a>toggle()</h2><p>用来切换 hide() 和 show() 方法，可以隐藏和显示。</p>
+<blockquote>
+<p>$(<em>selector</em>).toggle(<em>speed,callback</em>);</p>
+<p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</p>
+</blockquote>
+<h2 id="Fading-方法"><a href="#Fading-方法" class="headerlink" title="Fading 方法"></a>Fading 方法</h2><p>fadeIn() 用于淡入已隐藏的元素。</p>
+<blockquote>
+<p>$(<em>selector</em>).fadeIn(<em>speed,callback</em>);</p>
+<p>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。.</p>
+<p>可选的 callback 参数是 fading 完成后所执行的函数名称。</p>
+</blockquote>
+<p>fadeOut() 方法用于淡出可见元素。(语法同上面的)</p>
+<p>fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。(语法同上面的)</p>
+<blockquote>
+<p>如果元素已淡出，则 fadeToggle() 会向元素添加淡入效果。</p>
+<p>如果元素已淡入，则 fadeToggle() 会向元素添加淡出效果。</p>
+</blockquote>
+<p>fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）。</p>
+<blockquote>
+<p>$(<em>selector</em>).fadeTo(<em>speed,opacity,callback</em>);</p>
+<p>必需的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。</p>
+<p>可选的 callback 参数是该函数完成后所执行的函数名称。</p>
+</blockquote>
+<h2 id="滑动方法"><a href="#滑动方法" class="headerlink" title="滑动方法"></a>滑动方法</h2><p>slideDown() 方法用于向下滑动元素。</p>
+<blockquote>
+<p>$(<em>selector</em>).slideDown(<em>speed,callback</em>);</p>
+<p>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>可选的 callback 参数是滑动完成后所执行的函数名称。</p>
+</blockquote>
+<p>slideUp() 方法用于向上滑动元素。</p>
+<p>slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。</p>
+<blockquote>
+<p>如果元素向下滑动，则 slideToggle() 可向上滑动它们。</p>
+<p>如果元素向上滑动，则 slideToggle() 可向下滑动它们。</p>
+</blockquote>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>animate() 方法用于创建自定义动画。</p>
+<blockquote>
+<p>$(<em>selector</em>).animate({<em>params</em>}<em>,speed,callback</em>);</p>
+<p>必需的 params 参数定义形成动画的 CSS 属性。</p>
+<p>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>可选的 callback 参数是动画完成后所执行的函数名称。</p>
+</blockquote>
+<p><strong>注意：默认情况下，所有 HTML 元素都有一个静态位置，且无法移动。如需对位置进行操作，要记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute！</strong></p>
+<p>animate() 方法 操作多个属性</p>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  $(&quot;div&quot;).animate(&#123;
+    left: &quot;250px&quot;,
+    opacity: &quot;0.5&quot;, // 透明度
+    height: &quot;150px&quot;,
+    width: &quot;150px&quot;,
+  &#125;);
+&#125;);</code></pre>
+<blockquote>
+<p><strong>可以用 animate() 方法来操作所有 CSS 属性</strong>，当使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，比如，必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right，等等。</p>
+<p>如果需要生成颜色动画，您需要从 <a target="_blank" rel="noopener" href="http://jquery.com/download/">jquery.com</a> 下载 <a target="_blank" rel="noopener" href="http://plugins.jquery.com/color/">颜色动画</a> 插件。</p>
+</blockquote>
+<p>animate() - 使用相对值</p>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  $(&quot;div&quot;).animate(&#123;
+    left: &quot;250px&quot;,
+    height: &quot;+=150px&quot;,
+    width: &quot;+=150px&quot;,
+  &#125;);
+&#125;);</code></pre>
+<p>animate() - 使用预定义的值，可以把属性的动画值设置为 “show”、”hide” 或 “toggle”：</p>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  $(&quot;div&quot;).animate(&#123;
+    height: &quot;toggle&quot;,
+  &#125;);
+&#125;);</code></pre>
+<p>animate() - 使用队列功能</p>
+<blockquote>
+<p>默认地，jQuery 提供针对动画的队列功能。</p>
+<p>这意味着如果您在彼此之后编写多个 animate() 调用，jQuery 会创建包含这些方法调用的”内部”队列。然后逐一运行这些 animate 调用。</p>
+</blockquote>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  var div = $(&quot;div&quot;);
+  div.animate(&#123; height: &quot;300px&quot;, opacity: &quot;0.4&quot; &#125;, &quot;slow&quot;);
+  div.animate(&#123; width: &quot;300px&quot;, opacity: &quot;0.8&quot; &#125;, &quot;slow&quot;);
+  div.animate(&#123; height: &quot;100px&quot;, opacity: &quot;0.4&quot; &#125;, &quot;slow&quot;);
+  div.animate(&#123; width: &quot;100px&quot;, opacity: &quot;0.8&quot; &#125;, &quot;slow&quot;);
+&#125;);
+//把 &lt;div&gt; 元素往右边移动了 100 像素，然后增加文本的字号
+$(&quot;button&quot;).click(function () &#123;
+  var div = $(&quot;div&quot;);
+  div.animate(&#123; left: &quot;100px&quot; &#125;, &quot;slow&quot;);
+  div.animate(&#123; fontSize: &quot;3em&quot; &#125;, &quot;slow&quot;);
+&#125;);</code></pre>
+<p>stop() 方法用于停止动画或效果，在它们完成之前。</p>
+<blockquote>
+<p>stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。</p>
+<p>$(<em>selector</em>).stop(<em>stopAll,goToEnd</em>);</p>
+<p>可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。</p>
+<p>可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。</p>
+<p>默认地，stop() 会清除在被选元素上指定的当前动画。</p>
+</blockquote>
+<p>Callback 回调函数在当前动画 100% 完成之后执行。</p>
+<pre><code>//在隐藏效果完全实现后回调函数，即在hide之后又有个function
+$(&quot;button&quot;).click(function () &#123;
+  $(&quot;p&quot;).hide(&quot;slow&quot;, function () &#123;
+    alert(&quot;段落现在被隐藏了&quot;);
+  &#125;);
+&#125;);</code></pre>
+<h2 id="链-Chaining"><a href="#链-Chaining" class="headerlink" title="链(Chaining)"></a>链(Chaining)</h2><p>Chaining 允许我们在一条语句中运行多个 jQuery 方法（在相同的元素上）。链接（chaining）的技术，允许我们在相同的元素上运行多条 jQuery 命令，一条接着另一条。</p>
+<p><strong>提示：</strong> 这样的话，浏览器就不必多次查找相同的元素。</p>
+<p>如需链接一个动作，您只需简单地把该动作追加到之前的动作上。</p>
+<p>下面的例子把 css()、slideUp() 和 slideDown() 链接在一起。”p1” 元素首先会变为红色，然后向上滑动，再然后向下滑动：</p>
+<pre><code>$(&quot;#p1&quot;).css(&quot;color&quot;, &quot;red&quot;).slideUp(2000).slideDown(2000);</code></pre>
+<h1 id="三、jQuery-HTML"><a href="#三、jQuery-HTML" class="headerlink" title="三、jQuery HTML"></a>三、jQuery HTML</h1><h2 id="获得-设置内容-text-、html-以及-val"><a href="#获得-设置内容-text-、html-以及-val" class="headerlink" title="获得/设置内容 - text()、html() 以及 val()"></a>获得/设置内容 - text()、html() 以及 val()</h2><p>三个简单实用的用于 DOM 操作的 jQuery 方法：</p>
+<ul>
+<li>text() - 设置或返回所选元素的文本内容</li>
+<li>html() - 设置或返回所选元素的内容（包括 HTML 标记，会显示 HTML 相关标签）</li>
+<li>val() - 设置或返回表单字段的值</li>
+</ul>
+<p>设置内容时，只要在函数里面填写对应的内容即可，注意 html()函数要在里面填写对应的 HTML 标签。</p>
+<h2 id="text-、html-以及-val-的回调函数"><a href="#text-、html-以及-val-的回调函数" class="headerlink" title="text()、html() 以及 val() 的回调函数"></a>text()、html() 以及 val() 的回调函数</h2><p>回调函数有两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+<pre><code>$(&quot;#btn1&quot;).click(function () &#123;
+  $(&quot;#test1&quot;).text(function (i, origText) &#123;
+    return &quot;旧文本: &quot; + origText + &quot; 新文本: Hello world! (index: &quot; + i + &quot;)&quot;;
+  &#125;);
+&#125;);
+
+$(&quot;#btn2&quot;).click(function () &#123;
+  $(&quot;#test2&quot;).html(function (i, origText) &#123;
+    return (
+      &quot;旧 html: &quot; +
+      origText +
+      &quot; 新 html: Hello &lt;b&gt;world!&lt;/b&gt; (index: &quot; +
+      i +
+      &quot;)&quot;
+    );
+  &#125;);
+&#125;);</code></pre>
+<h2 id="获取-设置属性-attr"><a href="#获取-设置属性-attr" class="headerlink" title="获取/设置属性 - attr()"></a>获取/设置属性 - attr()</h2><pre><code>&lt;script&gt;
+  $(document).ready(function () &#123;
+    $(&quot;button&quot;).click(function () &#123;
+      alert($(&quot;#runoob&quot;).attr(&quot;href&quot;)); //获得链接中 href 属性的值
+      $(&quot;#runoob&quot;).attr(&quot;href&quot;, &quot;http://www.runoob.com/jquery&quot;); // 设置属性
+    &#125;);
+  &#125;);
+&lt;/script&gt;
+
+&lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;//www.runoob.com&quot; id=&quot;runoob&quot;&gt;菜鸟教程&lt;/a&gt;&lt;/p&gt;
+  &lt;button&gt;显示 href 属性的值&lt;/button&gt;
+&lt;/body&gt;</code></pre>
+<p>attr() 方法也允许您同时设置多个属性：</p>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  $(&quot;#runoob&quot;).attr(&#123;
+    href: &quot;http://www.runoob.com/jquery&quot;,
+    title: &quot;jQuery 教程&quot;,
+  &#125;);
+&#125;);</code></pre>
+<h3 id="attr-的回调函数"><a href="#attr-的回调函数" class="headerlink" title="attr() 的回调函数"></a>attr() 的回调函数</h3><p>回调函数有两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  $(&quot;#runoob&quot;).attr(&quot;href&quot;, function (i, origValue) &#123;
+    return origValue + &quot;/jquery&quot;;
+  &#125;);
+&#125;);</code></pre>
+<h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><h3 id="添加新的-HTML-内容"><a href="#添加新的-HTML-内容" class="headerlink" title="添加新的 HTML 内容"></a>添加新的 HTML 内容</h3><p>我们将学习用于添加新内容的四个 jQuery 方法：</p>
+<ul>
+<li>append() - 在被选元素的结尾插入内容</li>
+<li>prepend() - 在被选元素的开头插入内容</li>
+<li>after() - 在被选元素之后插入内容</li>
+<li>before() - 在被选元素之前插入内容</li>
+</ul>
+<pre><code>&lt;script&gt;
+$(document).ready(function()&#123;
+ $(&quot;#btn1&quot;).click(function()&#123;
+  $(&quot;p&quot;).append(&quot; &lt;b&gt;追加文本&lt;/b&gt;。&quot;);
+  $(&quot;p&quot;).prepend(&quot;&lt;b&gt;在开头追加文本&lt;/b&gt;。 &quot;);
+ &#125;);
+ $(&quot;#btn2&quot;).click(function()&#123;
+  $(&quot;ol&quot;).prepend(&quot;&lt;li&gt;在开头添加列表项&lt;/li&gt;&quot;);
+ &#125;);
+&#125;);
+&lt;/script&gt;</code></pre>
+<p>多种方法追加元素：</p>
+<pre><code>&lt;script&gt;
+function appendText()&#123;
+ var txt1=&quot;&lt;p&gt;文本。&lt;/p&gt;&quot;;              // 使用 HTML 标签创建文本
+ var txt2=$(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;文本。&quot;);  // 使用 jQuery 创建文本
+ var txt3=document.createElement(&quot;p&quot;);
+ txt3.innerHTML=&quot;文本。&quot;;               // 使用 DOM 创建文本 text with DOM
+ $(&quot;body&quot;).append(txt1,txt2,txt3);        // 追加新元素
+&#125;
+&lt;/script&gt;</code></pre>
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><ul>
+<li>remove() - 删除被选元素（及其子元素）</li>
+<li>empty() - 从被选元素中删除子元素</li>
+</ul>
+<h3 id="过滤被删除的元素"><a href="#过滤被删除的元素" class="headerlink" title="过滤被删除的元素"></a>过滤被删除的元素</h3><p>删除 class=”italic” 的所有 &lt;p&gt; 元素：$(“p”).remove(“.italic”);</p>
+<h2 id="获取并设置-CSS-类"><a href="#获取并设置-CSS-类" class="headerlink" title="获取并设置 CSS 类"></a>获取并设置 CSS 类</h2><ul>
+<li>addClass() - 向被选元素添加一个或多个类</li>
+<li>removeClass() - 从被选元素删除一个或多个类</li>
+<li>toggleClass() - 对被选元素进行添加/删除类的切换操作</li>
+<li>css() - 设置或返回样式属性</li>
+</ul>
+<pre><code>&lt;script&gt;
+$(document).ready(function()&#123;
+  $(&quot;button&quot;).click(function()&#123;
+    $(&quot;h1,h2,p&quot;).addClass(&quot;blue&quot;);  // 添加相关的class属性
+    $(&quot;div&quot;).addClass(&quot;important&quot;);
+  &#125;);
+  $(&quot;button&quot;).click(function()&#123;
+  $(&quot;body div:first&quot;).addClass(&quot;important blue&quot;);
+ &#125;);
+&#125;);
+&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+.important
+&#123;
+ font-weight:bold;
+ font-size:xx-large;
+&#125;
+.blue
+&#123;
+ color:blue;
+&#125;
+&lt;/style&gt;</code></pre>
+<h2 id="css-方法"><a href="#css-方法" class="headerlink" title="css() 方法"></a>css() 方法</h2><p>css() 方法设置或返回被选元素的一个或多个样式属性。</p>
+<p>css(“<em>propertyname</em>“); 返回指定的 CSS 属性的值</p>
+<p>css(“<em>propertyname</em>“,”<em>value</em>“); 设置指定的 CSS 属性</p>
+<p>css({“<em>propertyname</em>“:”<em>value</em>“,”<em>propertyname</em>“:”<em>value</em>“,…}); 设置多个指定的 CSS 属性</p>
+<h2 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h2><p><img src="/images/image-20190512121844324.png" alt="image-20190512121844324"></p>
+<p>jQuery 提供多个处理尺寸的重要方法：</p>
+<ul>
+<li>width() 设置或返回元素的宽度（不包括内边距、边框或外边距）。</li>
+<li>height() 设置或返回元素的高度（不包括内边距、边框或外边距）。</li>
+<li>innerWidth() 返回元素的宽度（包括内边距）。</li>
+<li>innerHeight() 返回元素的高度（包括内边距）。</li>
+<li>outerWidth() 返回元素的宽度（包括内边距和边框）。</li>
+<li>outerHeight() 返回元素的高度（包括内边距和边框）。</li>
+</ul>
+<h1 id="四、遍历"><a href="#四、遍历" class="headerlink" title="四、遍历"></a>四、遍历</h1><p>​ 下图展示了一个家族树。通过 jQuery 遍历，您能够从被选（当前的）元素开始，轻松地在家族树中向上移动（祖先），向下移动（子孙），水平移动（同胞）。这种移动被称为对 DOM 进行遍历。</p>
+<p><img src="/images/img_travtree.png" alt="jQuery Dimensions"></p>
+<ul>
+<li>&lt;div&gt; 元素是 &lt;ul&gt; 的父元素，同时是其中所有内容的祖先。</li>
+<li>&lt;ul&gt; 元素是 &lt;li&gt; 元素的父元素，同时是 &lt;div&gt; 的子元素</li>
+<li>左边的 &lt;li&gt; 元素是 &lt;span&gt; 的父元素，&lt;ul&gt; 的子元素，同时是 &lt;div&gt; 的后代。</li>
+<li>&lt;span&gt; 元素是 &lt;li&gt; 的子元素，同时是 &lt;ul&gt; 和 &lt;div&gt; 的后代。</li>
+<li>两个 &lt;li&gt; 元素是同胞（拥有相同的父元素）。</li>
+<li>右边的 &lt;li&gt; 元素是 &lt;b&gt; 的父元素，&lt;ul&gt; 的子元素，同时是 &lt;div&gt; 的后代。</li>
+<li>&lt;b&gt; 元素是右边的 &lt;li&gt; 的子元素，同时是 &lt;ul&gt; 和 &lt;div&gt; 的后代。</li>
+</ul>
+<blockquote>
+<p>祖先是父、祖父、曾祖父等等。后代是子、孙、曾孙等等。同胞拥有相同的父。</p>
+</blockquote>
+<h2 id="祖先"><a href="#祖先" class="headerlink" title="祖先"></a>祖先</h2><p>向上遍历 DOM 树</p>
+<ul>
+<li><p>parent() 返回被选元素的直接父元素，只会向<strong>上一级</strong>对 DOM 树进行遍历。</p>
+</li>
+<li><p>parents() 返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (&lt;html&gt;)。也可以使用可选参数来过滤对祖先元素的搜索。</p>
+<blockquote>
+<p>如：返回所有 &lt;span&gt; 元素的所有祖先，并且它是 &lt;ul&gt; 元素：$(“span”).parents(“ul”);</p>
+</blockquote>
+</li>
+<li><p>parentsUntil() 返回介于两个给定元素之间的所有祖先元素。</p>
+<blockquote>
+<p>如：返回介于 &lt;span&gt; 与 &lt;div&gt; 元素之间的所有祖先元素：</p>
+<p>$(“span”).parentsUntil(“div”);</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="后代"><a href="#后代" class="headerlink" title="后代"></a>后代</h2><p>后代是子、孙、曾孙等等。</p>
+<ul>
+<li><p>children() 返回被选元素的<strong>所有</strong>直接子元素，只会向<strong>下一级</strong>对 DOM 树进行遍历。也可以使用可选参数来过滤对子元素的搜索。</p>
+<blockquote>
+<p>如：返回类名为 “1” 的所有 &lt;p&gt; 元素，并且它们是 &lt;div&gt; 的直接子元素：</p>
+<p>$(“div”).children(“p.1”);</p>
+</blockquote>
+</li>
+<li><p>find() 返回被选元素的后代元素，一路向下直到最后一个后代。</p>
+<blockquote>
+<p>返回属于 &lt;div&gt; 后代的所有 &lt;span&gt; 元素：$(“div”).find(“span”);</p>
+<p>返回 &lt;div&gt; 的所有后代：$(“div”).find(“*“);</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="同胞-siblings"><a href="#同胞-siblings" class="headerlink" title="同胞(siblings)"></a>同胞(siblings)</h2><p>同胞拥有相同的父元素。</p>
+<h2 id="在-DOM-树中水平遍历"><a href="#在-DOM-树中水平遍历" class="headerlink" title="在 DOM 树中水平遍历"></a>在 DOM 树中水平遍历</h2><ul>
+<li>siblings() 返回被选元素的所有同胞元素，也可以使用可选参数来过滤对同胞元素的搜索。</li>
+<li>next() 返回被选元素的下一个同胞元素,只返回一个元素,即返回同级元素中的下一个。</li>
+<li>nextAll() 返回被选元素的所有跟随的同胞元素，即被选元素下面所有同胞。</li>
+<li>nextUntil() 介于两个给定参数之间的<strong>所有跟随的同胞元素</strong>。</li>
+<li>prev()</li>
+<li>prevAll()</li>
+<li>prevUntil()</li>
+</ul>
+<blockquote>
+<p>后面这三个 prev 方法与上面效果一样，只是方向相反。</p>
+</blockquote>
+<h2 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h2><p>三个最基本的过滤方法是：**first(), last() 和 eq()**，它们允许您基于其在一组元素中的位置来选择一个特定的元素。</p>
+<p>其他过滤方法，比如 <strong>filter() 和 not()</strong> 允许您选取匹配或不匹配某项指定标准的元素。</p>
+<ul>
+<li><p>first() 方法返回被选元素的首个元素。</p>
+<blockquote>
+<p>选取首个 &lt;div&gt; 元素内部的第一个 &lt;p&gt; 元素：$(“div p”).first();</p>
+</blockquote>
+</li>
+<li><p>last() 方法返回被选元素的最后一个元素。</p>
+</li>
+<li><p>eq() 方法返回被选元素中带有指定索引号的元素。</p>
+<blockquote>
+<p>索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 &lt;p&gt; 元素（索引号 1）：$(“p”).eq(1);</p>
+</blockquote>
+</li>
+<li><p>filter() 方法允许规定一个标准，不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。</p>
+<blockquote>
+<p>返回带有类名 “url” 的所有 &lt;p&gt; 元素：$(“p”).filter(“.url”);</p>
+</blockquote>
+</li>
+<li><p>not() 方法返回不匹配标准的所有元素,not() 方法与 filter() 相反。</p>
+</li>
+</ul>
+<h1 id="五、AJAX"><a href="#五、AJAX" class="headerlink" title="五、AJAX"></a>五、AJAX</h1><h2 id="load"><a href="#load" class="headerlink" title="load()"></a>load()</h2><p>从服务器加载数据，并把返回的数据放入被选元素中。</p>
+<p>语法：$(selector).load(URL,data,callback);</p>
+<p>必需的 <em>URL</em> 参数规定您希望加载的 URL。</p>
+<p>可选的 <em>data</em> 参数规定与请求一同发送的查询字符串键/值对集合。</p>
+<p>可选的 <em>callback</em> 参数是 load() 方法完成后所执行的函数名称。</p>
+<blockquote>
+<p>实例：</p>
+<p>文件**”demo_test.txt”**的内容：</p>
+<pre><code>&lt;h2&gt;jQuery AJAX 是个非常棒的功能！&lt;/h2&gt;
+&lt;p id=&quot;p1&quot;&gt;这是段落的一些文本。&lt;/p&gt;</code></pre>
+<p>把文件 “demo_test.txt” 的内容加载到指定的 &lt;div&gt; 元素中：$(“#div1”).load(“demo_test.txt”);</p>
+<p>可以把 jQuery 选择器添加到 URL 参数，把 “demo_test.txt” 文件中 id=”p1” 的元素的内容，加载到指定的 &lt;div&gt; 元素中：$(“#div1”).load(“demo_test.txt #p1”);</p>
+</blockquote>
+<p>可选的 callback 参数规定当 load() 方法完成后所要允许的回调函数。回调函数可以设置不同的参数：</p>
+<ul>
+<li><em>responseTxt</em> - 包含调用成功时的结果内容</li>
+<li><em>statusTXT</em> - 包含调用的状态</li>
+<li><em>xhr</em> - 包含 XMLHttpRequest 对象</li>
+</ul>
+<p>在 load() 方法完成后显示一个提示框。如果 load() 方法已成功，则显示”外部内容加载成功！”，而如果失败，则显示错误消息：</p>
+<pre><code>// 先加载，如果加载成功就弹出消息框，然后再更改对应的HTML内容
+$(&quot;button&quot;).click(function () &#123;
+  $(&quot;#div1&quot;).load(&quot;demo_test.txt&quot;, function (responseTxt, statusTxt, xhr) &#123;
+    if (statusTxt == &quot;success&quot;) alert(&quot;外部内容加载成功!&quot;);
+    if (statusTxt == &quot;error&quot;)
+      alert(&quot;Error: &quot; + xhr.status + &quot;: &quot; + xhr.statusText);
+  &#125;);
+&#125;);</code></pre>
+<h2 id="get-和-post-方法"><a href="#get-和-post-方法" class="headerlink" title="get() 和 post() 方法"></a>get() 和 post() 方法</h2><p>​ <strong>get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。</strong></p>
+<p>$.get() 方法通过 HTTP GET 请求从服务器上请求数据。</p>
+<blockquote>
+<p>$.get(<em>URL</em>,<em>callback</em>);</p>
+<p>必需的 <em>URL</em> 参数规定您希望请求的 URL。</p>
+<p>可选的 <em>callback</em> 参数是请求成功后所执行的函数名。</p>
+<p>下面的例子使用 $.get() 方法从服务器上的一个文件中取回数据：</p>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  $.get(&quot;demo_test.php&quot;, function (data, status) &#123;
+    alert(&quot;数据: &quot; + data + &quot;\n状态: &quot; + status);
+  &#125;);
+&#125;);</code></pre>
+<p>$.get() 的第一个参数是我们希望请求的 URL（”demo_test.php”）。</p>
+<p>第二个参数是回调函数。第一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态。</p>
+</blockquote>
+<p>$.post() 方法通过 HTTP POST 请求向服务器提交数据。</p>
+<blockquote>
+<p>$.post(<em>URL,data,callback</em>);</p>
+<p>必需的 <em>URL</em> 参数规定您希望请求的 URL。</p>
+<p>可选的 <em>data</em> 参数规定连同请求发送的数据。</p>
+<p>可选的 <em>callback</em> 参数是请求成功后所执行的函数名。</p>
+<p>使用 $.post() 连同请求一起发送数据：</p>
+<pre><code>$(&quot;button&quot;).click(function () &#123;
+  $.post(
+    &quot;/try/ajax/demo_test_post.php&quot;,
+    &#123;
+      name: &quot;菜鸟教程&quot;,
+      url: &quot;http://www.runoob.com&quot;,
+    &#125;,
+    function (data, status) &#123;
+      alert(&quot;数据: \n&quot; + data + &quot;\n状态: &quot; + status);
+    &#125;
+  );
+&#125;);</code></pre>
+<p>$.post() 的第一个参数是我们希望请求的 URL (“demo_test_post.php”)，接着连同请求（name 和 url）一起发送数据。”demo_test_post.php” 中的 PHP 脚本读取这些参数，对它们进行处理，然后返回结果。</p>
+<p>第三个参数是回调函数。第一个回调参数存有被请求页面的内容，而第二个参数存有请求的状态。</p>
+</blockquote>
+<h1 id="六、noConflict-方法"><a href="#六、noConflict-方法" class="headerlink" title="六、noConflict() 方法"></a>六、noConflict() 方法</h1><p>noConflict() 方法会释放对 $ 标识符的控制，这样其他脚本就可以使用它了。</p>
+<blockquote>
+<p>通过全名替代简写的方式来使用 jQuery：</p>
+<pre><code>$.noConflict();
+jQuery(document).ready(function () &#123;
+  jQuery(&quot;button&quot;).click(function () &#123;
+    jQuery(&quot;p&quot;).text(&quot;jQuery 仍然在工作!&quot;);
+  &#125;);
+&#125;);</code></pre>
+<p>以创建自己的简写。noConflict() 可返回对 jQuery 的引用，您可以把它存入变量，以供稍后使用:</p>
+<pre><code>var jq = $.noConflict();
+jq(document).ready(function () &#123;
+  jq(&quot;button&quot;).click(function () &#123;
+    jq(&quot;p&quot;).text(&quot;jQuery 仍然在工作!&quot;);
+  &#125;);
+&#125;);</code></pre>
+<p>如果你的 jQuery 代码块使用 $ 简写，并且您不愿意改变这个快捷方式，那么您<strong>可以把 $ 符号作为变量传递给 ready 方法。</strong>这样就可以在函数内使用 $ 符号了 - 而在函数外，依旧不得不使用 “jQuery”：</p>
+<pre><code>$.noConflict();
+jQuery(document).ready(function ($) &#123;
+  $(&quot;button&quot;).click(function () &#123;
+    $(&quot;p&quot;).text(&quot;jQuery 仍然在工作!&quot;);
+  &#125;);
+&#125;);</code></pre>
+</blockquote>
+<h1 id="七、jQuery-选择器"><a href="#七、jQuery-选择器" class="headerlink" title="七、jQuery 选择器"></a>七、jQuery 选择器</h1><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>实例</th>
+<th>选取</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-all.html">*</a></td>
+<td>$(“*“)</td>
+<td>所有元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-id.html">#<em>id</em></a></td>
+<td>$(“#lastname”)</td>
+<td>id=”lastname” 的元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-class.html">.<em>class</em></a></td>
+<td>$(“.intro”)</td>
+<td>class=”intro” 的所有元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-multiple-classes.html">.<em>class,</em>.<em>class</em></a></td>
+<td>$(“.intro,.demo”)</td>
+<td>==class 为 “intro” <strong>或</strong> “demo” 的所有元素==</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-element.html"><em>element</em></a></td>
+<td>$(“p”)</td>
+<td>所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-multiple-elements.html"><em>el1</em>,<em>el2</em>,<em>el3</em></a></td>
+<td>$(“h1,div,p”)</td>
+<td>所有 &lt;h1&gt;、&lt;div&gt; 和 &lt;p&gt; 元</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-first.html">:first</a></td>
+<td>$(“p:first”)</td>
+<td>第一个 <p> 元素</p></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-last.html">:last</a></td>
+<td>$(“p:last”)</td>
+<td>最后一个 <p> 元素</p></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-even.html">:even</a></td>
+<td>$(“tr:even”)</td>
+<td><strong>:even 选择器</strong>选取带有偶数索引号的每个元素（比如：0、2、4 等等）。所有偶数 &lt;tr&gt; 元素，索引值从 0 开始，第一个元素是偶数 (0)，第二个元素是奇数 (1)，以此类推。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-odd.html">:odd</a></td>
+<td>$(“tr:odd”)</td>
+<td><strong>:odd 选择器</strong>选取带有奇数索引号的每个元素（比如：1、3、5 等等）。所有奇数 &lt;tr&gt; 元素，索引值从 0 开始，第一个元素是偶数 (0)，第二个元素是奇数 (1)，以此类推。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-firstchild.html">:first-child</a></td>
+<td>$(“p:first-child”)</td>
+<td>属于其父元素的第一个子元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-firstoftype.html">:first-of-type</a></td>
+<td>$(“p:first-of-type”)</td>
+<td>选取属于其父元素的特定类型的第一个子元素的所有元素。属于其父元素的第一个 &lt;p&gt; 元素的所有 &lt;p&gt; 元素；该选择器与 :nth-of-type(1) 相同。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-lastchild.html">:last-child</a></td>
+<td>$(“p:last-child”)</td>
+<td>属于其父元素的最后一个子元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-lastoftype.html">:last-of-type</a></td>
+<td>$(“p:last-of-type”)</td>
+<td>属于其父元素的最后一个 &lt;p&gt; 元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthchild.html">:nth-child(<em>n</em>)</a></td>
+<td>$(“p:nth-child(2)”)</td>
+<td>属于其父元素的第二个子元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthlastchild.html">:nth-last-child(<em>n</em>)</a></td>
+<td>$(“p:nth-last-child(2)”)</td>
+<td>属于其父元素的第二个子元素的所有 &lt;p&gt; 元素，从最后一个子元素开始计数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthoftype.html">:nth-of-type(<em>n</em>)</a></td>
+<td>$(“p:nth-of-type(2)”)</td>
+<td>属于其父元素的第二个 &lt;p&gt; 元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthlastoftype.html">:nth-last-of-type(<em>n</em>)</a></td>
+<td>$(“p:nth-last-of-type(2)”)</td>
+<td>属于其父元素的第二个 &lt;p&gt; 元素的所有 &lt;p&gt; 元素，从最后一个子元素开始计数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-onlychild.html">:only-child</a></td>
+<td>$(“p:only-child”)</td>
+<td>属于其父元素的唯一子元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-onlyoftype.html">:only-of-type</a></td>
+<td>$(“p:only-of-type”)</td>
+<td>属于其父元素的特定类型的唯一子元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-parent-child.html">parent &gt; child</a></td>
+<td>$(“div &gt; p”)</td>
+<td>&lt;div&gt; 元素的直接子元素的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-parent-descendant.html">parent descendant</a></td>
+<td>$(“div p”)</td>
+<td>&lt;div&gt; 元素的后代的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-previous-next.html">element + next</a></td>
+<td>$(“div + p”)</td>
+<td>每个 &lt;div&gt; 元素相邻的下一个 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-previous-siblings.html">element ~ siblings</a></td>
+<td>$(“div ~ p”)</td>
+<td>&lt;div&gt; 元素同级的所有 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-eq.html">:eq(<em>index</em>)</a></td>
+<td>$(“ul li:eq(3)”)</td>
+<td>列表中的第四个元素（index 值从 0 开始）</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-gt.html">:gt(<em>no</em>)</a></td>
+<td>$(“ul li:gt(3)”)</td>
+<td>列举 index 大于 3 的元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-lt.html">:lt(<em>no</em>)</a></td>
+<td>$(“ul li:lt(3)”)</td>
+<td>列举 index 小于 3 的元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-not.html">:not(<em>selector</em>)</a></td>
+<td>$(“input:not(:empty)”)</td>
+<td>所有不为空的输入元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-header.html">:header</a></td>
+<td>$(“:header”)</td>
+<td>所有标题元素 &lt;h1&gt;, &lt;h2&gt; …</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-animated.html">:animated</a></td>
+<td>$(“:animated”)</td>
+<td>所有动画元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-focus.html">:focus</a></td>
+<td>$(“:focus”)</td>
+<td>当前具有焦点的元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-contains.html">:contains(<em>text</em>)</a></td>
+<td>$(“:contains(‘Hello’)”)</td>
+<td>所有包含文本 “Hello” 的元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-has.html">:has(<em>selector</em>)</a></td>
+<td>$(“div:has(p)”)</td>
+<td>所有包含有 &lt;p&gt; 元素在其内的 &lt;div&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-empty.html">:empty</a></td>
+<td>$(“:empty”)</td>
+<td>所有空元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-parent.html">:parent</a></td>
+<td>$(“:parent”)</td>
+<td>匹配所有含有子元素或者文本的父元素。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-hidden.html">:hidden</a></td>
+<td>$(“p:hidden”)</td>
+<td>所有隐藏的 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-visible.html">:visible</a></td>
+<td>$(“table:visible”)</td>
+<td>所有可见的表格</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-root.html">:root</a></td>
+<td>$(“:root”)</td>
+<td>文档的根元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-lang.html">:lang(<em>language</em>)</a></td>
+<td>$(“p:lang(de)”)</td>
+<td>所有 lang 属性值为 “de” 的 &lt;p&gt; 元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-attribute.html"><em>attribute</em>]</a></td>
+<td>$(“[href]”)</td>
+<td>所有带有 href 属性的元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-attribute-equal-value.html"><em>attribute</em>=<em>value</em>]</a></td>
+<td>$(“[href=’default.htm’]”)</td>
+<td>所有带有 href 属性且值等于 “default.htm” 的元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-attribute-notequal-value.html"><em>attribute</em>!=<em>value</em>]</a></td>
+<td>$(“[href!=’default.htm’]”)</td>
+<td>所有带有 href 属性且值不等于 “default.htm” 的元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-attribute-end-value.html"><em>attribute</em>$=<em>value</em>]</a></td>
+<td>$(“[href$=’.jpg’]”)</td>
+<td>所有带有 href 属性且值以 “.jpg” 结尾的元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-attribute-prefix-value.html"><em>attribute</em>|=<em>value</em>]</a></td>
+<td>$(“[title|=’Tomorrow’]”)</td>
+<td>所有带有 title 属性且值等于 ‘Tomorrow’ 或者以 ‘Tomorrow’ 后跟连接符作为开头的字符串</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-attribute-beginning-value.html"><em>attribute</em>^=<em>value</em>]</a></td>
+<td>$(“[title^=’Tom’]”)</td>
+<td>所有带有 title 属性且值以 “Tom” 开头的元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-attribute-contains-value.html"><em>attribute</em>~=<em>value</em>]</a></td>
+<td>$(“[title~=’hello’]”)</td>
+<td>所有带有 title 属性且值包含单词 “hello” 的元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-attribute-contains-string-value.html">*attribute**=<em>value</em>]</a></td>
+<td>$(“[title*=’hello’]”)</td>
+<td>所有带有 title 属性且值包含字符串 “hello” 的元素</td>
+</tr>
+<tr>
+<td>[<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-multipleattribute-equal-value.html"><em>name</em>=<em>value</em>][<em>name2</em>=<em>value2</em>]</a></td>
+<td>$( “input[id][name$=’man’]” )</td>
+<td>带有 id 属性，并且 name 属性以 man 结尾的输入框</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input.html">:input</a></td>
+<td>$(“:input”)</td>
+<td>所有 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-text.html">:text</a></td>
+<td>$(“:text”)</td>
+<td>所有带有 type=”text” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-password.html">:password</a></td>
+<td>$(“:password”)</td>
+<td>所有带有 type=”password” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-radio.html">:radio</a></td>
+<td>$(“:radio”)</td>
+<td>所有带有 type=”radio” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-checkbox.html">:checkbox</a></td>
+<td>$(“:checkbox”)</td>
+<td>所有带有 type=”checkbox” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-submit.html">:submit</a></td>
+<td>$(“:submit”)</td>
+<td>所有带有 type=”submit” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-reset.html">:reset</a></td>
+<td>$(“:reset”)</td>
+<td>所有带有 type=”reset” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-button.html">:button</a></td>
+<td>$(“:button”)</td>
+<td>所有带有 type=”button” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-image.html">:image</a></td>
+<td>$(“:image”)</td>
+<td>所有带有 type=”image” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-file.html">:file</a></td>
+<td>$(“:file”)</td>
+<td>所有带有 type=”file” 的 input 元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-enabled.html">:enabled</a></td>
+<td>$(“:enabled”)</td>
+<td>所有启用的元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-disabled.html">:disabled</a></td>
+<td>$(“:disabled”)</td>
+<td>所有禁用的元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-selected.html">:selected</a></td>
+<td>$(“:selected”)</td>
+<td>所有选定的下拉列表元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-input-checked.html">:checked</a></td>
+<td>$(“:checked”)</td>
+<td>所有选中的复选框选项</td>
+</tr>
+<tr>
+<td>.selector</td>
+<td>$(selector).selector</td>
+<td>在 jQuery 1.7 中已经不被赞成使用。返回传给 jQuery()的原始选择器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-target.html">:target</a></td>
+<td>$( “p:target” )</td>
+<td>选择器将选中 ID 和 URI 中一个格式化的标识符相匹配的<p>元素</p></td>
+</tr>
+</tbody></table>
+<h1 id="八、插件"><a href="#八、插件" class="headerlink" title="八、插件"></a>八、插件</h1><p>菜鸟教程&lt;<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-plugin-validate.html&gt;">https://www.runoob.com/jquery/jquery-plugin-validate.html&gt;</a></p>
+<p>参照：菜鸟教程</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Charles</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/jquery/">https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/jquery/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Charles</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/jQuery/">
+                                    <span class="chip bg-color">jQuery</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/12/06/javascript/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="JavaScript">
+                        
+                        <span class="card-title">JavaScript</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一、基础1.alter()自带的弹出消息框的方法，可以在 onclick 中直接调用，如：onclick=”alert(‘欢迎!’)”；点击后就会弹出消息框；
+2.匹配属性​ 如下，先获取 myimage 这个 id，赋值给 element
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JavaScript/" class="post-category">
+                                    JavaScript
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/06/git/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Git">
+                        
+                        <span class="card-title">Git</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+一、基础1.常用命令
+
+git init：创建 Git 库。
+
+git status ：查看当前仓库的状态。
+
+
+git show ：# 显示某次提交的内容 git show $id
+
+git diff ：查看本次修改与上次修改的内容的区
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Charles的博客<br />'
+            + '文章作者: Charles<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="7689823053"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Charles</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "4";
+                    var startHour = "11";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/huaibinzhang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1207510422@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1207510422" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1207510422" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-space-shuttle"></i>
+    </a>
+</div>
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?code-HPokNTio6o.huaibinzhang.github.io";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "4f275905"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":200,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>

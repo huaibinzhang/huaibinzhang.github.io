@@ -6,7 +6,7 @@
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/"/>
-  <updated>2020-12-05T02:32:16.469Z</updated>
+  <updated>2020-12-06T09:18:43.317Z</updated>
   <id>https://github.com/huaibinzhang/huaibinzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript</title>
+    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/javascript/"/>
+    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/javascript/</id>
+    <published>2020-12-06T09:09:44.411Z</published>
+    <updated>2020-12-06T09:18:43.317Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;h2 id=&quot;1-alter&quot;&gt;&lt;a href=&quot;#1-alter&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaScript" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery</title>
+    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/jquery/"/>
+    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/jquery/</id>
+    <published>2020-12-06T09:07:31.290Z</published>
+    <updated>2020-12-06T09:26:46.623Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、简介&quot;&gt;&lt;a href=&quot;#一、简介&quot; class=&quot;headerlink&quot; title=&quot;一、简介&quot;&gt;&lt;/a&gt;一、简介&lt;/h1&gt;&lt;p&gt;jQuery 库包含以下功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML 元素选取&lt;/li&gt;
+&lt;li&gt;HTML</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="jQuery" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git</title>
+    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/git/"/>
+    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/06/git/</id>
+    <published>2020-12-06T09:02:53.475Z</published>
+    <updated>2020-12-06T09:05:45.063Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://learningpics.oss-cn-shenzhen.aliyuncs.com/images/37923f2478edc5709b36562b26c9e008.png&quot; alt=&quot;脑图&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;一、基础&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Git" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>有趣的注释</title>
@@ -472,21 +557,6 @@
     
     
     <category term="面试题" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试</title>
-    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/03/ce-shi/"/>
-    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/03/ce-shi/</id>
-    <published>2020-11-03T02:09:00.000Z</published>
-    <updated>2020-11-10T02:16:31.364Z</updated>
-    
-    
-    
-    
-    <category term="Markdown" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/Markdown/"/>
-    
     
   </entry>
   
