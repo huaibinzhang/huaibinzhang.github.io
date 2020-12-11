@@ -6,7 +6,7 @@
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/"/>
-  <updated>2020-12-06T09:18:43.317Z</updated>
+  <updated>2020-12-11T04:34:38.168Z</updated>
   <id>https://github.com/huaibinzhang/huaibinzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端工程师简史</title>
+    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/11/qian-duan-gong-cheng-shi-jian-shi/"/>
+    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/11/qian-duan-gong-cheng-shi-jian-shi/</id>
+    <published>2020-12-11T04:01:47.257Z</published>
+    <updated>2020-12-11T04:34:38.168Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;「科普」前端工程师简史&quot;&gt;&lt;a href=&quot;#「科普」前端工程师简史&quot; class=&quot;headerlink&quot; title=&quot;「科普」前端工程师简史&quot;&gt;&lt;/a&gt;「科普」前端工程师简史&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;作者：魔术师卡颂 公号 /</summary>
+        
+      
+    
+    
+    
+    <category term="科普" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/%E7%A7%91%E6%99%AE/"/>
+    
+    
+    <category term="科普" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E7%A7%91%E6%99%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript</title>
@@ -532,31 +558,6 @@
     <category term="重绘" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%87%8D%E7%BB%98/"/>
     
     <category term="重排" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%87%8D%E6%8E%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端面试题</title>
-    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/qian-duan-mian-shi-ti-di-yi-tao-jie-xi/"/>
-    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/qian-duan-mian-shi-ti-di-yi-tao-jie-xi/</id>
-    <published>2020-11-04T07:36:26.896Z</published>
-    <updated>2020-11-24T06:52:54.989Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;前端面试题&quot;&gt;&lt;a href=&quot;#前端面试题&quot; class=&quot;headerlink&quot; title=&quot;前端面试题&quot;&gt;&lt;/a&gt;前端面试题&lt;/h2&gt;&lt;h3 id=&quot;1、盒子塌陷的原因？解决方式&quot;&gt;&lt;a href=&quot;#1、盒子塌陷的原因？解决方式&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="面试题" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-    <category term="面试题" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
