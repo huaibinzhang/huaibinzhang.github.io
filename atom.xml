@@ -6,7 +6,7 @@
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/"/>
-  <updated>2020-12-11T04:34:38.168Z</updated>
+  <updated>2020-12-19T12:04:03.042Z</updated>
   <id>https://github.com/huaibinzhang/huaibinzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分享8个非常实用的Vue自定义指令</title>
+    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/19/fen-xiang-8-ge-fei-chang-shi-yong-de-vue-zi-ding-yi-zhi-ling/"/>
+    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/12/19/fen-xiang-8-ge-fei-chang-shi-yong-de-vue-zi-ding-yi-zhi-ling/</id>
+    <published>2020-12-19T11:58:23.902Z</published>
+    <updated>2020-12-19T12:04:03.042Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在 Vue，除了核心功能默认内置的指令 ( v-model 和 v-show )，Vue 也允许注册自定义指令。它的作用价值在于当开发人员在某些场景下需要对普通 DOM 元素进行操作。&lt;/p&gt;
+&lt;p&gt;Vue</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Vue" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>前端工程师简史</title>
@@ -242,7 +270,7 @@
     <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/24/vue-xiang-guan-mian-shi-ti/"/>
     <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/24/vue-xiang-guan-mian-shi-ti/</id>
     <published>2020-11-24T07:02:12.990Z</published>
-    <updated>2020-11-26T02:53:44.295Z</updated>
+    <updated>2020-12-19T11:59:06.783Z</updated>
     
     
       
@@ -250,7 +278,7 @@
         
         
     <summary type="html">&lt;h3 id=&quot;1-库和框架的区别&quot;&gt;&lt;a href=&quot;#1-库和框架的区别&quot; class=&quot;headerlink&quot; title=&quot;1.库和框架的区别&quot;&gt;&lt;/a&gt;1.库和框架的区别&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;答:
-    库:</summary>
+ 库:</summary>
         
       
     
@@ -529,35 +557,6 @@
     <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/html5/"/>
     
     <category term="源码" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重绘重排理解与优化</title>
-    <link href="https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/chong-hui-chong-pai-li-jie-yu-you-hua/"/>
-    <id>https://github.com/huaibinzhang/huaibinzhang.github.io/2020/11/04/chong-hui-chong-pai-li-jie-yu-you-hua/</id>
-    <published>2020-11-04T14:42:50.416Z</published>
-    <updated>2020-11-04T15:10:31.168Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;重绘&quot;&gt;&lt;a href=&quot;#重绘&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/categories/html5/"/>
-    
-    
-    <category term="html5" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/html5/"/>
-    
-    <category term="重绘" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%87%8D%E7%BB%98/"/>
-    
-    <category term="重排" scheme="https://github.com/huaibinzhang/huaibinzhang.github.io/tags/%E9%87%8D%E6%8E%92/"/>
     
   </entry>
   
